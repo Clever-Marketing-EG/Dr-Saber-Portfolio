@@ -1,4 +1,4 @@
-@extends('layoutmaster')
+@extends('dashboard/layoutmaster')
 @section('content')
 <div class="col-6 mx-auto p-4 m-5 border-light shadow-sm">
     <h3 class="pb-3">Article Form </h3>

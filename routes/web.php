@@ -98,6 +98,9 @@ Route::get('/article-data-dahboard', function () {
 Route::get('/oper-edit-dahboard', function () {
     return view('dashboard/oper-edit-dahboard');
 });
+Route::get('/dash-edit', function () {
+    return view('dashboard/dash-edit');
+});
 
 
 Route::group(['prefix' => 'ar'], function () {
