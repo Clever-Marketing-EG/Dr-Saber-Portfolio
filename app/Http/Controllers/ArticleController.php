@@ -27,7 +27,7 @@ class ArticleController extends Controller
      *
      * @return View
      */
-    public function create()
+    public function create(): View
     {
         //TODO: create a form for articles
         return view('dashboard/dash-edit');

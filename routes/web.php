@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,48 +15,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+/*
+|--------------------------------------------------------------------------
+| Main Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/', [MainController::class, 'main'])->name('landing-page');
+Route::get('/biography', [MainController::class, 'biography'])->name('biography');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+Route::get('/operations', function () {
+    return view('main-page/operations');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Articles Routes
+|--------------------------------------------------------------------------
+*/
 Route::resource('articles', ArticleController::class);
 
-Route::get('/', function () {
-    return view('main-page/welcome');
-})->name('main');
+/*
+|--------------------------------------------------------------------------
+| Operations Routes
+|--------------------------------------------------------------------------
+*/
+Route::resource('operations', ArticleController::class);
 
-Route::get('/biography', function () {
-    $collection = [
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ],
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ],
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ],
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ]
-    ];
-    return view('main-page/test', ['events' => $collection]);
-});
-Route::get('/contact-1', function () {
-    return view('main-page/contact-1');
-});
+
+
 Route::get('/operations', function () {
     return view('main-page/operations');
 });
