@@ -1,4 +1,4 @@
-@extends('dashboard/layoutmaster')
+@extends('dashboard.shared.layout')
 @section('content')
 <body class="sb-nav-fixed">
 
@@ -68,7 +68,7 @@
         </div>
         <div id="layoutSidenav_content">
            <main>
-               
+
            </main>
         </div>
     </div>
