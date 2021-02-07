@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
+
 
 class Article extends Model
 {
@@ -18,4 +20,9 @@ class Article extends Model
         'image_url',
         'video_url'
     ];
+
+    public function getCreatedAtAttribute($date): string
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
+    }
 }
