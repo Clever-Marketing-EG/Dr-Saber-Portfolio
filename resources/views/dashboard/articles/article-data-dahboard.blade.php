@@ -1,4 +1,4 @@
-@extends('dashboard/layoutmaster')
+@extends('dashboard.shared.layout')
 @section('content')
 <body class="sb-nav-fixed">
 
@@ -67,6 +67,7 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
+<<<<<<< HEAD:resources/views/dashboard/article-data-dahboard.blade.php
             <main>
                 <div class="container-fluid">
 
@@ -243,6 +244,11 @@
 
                 </div>
             </main>
+=======
+           <main>
+
+           </main>
+>>>>>>> 71a8481ecd3684437b2310b644bd100c0a51f1fc:resources/views/dashboard/articles/article-data-dahboard.blade.php
         </div>
     </div>
 

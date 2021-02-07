@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\OperationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('main-page/welcome');
 })->name('main');
@@ -53,6 +57,38 @@ Route::get('/biography', function () {
 Route::get('/contact-1', function () {
     return view('main-page/contact-1');
 });
+=======
+
+/*
+|--------------------------------------------------------------------------
+| Main Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/', [MainController::class, 'main'])->name('landing-page');
+Route::get('/biography', [MainController::class, 'biography'])->name('biography');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+
+
+/*
+|--------------------------------------------------------------------------
+| articles Routes
+|--------------------------------------------------------------------------
+*/
+Route::resource('articles', ArticleController::class);
+
+
+/*
+|--------------------------------------------------------------------------
+| Operations Routes
+|--------------------------------------------------------------------------
+*/
+Route::resource('operations', OperationController::class);
+
+
+//==============================================================================
+
+
+>>>>>>> 71a8481ecd3684437b2310b644bd100c0a51f1fc
 Route::get('/operations', function () {
     return view('main-page/operations');
 });
@@ -79,8 +115,8 @@ Route::get('/docview', function () {
 Route::get('/dashboard-article', function () {
     return view('dashboard/dashboard-article');
 });
-Route::get('/articleedit-dashb', function () {
-    return view('dashboard/articleedit-dashb');
+Route::get('/create', function () {
+    return view('dashboard/articles/create');
 });
 
 

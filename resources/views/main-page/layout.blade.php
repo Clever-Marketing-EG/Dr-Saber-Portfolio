@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     @include('main-page/shared/head')
-
 </head>
 <body>
     @include('main-page/shared/header')

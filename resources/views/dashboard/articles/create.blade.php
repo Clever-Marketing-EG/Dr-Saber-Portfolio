@@ -1,4 +1,4 @@
-@extends('dashboard/layoutmaster')
+@extends('dashboard.shared.layout')
 @section('content')
 
 <body class="sb-nav-fixed">
