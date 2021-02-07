@@ -15,7 +15,7 @@ class OperationController extends Controller
      */
     public function index(): View
     {
-        return view('main-page/operations');
+        return view('main/operations');
     }
 
     /**

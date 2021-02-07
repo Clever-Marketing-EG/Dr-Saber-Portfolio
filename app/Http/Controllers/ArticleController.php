@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function index(): View
     {
         $articles = Article::all();
-        return view('main-page/research', ['articles' => $articles]);
+        return view('main/research', ['articles' => $articles]);
     }
 
     /**

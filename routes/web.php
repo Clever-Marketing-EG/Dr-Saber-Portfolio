@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\OperationController;
 use Illuminate\Support\Facades\Route;
@@ -44,23 +45,27 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::resource('operations', OperationController::class);
 
 
+/*
+|--------------------------------------------------------------------------
+| Events Routes
+|--------------------------------------------------------------------------
+*/
+Route::resource('events', EventController::class);
+
 //==============================================================================
 
 
 Route::get('/operations', function () {
-    return view('main-page/operations');
+    return view('main/operations');
 });
 Route::get('/research', function () {
-    return view('main-page/research');
+    return view('main/research');
 });
 Route::get('/videos', function () {
     return view('min-page/videos');
 });
 Route::get('/videos', function () {
-    return view('main-page/videos');
-});
-Route::get('/events', function () {
-    return view('main-page/events');
+    return view('main/videos');
 });
 
 // dashboard
@@ -110,4 +115,6 @@ Route::group(['prefix' => 'ar'], function () {
     });
 });
 
-
+Route::get('/test', function () {
+   return view('main.events');
+});
