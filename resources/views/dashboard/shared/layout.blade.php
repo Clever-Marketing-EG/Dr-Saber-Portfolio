@@ -9,7 +9,7 @@
 
 @yield('content')
 @include('dashboard.shared.scripts')
-@include('main-page.Shared.scripts')
+@include('main.Shared.scripts')
 @include('dashboard.shared.footer')
 
 </body>

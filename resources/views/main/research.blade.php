@@ -1,5 +1,5 @@
 
-@extends('main-page/layout')
+@extends('main.Shared.layout')
 
 @section('content')
 <div class="main-container">

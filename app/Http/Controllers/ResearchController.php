@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Operation;
-use Illuminate\Contracts\View\View;
+use App\Models\Research;
 use Illuminate\Http\Request;
 
-class OperationController extends Controller
+class ResearchController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return View
+     * @return \Illuminate\Http\Response
      */
-    public function index(): View
+    public function index()
     {
-        return view('main/operations');
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class OperationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Operation  $operation
+     * @param  \App\Models\Research  $research
      * @return \Illuminate\Http\Response
      */
-    public function show(Operation $operation)
+    public function show(Research $research)
     {
         //
     }
@@ -53,10 +52,10 @@ class OperationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Operation  $operation
+     * @param  \App\Models\Research  $research
      * @return \Illuminate\Http\Response
      */
-    public function edit(Operation $operation)
+    public function edit(Research $research)
     {
         //
     }
@@ -65,10 +64,10 @@ class OperationController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Operation  $operation
+     * @param  \App\Models\Research  $research
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Operation $operation)
+    public function update(Request $request, Research $research)
     {
         //
     }
@@ -76,10 +75,10 @@ class OperationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Operation  $operation
+     * @param  \App\Models\Research  $research
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Operation $operation)
+    public function destroy(Research $research)
     {
         //
     }

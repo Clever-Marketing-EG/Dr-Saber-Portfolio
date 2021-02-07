@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Doctor - Home</title>
+<title>Dr Saber Waheb</title>
 
 <!-- Standard Favicon -->
 <link rel="icon" type="image/x-icon" href={{ asset("assets/images/favicon.ico") }} />
