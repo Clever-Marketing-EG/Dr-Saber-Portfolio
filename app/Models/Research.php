@@ -3,7 +3,7 @@
 namespace App\Models;
 
 
-class Research extends Article
+class Research extends Event
 {
 
 }
