@@ -57,7 +57,9 @@ body.boxed-layout::before {
 	padding-bottom: 23px;
 	text-transform: uppercase;
 }
-
+.diploma{
+    color: #fff;
+}
 .header_s a.phone-call {
 	border: 2px solid #446891;
 	border-bottom: none;

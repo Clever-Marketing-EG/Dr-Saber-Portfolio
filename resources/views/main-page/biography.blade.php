@@ -36,10 +36,15 @@
                         <div class="team-content">
                             <div class="team-box">
                                 <img src="assets/images/team-2.png" alt="team" />
-                                <h5>Jenin</h5>
+                                <h5><a href="" class=""></a> Jeremy Duncan <a class="zoom-in" href="../assets/images/gallery-1.jpg"><i class="fa fa-expand"></i></a></h5>
 
                             </div>
-                            <span class="team-catagory"><a href="" ><button type="button" class="btn btn-primary">title</button></a><a class="zoom-in" href="assets/images/team-2.png"><i class="fa fa-expand"></i></a></span>
+
+
+                            <a href="" ><button type="button" class="btn btn-primary">Primary</button></a>
+
+
+
 
                         </div>
                     </div>
@@ -47,16 +52,16 @@
                         <div class="team-content">
                             <div class="team-box">
                                 <img src="assets/images/team-2.png" alt="team" />
-                                <h5>Jenin</h5>
+                                <h5><a href="" class=""></a> Jeremy Duncan <a class="zoom-in" href="../assets/images/gallery-1.jpg"><i class="fa fa-expand"></i></a></h5>
                             </div>
-                            <span class="team-catagory">Cardiologist</span>
+                            <a href="" ><button type="button" class="btn btn-primary">Primary</button></a>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="team-content">
                             <div class="team-box">
                                 <img src="assets/images/team-3.png" alt="team" />
-                                <h5><a href="" class=""></a> Jeremy Duncan</h5>
+                                <h5><a href="" class=""></a> Jeremy Duncan <a class="zoom-in" href="../assets/images/gallery-1.jpg"><i class="fa fa-expand"></i></a></h5>
                             </div>
                             <a href="" ><button type="button" class="btn btn-primary">Primary</button></a>
 
@@ -66,9 +71,9 @@
                         <div class="team-content">
                             <div class="team-box">
                                 <img src="assets/images/team-4.png" alt="team" />
-                                <h5>Tedd Justice</h5>
+                                <h5><a href="" class=""></a> Jeremy Duncan <a class="zoom-in" href="../assets/images/gallery-1.jpg"><i class="fa fa-expand"></i></a></h5>
                             </div>
-                            <span class="team-catagory">Pediatrician</span>
+                            <a href="" ><button type="button" class="btn btn-primary">Primary</button></a>
                         </div>
                     </div>
                 </div>

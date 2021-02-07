@@ -62,6 +62,9 @@ Route::get('/videos', function () {
 Route::get('/events', function () {
     return view('main-page/events');
 });
+Route::get('/latest-article', function () {
+    return view('main-page/latest-article');
+});
 
 // dashboard
 Route::get('/dashboard', function () {
