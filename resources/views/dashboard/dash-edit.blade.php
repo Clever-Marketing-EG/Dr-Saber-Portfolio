@@ -5,13 +5,12 @@
     <div class="form-style">
     <form>
       <div class="form-group pb-3">
+        <div class="form-inline col-md-10 col-sm-9 col-xs-12">
+            <input type="file" class=" btn  btn-md file-uploader pull-left">
+        </div>
         <div class="articlename"><input type="text" name="article" id="article"class="form-control"></div>
       </div>
-      <div class="form-group pb-3">
-        <div class="image"><input type="text" name="article" id="article"class="form-control"><a title="Blog" href="#">
-            <img alt="blog" src="" />
-        </a></div>
-      </div>
+
       <div class="form-group pb-3">
         <div class="articlename"><input type="text" name="article" id="article"class="form-control"></div>
       </div>

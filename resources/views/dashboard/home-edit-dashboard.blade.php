@@ -91,8 +91,6 @@
                                             </figure>
                                             <div class="form-inline col-md-10 col-sm-9 col-xs-12">
                                                 <input type="file" class=" btn  btn-md file-uploader pull-left">
-
-
                                             </div>
                                         </div>
                                         <form action="edit-form">
