@@ -24,7 +24,57 @@
             </div><!-- Container /- -->
         </div>
 
-        <!-- Latest News -->
+        <div id="team-section" class="team-section container-fluid no-left-padding no-right-padding">
+            <!-- Container -->
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h3><a href="pag/events.html">Media</a> </h3>
+                </div>
+                <div class="team-carousel">
+                    <div class="col-md-12">
+                        <div class="team-content">
+                            <div class="team-box">
+                                <img src="assets/images/team-2.png" alt="team" />
+                                <h5>Jenin</h5>
+
+                            </div>
+                            <span class="team-catagory"><a href="" ><button type="button" class="btn btn-primary">title</button></a><a class="zoom-in" href="assets/images/team-2.png"><i class="fa fa-expand"></i></a></span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="team-content">
+                            <div class="team-box">
+                                <img src="assets/images/team-2.png" alt="team" />
+                                <h5>Jenin</h5>
+                            </div>
+                            <span class="team-catagory">Cardiologist</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="team-content">
+                            <div class="team-box">
+                                <img src="assets/images/team-3.png" alt="team" />
+                                <h5><a href="" class=""></a> Jeremy Duncan</h5>
+                            </div>
+                            <a href="" ><button type="button" class="btn btn-primary">Primary</button></a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="team-content">
+                            <div class="team-box">
+                                <img src="assets/images/team-4.png" alt="team" />
+                                <h5>Tedd Justice</h5>
+                            </div>
+                            <span class="team-catagory">Pediatrician</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Container /- -->
+        </div>
+
 
 
 
