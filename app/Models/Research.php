@@ -3,7 +3,7 @@
 namespace App\Models;
 
 
-class Operation extends Event
+class Research extends Event
 {
 
 }

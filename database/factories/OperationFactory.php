@@ -22,11 +22,12 @@ class OperationFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->unique()->word,
-            'title_ar' => $this->faker->unique()->word,
-            'description' => $this->faker->text,
-            'description_ar' => $this->faker->text,
-            'image_url' => $this->faker->imageUrl()
+            'title' => $this->faker->unique()->sentence,
+            'title_ar' => $this->faker->unique()->sentence,
+            'content' => $this->faker->text,
+            'content_ar' => $this->faker->text,
+            'image_url' => $this->faker->imageUrl(),
+            'video_url' => 'https://www.youtube.com/watch?v=WsptdUFthWI'
         ];
     }
 }

@@ -17,9 +17,10 @@ class CreateOperationsTable extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->string('title_ar')->unique();
-            $table->text('description');
-            $table->text('description_ar');
+            $table->text('content');
+            $table->text('content_ar');
             $table->string('image_url');
+            $table->string('video_url')->nullable();
             $table->timestamps();
         });
     }
