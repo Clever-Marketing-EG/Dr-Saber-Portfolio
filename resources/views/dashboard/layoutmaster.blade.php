@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('dashboard/shared/dashboardhead')
-    @include('main-page/shared/head')
+    @include('dashboard/shared/head-dash')
+
 </head>
 <body>
     @include('dashboard/shared/navbardashboard')

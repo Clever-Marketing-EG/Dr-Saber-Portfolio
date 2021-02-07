@@ -67,9 +67,182 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
-           <main>
-               
-           </main>
+            <main>
+                <div class="container-fluid">
+
+
+                    <div class="row">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                Article Data
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive table table-bordered" id="dataTable" width="100%" cellspacing="0"">
+                                    <table class="table table-hover" id="productname">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Article Name</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Handle</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+
+
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td><img src="/public/assets/images/2.jpg" alt=""></td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td><a href="/articleedit-dashb" title="Read More" class="read-more"> Edit</a></td>
+                                            <td><button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">show</button>
+
+                                                <div id="id01" class="modal">
+                                                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                  <form class="modal-content" action="/action_page.php">
+                                                    <div class="container">
+                                                      <h1>Article</h1>
+                                                      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                                                      <div class="clearfix">
+                                                        <button type="button" class="cancelbtn">Edit</button>
+                                                        <input type="button" value="Delete " class="deletebtn">
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                            </td>
+                                            <td><button class="btn btn-primary" type="button" value="Delete"><i class="fas fa-trash"></i></button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td><img src="/public/assets/images/2.jpg" alt=""></td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td><a href="/articleedit-dashb" title="Read More" class="read-more"> Edit</a></td>
+                                            <td><button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">show</button>
+
+                                                <div id="id01" class="modal">
+                                                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                  <form class="modal-content" action="/action_page.php">
+                                                    <div class="container">
+                                                      <h1>Article</h1>
+                                                      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                                                      <div class="clearfix">
+                                                        <button type="button" class="cancelbtn">Edit</button>
+                                                        <input type="button" value="Delete " class="deletebtn">
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                            </td>
+                                            <td><button class="btn btn-primary" type="button" value="Delete"><i class="fas fa-trash"></i></button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td><img src="/public/assets/images/2.jpg" alt=""></td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td><a href="/articleedit-dashb" title="Read More" class="read-more"> Edit</a></td>
+                                            <td><button class="btn btn-primary" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">show</button>
+
+                                                <div id="id01" class="modal">
+                                                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                  <form class="modal-content" action="/action_page.php">
+                                                    <div class="container">
+                                                      <h1>Article</h1>
+                                                      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                                                      <div class="clearfix">
+                                                        <button type="button" class="cancelbtn">Edit</button>
+                                                        <input type="button" value="Delete " class="deletebtn">
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                            </td>
+                                            <td><button class="btn btn-primary" type="button" value="Delete"><i class="fas fa-trash"></i></button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td><img src="/public/assets/images/2.jpg" alt=""></td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td><a href="/articleedit-dashb" title="Read More" class="read-more"> Edit</a></td>
+                                            <td><button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">show</button>
+
+                                                <div id="id01" class="modal">
+                                                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                  <form class="modal-content" action="/action_page.php">
+                                                    <div class="container">
+                                                      <h1>Article</h1>
+                                                      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                                                      <div class="clearfix">
+                                                        <button type="button" class="cancelbtn">Edit</button>
+                                                        <input type="button" value="Delete " class="deletebtn">
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                            </td>
+                                            <td><button class="btn btn-primary" type="button" value="Delete"><i class="fas fa-trash"></i></button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td><img src="/public/assets/images/2.jpg" alt=""></td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td><a href="/articleedit-dashb" title="Read More" class="read-more"> Edit</a></td>
+                                            <td><button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">show</button>
+
+                                                <div id="id01" class="modal">
+                                                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                  <form class="modal-content" action="/action_page.php">
+                                                    <div class="container">
+                                                      <h1>Article</h1>
+                                                      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                                                      <div class="clearfix">
+                                                        <button type="button" class="cancelbtn">Edit</button>
+                                                        <input type="button" value="Delete " class="deletebtn">
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                            </td>
+                                            <td><button class="btn btn-primary" type="button" value="Delete"><i class="fas fa-trash"></i></button></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </main>
         </div>
     </div>
 

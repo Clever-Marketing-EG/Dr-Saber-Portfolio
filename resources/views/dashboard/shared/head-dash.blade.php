@@ -12,4 +12,17 @@
 	<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib.css" rel="stylesheet">
+
+	<link href="assets/js/slick/slick.css" rel="stylesheet">
+    <link href="assets/js/slick/slick-theme.css" rel="stylesheet">
+
+	<!-- Custom - Common CSS -->
+	<link href="assets/css/plugins.css" rel="stylesheet">
+	<link href="assets/css/elements.css" rel="stylesheet">
+	<link href="assets/css/rtl.css" rel="stylesheet">
+	<link id="color" href="assets/css/color-schemes/default.css" rel="stylesheet"/>
+
+	<!-- Custom - Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>

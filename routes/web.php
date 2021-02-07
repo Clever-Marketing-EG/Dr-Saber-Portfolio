@@ -48,7 +48,7 @@ Route::get('/biography', function () {
             "title" => "article 2"
         ]
     ];
-    return view('main-page/test', ['events' => $collection]);
+    return view('main-page/biography', ['events' => $collection]);
 });
 Route::get('/contact-1', function () {
     return view('main-page/contact-1');
