@@ -1,4 +1,4 @@
-@extends('main-page/layout')
+@extends('main-page.Shared.layout')
 
 @section('content')
 <div class="main-container">
