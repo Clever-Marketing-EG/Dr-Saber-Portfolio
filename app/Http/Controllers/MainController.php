@@ -21,4 +21,9 @@ class MainController extends Controller
     {
         return view('main-page/contact');
     }
+
+    public function articles()
+    {
+        return view('main-page/latest-article');
+    }
 }
