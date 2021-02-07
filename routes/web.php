@@ -34,7 +34,7 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 | articles Routes
 |--------------------------------------------------------------------------
 */
-//Route::resource('articles', ArticleController::class);
+Route::resource('articles', ArticleController::class);
 
 
 /*
