@@ -42,16 +42,16 @@
 
 
 <!-- Library - Bootstrap v3.3.5 -->
-<link href="{{asset('assets/css/lib.css')}} rel="stylesheet">
+<link rel="stylesheet" href={{asset('assets/css/lib.css')}} />
 
-<link href={{asset('assets/js/slick/slick.css')}} rel="stylesheet">
-<link href={{asset('assets/js/slick/slick-theme.css')}} rel="stylesheet">
+<link rel="stylesheet" href={{asset('assets/js/slick/slick.css')}} />
+<link rel="stylesheet" href={{asset('assets/js/slick/slick-theme.css')}} />
 
 <!-- Custom - Common CSS -->
 <link href={{asset('assets/css/plugins.css')}} rel="stylesheet">
 <link href={{asset('assets/css/elements.css')}} rel="stylesheet">
 <link href={{asset('assets/css/rtl.css')}} rel="stylesheet">
-<link id="color" href={{asset('assets/css/color-schemes/default.css')}} rel="stylesheet"/>
+<link id="color" rel="stylesheet" href={{asset('assets/css/color-schemes/default.css')}} />
 
 <!-- Custom - Theme CSS -->
 <link rel="stylesheet" type="text/css" href={{asset('assets/style.css')}}>

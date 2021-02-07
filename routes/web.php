@@ -73,9 +73,6 @@ Route::get('/docview', function () {
 Route::get('/dashboard-article', function () {
     return view('dashboard/dashboard-article');
 });
-Route::get('/create', function () {
-    return view('dashboard/articles/create');
-});
 
 
 Route::get('/login', function () {
