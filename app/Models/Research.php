@@ -3,7 +3,7 @@
 namespace App\Models;
 
 
-class Operation extends Article
+class Research extends Article
 {
 
 }

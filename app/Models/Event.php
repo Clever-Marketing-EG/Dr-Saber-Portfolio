@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-
-class Operation extends Article
+class Event extends Article
 {
 
 }
