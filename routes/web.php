@@ -70,6 +70,10 @@ Route::get('/videos', function () {
 Route::get('/latest-article', function () {
     return view('main-page/latest-article');
 });
+Route::get('/show', function () {
+    return view('main/events/show');
+});
+
 
 // dashboard
 Route::get('/dashboard', function () {
