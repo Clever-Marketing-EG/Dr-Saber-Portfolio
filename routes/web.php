@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [MainController::class, 'main'])->name('landing-page');
 Route::get('/biography', [MainController::class, 'biography'])->name('biography');
+
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
 
