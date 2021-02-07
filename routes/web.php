@@ -29,7 +29,7 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
 /*
 |--------------------------------------------------------------------------
-| Articles Routes
+| articles Routes
 |--------------------------------------------------------------------------
 */
 Route::resource('articles', ArticleController::class);
@@ -72,8 +72,8 @@ Route::get('/docview', function () {
 Route::get('/dashboard-article', function () {
     return view('dashboard/dashboard-article');
 });
-Route::get('/articleedit-dashb', function () {
-    return view('dashboard/articleedit-dashb');
+Route::get('/create', function () {
+    return view('dashboard/articles/create');
 });
 
 
