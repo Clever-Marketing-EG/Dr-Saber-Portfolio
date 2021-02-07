@@ -16,48 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('main-page/welcome');
-})->name('main');
-
-Route::get('/biography', function () {
-    $collection = [
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ],
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ],
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ],
-        [
-            "title" => "article 1",
-            "image_url" =>"someurl.com"
-        ],
-        [
-            "title" => "article 2"
-        ]
-    ];
-    return view('main-page/biography', ['events' => $collection]);
-});
-Route::get('/contact-1', function () {
-    return view('main-page/contact-1');
-});
-=======
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +46,6 @@ Route::resource('operations', OperationController::class);
 //==============================================================================
 
 
->>>>>>> 71a8481ecd3684437b2310b644bd100c0a51f1fc
 Route::get('/operations', function () {
     return view('main-page/operations');
 });

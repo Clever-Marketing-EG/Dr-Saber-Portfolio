@@ -15,20 +15,8 @@
 
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav menubar navbar-left">
-<<<<<<< HEAD
-                    <li class="active"><a title="Home" href="/">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#doctors" title="for doctors" data-toggle="dropdown"class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">About Dr Saber</a>
-                        <i class="ddl-switch fa fa-angle-down"></i>
-                        <ul class="dropdown-menu">
-                            <li><a href="biography" title="Blog Post">Biography</a></li>
-                            <li><a href="operations" title="Blog Post">Latest Article</a></li>
-                        </ul>
-                    </li>
-=======
                     <li class="active"><a title="Home" href=" {{route('landing-page')}}">Home</a></li>
                     <li><a title="Biography" href="biography">About Dr Saber Waheb</a></li>
->>>>>>> 71a8481ecd3684437b2310b644bd100c0a51f1fc
                     <li class="dropdown">
                         <a href="#doctors" title="for doctors" data-toggle="dropdown"class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">For Doctors</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
