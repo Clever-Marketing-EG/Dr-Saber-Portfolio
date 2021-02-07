@@ -19,7 +19,9 @@ class CreateArticlesTable extends Migration
             $table->string('title_ar')->unique();
             $table->text('content');
             $table->text('content_ar');
+            $table->json('meta')->nullable();
             $table->string('image_url');
+            $table->string('video_url')->nullable();
             $table->timestamps();
         });
     }
