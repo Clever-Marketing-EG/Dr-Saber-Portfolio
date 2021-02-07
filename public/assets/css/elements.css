@@ -428,6 +428,9 @@ body.boxed-layout::before {
     position: relative;
     text-align: center;
 }
+.page-banner1{
+    background-image: url("images/1.jpg");
+}
 .page-banner .page-banner-content {
 	position: relative;
 	padding: 127px 0;
