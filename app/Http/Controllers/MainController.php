@@ -7,7 +7,7 @@ class MainController extends Controller
 {
     public function main()
     {
-        return view('main/landing-page');
+        return view('main.index');
     }
 
     public function biography()

@@ -1,4 +1,4 @@
-@extends('main.Shared.layout')
+@extends('main.shared.layout')
 @section('content')
 <div class="main-container">
     <main>
@@ -188,7 +188,7 @@
                         </div>
                         <!-- <a href="operations.html" class="learn-more" title="Learn More">Learn More</a>
                         <span>Or</span> -->
-                        <a href="operations" class="learn-more appointment" title="Make an Appointment">See Our Opertion</a>
+                        <a href="../operations" class="learn-more appointment" title="Make an Appointment">See Our Opertion</a>
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-12 col-xs-12 services-img">

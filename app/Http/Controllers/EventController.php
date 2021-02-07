@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+
+define('RESULTS_PER_PAGE', 21);
+
 
 class EventController extends Controller
 {
@@ -19,7 +20,7 @@ class EventController extends Controller
     public function index(): View
     {
         $events = Event::paginate(21);
-        return view('main.events.index', ['events' => $events]);
+        return view('events.index', ['events' => $events]);
     }
 
     /**
@@ -27,7 +28,7 @@ class EventController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create(): Response
     {
         //
     }
@@ -38,9 +39,9 @@ class EventController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request): Response
     {
-        //
+        //TODO
     }
 
     /**
@@ -51,7 +52,7 @@ class EventController extends Controller
      */
     public function show(Event $event): View
     {
-        return view('main.events.show', ['event' => $event]);
+        return view('events.show', ['event' => $event]);
     }
 
     /**
@@ -60,9 +61,9 @@ class EventController extends Controller
      * @param Event $event
      * @return Response
      */
-    public function edit(Event $event)
+    public function edit(Event $event): Response
     {
-        //
+        //TODO
     }
 
     /**
@@ -72,9 +73,9 @@ class EventController extends Controller
      * @param Event $event
      * @return Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, Event $event): Response
     {
-        //
+        //TODO
     }
 
     /**
@@ -83,8 +84,20 @@ class EventController extends Controller
      * @param Event $event
      * @return Response
      */
-    public function destroy(Event $event)
+    public function destroy(Event $event): Response
     {
-        //
+        //TODO
+    }
+
+    public function search(Request $request)
+    {
+        $events = Event::query()
+            ->where('title', 'LIKE', "%{$request['term']}%")
+            ->where('title_ar', 'LIKE', "%{$request['term']}%")
+            ->where('content', 'LIKE', "%{$request['term']}%")
+            ->where('content', 'LIKE', "%{$request['term']}%")
+            ->paginate(21);
+
+        return view('main.events.index', ['events' => $events]);
     }
 }

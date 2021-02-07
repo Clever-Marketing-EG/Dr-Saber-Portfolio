@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function index(): View
     {
         $articles = Article::all();
-        return view('main/research', ['articles' => $articles]);
+        return view('articles.index', ['articles' => $articles]);
     }
 
     /**
@@ -41,7 +41,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //TODO handle store Articles
     }
 
     /**
@@ -88,4 +88,15 @@ class ArticleController extends Controller
     {
         //
     }
+
+
+//    TODO
+//    public function search(Request $request)
+//    {
+//        $request->validate([
+//            'term' => 'required|string|min:3'
+//        ]);
+//
+//        dd($request['term']);
+//    }
 }

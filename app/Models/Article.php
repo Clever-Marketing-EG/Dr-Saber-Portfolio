@@ -21,8 +21,4 @@ class Article extends Model
         'video_url'
     ];
 
-    public function getCreatedAtAttribute($date): string
-    {
-        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
-    }
 }

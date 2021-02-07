@@ -35,6 +35,7 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 |--------------------------------------------------------------------------
 */
 Route::resource('articles', ArticleController::class);
+//Route::get('search/articles/{term}', [ArticleController::class, 'search']);
 
 
 /*
@@ -51,16 +52,11 @@ Route::resource('operations', OperationController::class);
 |--------------------------------------------------------------------------
 */
 Route::resource('events', EventController::class);
+Route::get('/search/events/{term}', [EventController::class, 'search']);
 
 //==============================================================================
 
 
-Route::get('/operations', function () {
-    return view('main/operations');
-});
-Route::get('/research', function () {
-    return view('main/research');
-});
 Route::get('/videos', function () {
     return view('min-page/videos');
 });
@@ -123,5 +119,9 @@ Route::group(['prefix' => 'ar'], function () {
 });
 
 Route::get('/test', function () {
-   return view('main.events');
+   return view('dashboard.dashboard');
+});
+
+Route::fallback(function () {
+    return 'Not Found!';
 });

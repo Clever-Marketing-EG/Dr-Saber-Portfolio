@@ -22,6 +22,6 @@ class Event extends Model
 
     public function getCreatedAtAttribute($date): string
     {
-        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d-M-Y');
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d - M - Y');
     }
 }

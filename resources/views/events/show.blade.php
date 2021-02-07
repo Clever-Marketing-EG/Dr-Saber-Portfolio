@@ -1,4 +1,4 @@
-@extends('main/shared/layout')
+@extends('main.shared.layout')
 @section('content')
     <div class="main-container">
         <main>
@@ -31,7 +31,7 @@
                         </div>
 
                     </div>
-
+                    {{--TODO--}}
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/WsptdUFthWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="col-md-4 col-sm-5 col-xs-6">
                         <div class="info-box">
