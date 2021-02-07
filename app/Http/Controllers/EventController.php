@@ -18,7 +18,7 @@ class EventController extends Controller
      */
     public function index(): View
     {
-        $events = Event::paginate(20);
+        $events = Event::paginate(21);
         return view('main.events', ['events' => $events]);
     }
 
@@ -35,7 +35,7 @@ class EventController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return Response
      */
     public function store(Request $request)
@@ -46,18 +46,19 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Event  $event
-     * @return Response
+     * @param Event $event
+     * @return View
      */
-    public function show(Event $event)
+    public function show(Event $event): View
     {
-        //
+//        dd($event);
+        return view('main.contact');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param Event $event
      * @return Response
      */
     public function edit(Event $event)
@@ -68,8 +69,8 @@ class EventController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
+     * @param Request $request
+     * @param Event $event
      * @return Response
      */
     public function update(Request $request, Event $event)
@@ -80,7 +81,7 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Event  $event
+     * @param Event $event
      * @return Response
      */
     public function destroy(Event $event)
