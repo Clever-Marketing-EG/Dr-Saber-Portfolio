@@ -13,7 +13,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="navbar-brand" href="docview" ><img src="assets/images/logo4.png" alt="Logo"></a>
+                        <a class="navbar-brand" href="docview" ><img src={{asset("assets/images/logo4.png")}} alt="Logo"></a>
 
 
 
