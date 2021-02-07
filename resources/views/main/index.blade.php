@@ -55,7 +55,7 @@
                                 data-paddingright="[10,10,10,10]"
                                 data-paddingbottom="[15,15,15,70]"
                                 data-paddingleft="[10,10,10,10]"
-                                style="z-index: 10; border-radius: 0; letter-spacing:0.8px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><a href="biography.html" <span class="button-txt"><i class="fa fa-stethoscope" style="text-align: center; line-height: 50px; width: 70px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.06); margin-right: 10px;"></i> About Dr Saber Waheb</span></a>
+                                style="z-index: 10; border-radius: 0; letter-spacing:0.8px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><a href="biography.html"> <span class="button-txt"><i class="fa fa-stethoscope" style="text-align: center; line-height: 50px; width: 70px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.06); margin-right: 10px;"></i> About Dr Saber Waheb</span></a>
                             </div>
                         </li>
                         <li data-transition="zoomout" data-slotamount="default"  data-easein="easeInOut" data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7">
@@ -106,7 +106,7 @@
                                 data-paddingright="[10,10,10,10]"
                                 data-paddingbottom="[15,15,15,70]"
                                 data-paddingleft="[10,10,10,10]"
-                                style="z-index: 10; border-radius: 0; letter-spacing:0.8px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><a href="biography.html" <span class="button-txt"><i class="fa fa-stethoscope" style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.06); margin-right: 10px;"></i> Latest News</span></a>
+                                style="z-index: 10; border-radius: 0; letter-spacing:0.8px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><a href="biography.html"> <span class="button-txt"><i class="fa fa-stethoscope" style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.06); margin-right: 10px;"></i> Latest News</span></a>
                             </div>
                         </li>
                         <li data-transition="zoomout" data-slotamount="default"  data-easein="easeInOut" data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7">
@@ -156,7 +156,7 @@
                                 data-paddingright="[10,10,10,10]"
                                 data-paddingbottom="[15,15,15,70]"
                                 data-paddingleft="[10,10,10,10]"
-                                style="z-index: 10; border-radius: 0; letter-spacing:0.8px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><a href="biography.html" <span class="button-txt"><i class="fa fa-stethoscope" style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.06); margin-right: 10px;"></i> See My Bio</span></a>
+                                style="z-index: 10; border-radius: 0; letter-spacing:0.8px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><a href="biography.html"> <span class="button-txt"><i class="fa fa-stethoscope" style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.06); margin-right: 10px;"></i> See My Bio</span></a>
                             </div>
 
                         </li>
@@ -218,7 +218,7 @@
                             </div>
 
 
-                            <a href="pag/research.html" class="btn-submit pull-right"" style="text-decoration: none;">Scientific Publication</a>
+                            <a href="pag/research.html" class="btn-submit pull-right" style="text-decoration: none;">Scientific Publication</a>
                             <div id="appointment-alert-msg" class="alert-msg"></div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             </div>
 
-                            <a href="pag/operations.html" class="btn-submit pull-right"" style="text-decoration: none;">Operations</a>
+                            <a href="pag/operations.html" class="btn-submit pull-right" style="text-decoration: none;">Operations</a>
                         </form>
                     </div>
                 </div>
