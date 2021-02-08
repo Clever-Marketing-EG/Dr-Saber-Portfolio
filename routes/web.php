@@ -119,8 +119,14 @@ Route::group(['prefix' => 'ar'], function () {
 });
 
 Route::get('/test', function () {
-   return view('dashboard.dashboard');
+
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 
 Route::fallback(function () {
     return 'Not Found!';
