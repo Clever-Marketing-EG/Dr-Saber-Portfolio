@@ -36,7 +36,6 @@ Route::get('/', [MainController::class, 'main'])->name('main.home');
 */
 Route::resource('articles', ArticleController::class);
 
-
 /*
 |--------------------------------------------------------------------------
 | Operations Routes
