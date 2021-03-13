@@ -1,16 +1,16 @@
 /*------------------------------------
 	Theme Name: Doctor
-	Start Date :
-	End Date :
-	Last change:
+	Start Date : 
+	End Date : 
+	Last change: 
 	Version: 1.0
 	Assigned to:
 	Primary use:
 ---------------------------------------*/
-/*
-
-	* Document Scroll
-
+/*	
+	
+	* Document Scroll		
+		
 	* Document Ready
 		- Menu Triangle
 		- Responsive Caret
@@ -22,7 +22,7 @@
 		- Client Carousel
 		- Team Carousel
 		- News Carousel
-		- Gallery Section
+		- Gallery Section 
 		- Gallery Detail
 		- Testimonial Slider
 		- Contact Map
@@ -37,7 +37,7 @@
 (function($) {
 
 	"use strict"
-
+	
 	/* - Menu Switch * */
 	function menu_switch(){
 		var width = $(window).width();
@@ -49,19 +49,19 @@
 			$(".ownavigation .navbar-nav").removeClass("menu-open");
 		}
 	}
-
+	
 	/* - Menu Triangle */
 	function menu_triangle() {
 		var width = $(window).width();
 		if( width > 991 ) {
 			$( ".header_s16 .ownavigation .nav > li" ).each(function (i){
-				var menu_width;
+				var menu_width;			
 				menu_width = $(".header_s16 .ownavigation .nav > li").eq(i).width();
 				var border_width = menu_width / 2;
 				$(".header_s16 .ownavigation .nav > li > a").eq(i).find(' > span').remove();
 				$(".header_s16 .ownavigation .nav > li > a").eq(i).append("<span class='left-brd'></span>","<span class='right-brd'></span>");
 				$(".header_s16 .ownavigation .nav > li > a .left-brd").eq(i).css("border-right-width",border_width);
-				$(".header_s16 .ownavigation .nav > li > a .right-brd").eq(i).css("border-left-width",border_width);
+				$(".header_s16 .ownavigation .nav > li > a .right-brd").eq(i).css("border-left-width",border_width);		
 			});
 		} else {
 			$( ".header_s16 .ownavigation .nav > li" ).each(function (i){
@@ -82,7 +82,7 @@
 			$(".ownavigation .nav li .dropdown-menu").removeAttr("style");
 		}
 	}
-
+	
 	/* - Expand Panel Resize * */
 	function panel_resize(){
 		var width = $(window).width();
@@ -92,7 +92,7 @@
 			}
 		}
 	}
-
+	
 	/* - Google Map* */
 	function initialize(obj) {
 		var lat = $("#"+obj).attr("data-lat");
@@ -101,10 +101,10 @@
 		var myLatlng = new google.maps.LatLng(lat,lng);
 		var map, marker, infowindow;
 		var image = "assets/images/marker.png";
-		var zoomLevel = parseInt($("#"+obj).attr("data-zoom") ,10);
+		var zoomLevel = parseInt($("#"+obj).attr("data-zoom") ,10);		
 		var styles = [{"featureType":"landscape","stylers":[{"saturation":" "},{"lightness":" "},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":" "},{"lightness":" "},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":" "},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":" "},{"lightness":" "},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":" "},{"lightness":" "},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":" "},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":" "},{"saturation":" "}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":" "},{"saturation":" "}]}]
-		var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
-
+		var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});	
+		
 		var mapOptions = {
 			zoom: zoomLevel,
 			disableDefaultUI: true,
@@ -114,16 +114,16 @@
             mapTypeIds: [google.maps.MapTypeId.ROADMAP, "map_style"]
 			}
 		}
-
-		map = new google.maps.Map(document.getElementById(obj), mapOptions);
-
+		
+		map = new google.maps.Map(document.getElementById(obj), mapOptions);	
+		
 		map.mapTypes.set("map_style", styledMap);
 		map.setMapTypeId("map_style");
-
+		
 		infowindow = new google.maps.InfoWindow({
 			content: contentString
-		});
-
+		});      
+	    
         marker = new google.maps.Marker({
 			position: myLatlng,
 			map: map,
@@ -132,17 +132,17 @@
 
 		google.maps.event.addListener(marker, "click", function() {
 			infowindow.open(map,marker);
-		});
+		});	
 	}
-
+	
 	function sticky_menu() {
 		var menu_scroll = $('header[class*="header_s"]').offset().top;
 		var scroll_top = $(window).scrollTop();
-
+		
 		if ( scroll_top > menu_scroll ) {
 			$(".header_s .ownavigation").addClass("navbar-fixed-top animated fadeInDown");
 		} else {
-			$(".header_s .ownavigation").removeClass("navbar-fixed-top animated fadeInDown");
+			$(".header_s .ownavigation").removeClass("navbar-fixed-top animated fadeInDown"); 
 		}
 	}
 
@@ -152,7 +152,7 @@
 		/* - Scrolling Navigation* */
 		var width	=	$(window).width();
 		var height	=	$(window).height();
-
+		
 		/* - Set Sticky Menu* */
 		if( $(".header_s .ownavigation").length ) {
 			sticky_menu();
@@ -171,24 +171,24 @@
 				li.children(".dropdown-menu").slideDown();
 			}
 		});
-
+		
 		/* - Expand Panel * */
 		$("#slideit").on ("click", function() {
 			$("#slidepanel").slideDown(1000);
 			$("html").animate({ scrollTop: 0 }, 1000);
-		});
+		});	
 
 		/* Collapse Panel * */
 		$("#closeit").on("click", function() {
 			$("#slidepanel").slideUp("slow");
 			$("html").animate({ scrollTop: 0 }, 1000);
-		});
-
+		});	
+		
 		/* Switch buttons from "Log In | Register" to "Close Panel" on click * */
 		$("#toggle a").on("click", function() {
 			$("#toggle a").toggle();
 		});
-
+		
 		/* - Color Switcher */
 		if( $('#choose_style').length ) {
 
@@ -201,7 +201,7 @@
 				$("#color" ).attr("href","assets/css/color-schemes/blue.css");
 				return false;
 			});
-
+			
 			$("#green").on("click", function() {
 				$("#color" ).attr("href","assets/css/color-schemes/green.css");
 				return false;
@@ -247,48 +247,48 @@
 				$("#choose_style").toggleClass("position");
 			});
 		}
-
+		
 		$(".color-switcher-block li a").on("click", function() {
 			$(".color-switcher-block li").removeClass("active");
 			$(this).parent().addClass("active");
 		});
-
+		
 		/* - Cookies */
 		var layout = $.cookie('choose-switcher-box > ul li');
 		if (!($.cookie('choose-switcher-box > ul li'))) {
-
+			
 			$.cookie('choose-switcher-box > ul li', 'full-view', 365);
 			layout = $.cookie('choose-switcher-box > ul li');
 			$('#choose_style .choose-switcher-box > ul li a[id="full_view"]');
-
+			
 		} else {
-
+			
 			if (layout=="box-view") {
-
+				
 				$("body").addClass("boxed-layout");
-
-			} else {
-
+				
+			} else { 
+			
 				$("body").removeClass("boxed-layout");
 			};
-
+			
 		};
-
+		
 		/* - View Box */
 		$("#full_view").on("click", function(e) {
-			e.preventDefault();
+			e.preventDefault(); 
 			$("body").removeClass("boxed-layout");
 			$.cookie('choose-switcher-box > ul li', 'full-view', 365);
 			document.location.reload();
 		});
-
+		
 		$("#box_view").on("click", function(e) {
-			e.preventDefault();
+			e.preventDefault(); 
 			$("body").addClass("boxed-layout");
 			$.cookie('choose-switcher-box > ul li', 'box-view', 365);
 			document.location.reload();
 		});
-
+		
 		/* - Rev Slider */
 		if($(".slider-section").length){
 			$("#home-slider1").revolution({
@@ -303,7 +303,7 @@
 					bullets: {
 						enable:true,
 						style:"zeus",
-						hide_onleave:false,
+						hide_onleave:false,						
 						direction:"horizontal",
 						h_align:"center",
 						v_align:"bottom",
@@ -318,17 +318,17 @@
 				gridheight:[989,800,700,480]
 			});
 		}
-
+		
 		/* - Menu Switch */
 		if($(".menu-switch").length){
 			menu_switch();
 		}
-
+		
 		/* - Menu Triangle */
 		menu_triangle();
-
+		
 		panel_resize();
-
+		
 		/* - Search* */
 		if($(".search-box").length){
 			$("#search").on("click", function(){
@@ -338,9 +338,9 @@
 				$(".search-box").removeClass("active")
 			});
 		}
-
+		
 		$('#datetimepicker1 input').datepicker({ });
-
+		
 		/* - Client Carousel */
 		if( $(".clients-carousel").length ) {
 			$(".clients-carousel").owlCarousel({
@@ -365,7 +365,7 @@
 				}
 			});
 		}
-
+		
 		/* - Team Carousel */
 		if( $(".team-carousel").length ) {
 			$(".team-carousel").owlCarousel({
@@ -390,7 +390,7 @@
 				}
 			});
 		}
-
+		
 		/* - News Carousel */
 		if( $(".news-carousel").length ) {
 			$(".news-carousel").owlCarousel({
@@ -409,8 +409,8 @@
 				}
 			});
 		}
-
-		/* - Gallery Section */
+		
+		/* - Gallery Section */		
 		if( $(".content-image-block").length ){
 			$(".content-block-hover").magnificPopup({
 				delegate: "a.zoom-in",
@@ -423,11 +423,11 @@
 					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
 				},
 				image: {
-					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',				
 				}
 			});
 		}
-
+		
 		/* - Gallery Detail */
 		if( $(".gallery-details-thumb").length ){
 			$('.gallery-details-thumb').flexslider({
@@ -448,8 +448,8 @@
 				sync: ".gallery-details-thumb"
 			});
 		}
-
-		/* - Testimonial Slider */
+		
+		/* - Testimonial Slider */			
 		$(".testimonial-slider").slick({
 			centerMode: true,
 			centerPadding: "190px",
@@ -487,7 +487,7 @@
 		if($("#map-canvas-contact-1").length===1){
 			initialize("map-canvas-contact-1");
 		}
-
+		
 		/* - Quick Contact Form */
 		$( "#btn_submit" ).on( "click", function(event) {
 			event.preventDefault();
@@ -506,7 +506,7 @@
 					} else {
 						$("#alert-msg").html(data["msg"]);
 						$("#alert-msg").addClass("alert-msg-success");
-						$("#alert-msg").removeClass("alert-msg-failure");
+						$("#alert-msg").removeClass("alert-msg-failure");					
 						$("#input_name").val("");
 						$("#input_phone").val("");
 						$("#textarea_message").val("");
@@ -519,7 +519,7 @@
 			});
 			return false;
 		});/* Quick Contact Form /- */
-
+		
 		/* - Questiong Form */
 		$( "#que_btn_submit" ).on( "click", function(event) {
 			event.preventDefault();
@@ -538,7 +538,7 @@
 					} else {
 						$("#alert-msg-que").html(data["msg"]);
 						$("#alert-msg-que").addClass("alert-msg-success");
-						$("#alert-msg-que").removeClass("alert-msg-failure");
+						$("#alert-msg-que").removeClass("alert-msg-failure");					
 						$("#input_fname").val("");
 						$("#input_email").val("");
 						$("#input_subject").val("");
@@ -551,21 +551,8 @@
 				}
 			});
 			return false;
-        });/* - Questiong Form *- */
-
-        // dashboard
-        $('table').on('click', 'button[type="button"]', function(e){
-            $(this).closest('tr').remove()
-         });
-
-        var modal = document.getElementById('id01');
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-
-            }
-        };
-
+		});/* - Questiong Form *- */
+		
 		/* - Appointment Form */
 		$( "#appointment_submit" ).on( "click", function(event) {
 			event.preventDefault();
@@ -584,7 +571,7 @@
 					} else {
 						$("#appointment-alert-msg").html(data["msg"]);
 						$("#appointment-alert-msg").addClass("alert-msg-success");
-						$("#appointment-alert-msg").removeClass("alert-msg-failure");
+						$("#appointment-alert-msg").removeClass("alert-msg-failure");					
 						$("#patient_name").val("");
 						$("#patient_email").val("");
 						$("#patient_date").val("");
@@ -600,9 +587,9 @@
 			});
 			return false;
 		});/* - Appointment Form /- */
-
+		
 	});	/* - Document Ready /- */
-
+	
 	/* Event - Window Scroll */
 	$(window).on("scroll",function() {
 		/* - Set Sticky Menu* */
@@ -610,25 +597,25 @@
 			sticky_menu();
 		}
 	});
-
+	
 	$( window ).on("resize",function() {
-
+		
 		var width	=	$(window).width();
 		var height	=	$(window).height();
-
+		
 		/* - Expand Panel Resize */
 		panel_resize();
-
+		
 		/* - Menu Switch */
 		if($(".menu-switch").length){
 			menu_switch();
 		}
-
+		
 		/* - Menu Triangle */
 		menu_triangle();
-
+		
 	});
-
+	
 	/* ## Window Load - Handler for .load() called */
 	$(window).on("load",function() {
 		/* - Site Loader* */
@@ -638,8 +625,8 @@
 		else {
 			$("#site-loader").css("display","none");
 		}
-
-		/* - Gallery Section */
+		
+		/* - Gallery Section */	
 		if( $(".portfolio-list").length ) {
 			var $container = $(".portfolio-list");
 			$container.isotope({
@@ -652,11 +639,11 @@
 				$("#filters a").removeClass("active");
 				$(this).addClass("active");
 				var selector = $(this).attr("data-filter");
-				$container.isotope({ filter: selector });
+				$container.isotope({ filter: selector });		
 				return false;
 			});
 		}
-
+		
 	});
 
 })(jQuery);

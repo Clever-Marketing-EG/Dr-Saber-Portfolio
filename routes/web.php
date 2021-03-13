@@ -23,10 +23,10 @@ use Illuminate\Support\Facades\Route;
 | Main Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/', [MainController::class, 'main'])->name('landing-page');
-Route::get('/biography', [MainController::class, 'biography'])->name('biography');
-Route::get('/articles', [MainController::class, 'articles'])->name('articles');
-Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+Route::get('/', [MainController::class, 'main'])->name('main.home');
+//Route::get('/biography', [MainController::class, 'biography'])->name('biography');
+//Route::get('/articles', [MainController::class, 'articles'])->name('articles');
+//Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
 
 /*
@@ -34,8 +34,6 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 | articles Routes
 |--------------------------------------------------------------------------
 */
-Route::resource('articles', ArticleController::class);
-//Route::get('search/articles/{term}', [ArticleController::class, 'search']);
 
 
 /*
@@ -43,7 +41,6 @@ Route::resource('articles', ArticleController::class);
 | Operations Routes
 |--------------------------------------------------------------------------
 */
-Route::resource('operations', OperationController::class);
 
 
 /*
@@ -51,76 +48,19 @@ Route::resource('operations', OperationController::class);
 | Events Routes
 |--------------------------------------------------------------------------
 */
-Route::resource('events', EventController::class);
-Route::get('/search/events/{term}', [EventController::class, 'search']);
-
 //==============================================================================
-
-
-Route::get('/videos', function () {
-    return view('min-page/videos');
-});
-Route::get('/videos', function () {
-    return view('main/videos');
-});
-Route::get('/latest-article', function () {
-    return view('main-page/latest-article');
-});
-Route::get('/show', function () {
-    return view('main/events/show');
-});
-
 
 // dashboard
 Route::get('/dashboard', function () {
     return view('dashboard/dashboard');
-});
-Route::get('/docview', function () {
-    return view('dashboard/docview');
-});
-Route::get('/dashboard-article', function () {
-    return view('dashboard/dashboard-article');
 });
 
 
 Route::get('/login', function () {
     return view('dashboard/login');
 });
-Route::get('/home-edit-dashboard', function () {
-    return view('dashboard/home-edit-dashboard');
-});
-// Test
-
-Route::get('/article-data-dahboard', function () {
-    return view('dashboard/article-data-dahboard');
-});
-Route::get('/oper-edit-dahboard', function () {
-    return view('dashboard/oper-edit-dahboard');
-});
-Route::get('/dash-edit', function () {
-    return view('dashboard/dash-edit');
-});
 
 
-Route::group(['prefix' => 'ar'], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('main.ar');
-
-    Route::get('/operations', function () {
-        return view('operations');
-    });
-    Route::get('/research', function () {
-        return view('research');
-    });
-    Route::get('/videos', function () {
-        return view('videos');
-    });
-});
-
-Route::get('/test', function () {
-
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

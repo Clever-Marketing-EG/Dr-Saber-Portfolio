@@ -163,7 +163,7 @@ html[dir="rtl"] .header_s15 .ownavigation .navbar-nav > li:last-child > a {
 
 /* - Header 20 */
 html[dir="rtl"] .header_s20 .ownavigation .navbar-nav > li:first-child > a {
-	border-right: 1px solid #446891;
+	border-right: 1px solid #00d2eb;
 }
 html[dir="rtl"] .header_s20 .ownavigation .navbar-nav > li:first-child {
 	margin-left: 0;
