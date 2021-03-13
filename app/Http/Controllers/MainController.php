@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Article;
+
 class MainController extends Controller
 {
     public function main()
@@ -20,8 +22,4 @@ class MainController extends Controller
         return view('main/contact');
     }
 
-    public function articles()
-    {
-        return view('main/latest-article');
-    }
 }
