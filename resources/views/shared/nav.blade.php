@@ -10,31 +10,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><i class="fa fa-heartbeat"></i>Saber Waheb</a>
+
             </div>
-            <a href="tel:386489550686" title="+386 489 550 686" class="phone-call"><i class="fa fa-phone-square"></i>+386 489 550 686</a>
+            <a class="navbar-brand" style="font-size: 18px;margin-top:-9px;color: #03296fba;">
+                <img src="assets/images/logo.jpg" alt="" class="logo-img"/>
+                Dr.Saber Waheeb
+            </a>
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav menubar navbar-left">
                     <li><a title="Home" href={{route('main.home')}}>Home</a></li>
-                    <li><a title="About" href={{route('articles.index')}}>Articles</a></li>
-                    <li><a title="About" href="about.html">About</a></li>
-                    <li><a title="Services" href="services.html">Services</a></li>
-                    <li><a title="Work" href="gallery.html">Work</a></li>
+                    <li><a title="About" href="about.html">Biography</a></li>
+                    <li><a title="About" href={{route('articles.index')}}>Events</a></li>
+                    <li><a title="Services" href="services.html">Media</a></li>
+                    <li><a title="Work" href="gallery.html">Events</a></li>
+
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                        <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Doctors</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
                         <ul class="dropdown-menu">
-                            <li><a href="blog-2column.html" title="Blog Post">Blog 2column</a></li>
-                            <li><a href="blogsidebar-left.html" title="Blog Post">Blog sidebar left</a></li>
-                            <li><a href="blogsidebar-right.html" title="Blog Post">Blog sidebar right</a></li>
+                            <li><a href="blog-2column.html" title="Blog Post">Scientific publications</a></li>
+                            <li><a href="blogsidebar-left.html" title="Blog Post">Operations</a></li>
                         </ul>
                     </li>
+                    <li><a title="Work" href="gallery.html">Contact Us</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" title="Contact" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
+                        <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
                         <ul class="dropdown-menu">
-                            <li><a href="contact-1.html" title="Blog Post">Contact 1</a></li>
-                            <li><a href="contact-2.html" title="Blog Post">Contact 2</a></li>
+                            <li><a href="blog-2column.html" title="Blog Post">EN</a></li>
+                            <li><a href="blogsidebar-left.html" title="Blog Post">AR</a></li>
                         </ul>
                     </li>
                 </ul>

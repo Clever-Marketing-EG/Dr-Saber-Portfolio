@@ -5,7 +5,7 @@
 <body>
     @include('shared.nav')
     @yield('content')
-
+    @include('shared.footer')
     @include('shared.scripts')
 </body>
 </html>
