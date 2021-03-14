@@ -817,3 +817,19 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
     color: #fff;
 }
 
+.mb{
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #03296fba;
+    font-size: 12px;
+}
+.footer-title{
+    color: #03296fba;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.section-two{
+    margin-top: 50px;
+    margin-left: 50px;
+}
