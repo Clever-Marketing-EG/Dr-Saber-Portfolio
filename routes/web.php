@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\EventController;
 use App\Http\Controllers\MainController;
-use App\Http\Controllers\OperationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,24 +48,10 @@ Route::resource('articles', ArticleController::class);
 */
 //==============================================================================
 
-// dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard/dashboard');
-});
 
-
-Route::get('/login', function () {
-    return view('dashboard/login');
-});
-
-
-
-Route::get('/dashboard', function () {
+Route::get('/dashboar', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
 
-Route::fallback(function () {
-    return 'Not Found!';
-});
+require __DIR__.'/auth.php';
