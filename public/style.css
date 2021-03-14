@@ -812,11 +812,14 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
     background-color: #03296fba;
     box-shadow: 0 3px 35px 0 rgb(78 78 78 / 0.1);
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     color: #fff;
 }
-
+.icon-container i{
+    font-size: 14px;
+    margin-top: 7px;
+}
 .mb{
     margin-bottom: 5px;
     font-family: 'Open Sans', sans-serif;
@@ -832,4 +835,30 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
 .section-two{
     margin-top: 50px;
     margin-left: 50px;
+}
+.map-container iframe{
+    max-width: 400px;
+    min-width: 300px;
+    height: 200px;
+    width: 100%;
+    margin-top: 50px;
+    box-shadow: 0 3px 35px 0 rgb(78 78 78 / 0.1);
+    border-radius: 15px;
+    border: 0;
+
+}
+.map-container{
+    margin-left: -78px;
+}
+@media only screen and (max-width:790px){
+    .map-container{
+        margin-left: 0px;
+    }
+}
+.name{
+    color: #03296fba;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 40px;
+    margin-bottom: -20px;
 }
