@@ -50,7 +50,7 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
         $article->load('images');
-        return view('articles.show', $article);
+        return view('articles.show', ['article' => $article]);
     }
 
     /**
