@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <img src="assets/images/logo.jpg" />
+                <img src={{asset("assets/images/logo.jpg")}}  alt="..."/>
                 <h1 class="name">Dr.Saber Waheeb</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt suscipit itaque illo, vero laborum
                     ipsa voluptatem temporibus nostrum! Assumenda tempora libero, dolores nobis autem possimus

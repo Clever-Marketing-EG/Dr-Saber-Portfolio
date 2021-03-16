@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\OperationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::get('/', [MainController::class, 'main'])->name('main.home');
+Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
 //Route::get('/articles', [MainController::class, 'articles'])->name('main.articles');
-//Route::get('/biography', [MainController::class, 'biography'])->name('biography');
 //Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
 
@@ -39,7 +40,7 @@ Route::resource('articles', ArticleController::class);
 | Operations Routes
 |--------------------------------------------------------------------------
 */
-
+Route::resource('operations', OperationController::class);
 
 /*
 |--------------------------------------------------------------------------

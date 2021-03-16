@@ -27,7 +27,7 @@ class OperationFactory extends Factory
             'content' => $this->faker->text,
             'content_ar' => $this->faker->text,
             'image_url' => $this->faker->imageUrl(),
-            'video_url' => 'https://www.youtube.com/watch?v=WsptdUFthWI'
+            'video_url' => 'https://www.youtube.com/embed/WsptdUFthWI'
         ];
     }
 }

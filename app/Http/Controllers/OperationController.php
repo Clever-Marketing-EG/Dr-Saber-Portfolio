@@ -7,7 +7,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-define('RESULTS_PER_PAGE', 21);
 
 class OperationController extends Controller
 {
@@ -18,7 +17,7 @@ class OperationController extends Controller
      */
     public function index(): View
     {
-        $operations = Operation::paginate(RESULTS_PER_PAGE);
+        $operations = Operation::paginate(15);
         return view('operations.index', ['operations' => $operations]);
     }
 
@@ -47,11 +46,11 @@ class OperationController extends Controller
      * Display the specified resource.
      *
      * @param Operation $operation
-     * @return Response
+     * @return View
      */
-    public function show(Operation $operation): Response
+    public function show(Operation $operation): View
     {
-        //TODO
+        return view('operations.show', ['operation' => $operation]);
     }
 
     /**
