@@ -12,14 +12,14 @@
                 </button>
 
             </div>
-            <a class="navbar-brand" style="font-size: 18px;margin-top:-9px;color: #03296fba;">
-                <img src="assets/images/logo.jpg" alt="" class="logo-img"/>
+            <a class="navbar-brand" style="font-size: 18px;margin-top:-9px;color: #03296fba;" href={{route('main.home')}} >
+                <img src={{asset("assets/images/logo.jpg")}} alt="" class="logo-img"/>
                 Dr.Saber Waheeb
             </a>
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav menubar navbar-left">
                     <li><a title="Home" href={{route('main.home')}}>Home</a></li>
-                    <li><a title="About" href="about.html">Biography</a></li>
+                    <li><a title="About" href={{route('main.biography')}}>Biography</a></li>
                     <li><a title="About" href={{route('articles.index')}}>Events</a></li>
                     <li><a title="Services" href="services.html">Media</a></li>
 

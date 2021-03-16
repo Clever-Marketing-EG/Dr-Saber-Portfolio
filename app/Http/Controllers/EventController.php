@@ -20,7 +20,7 @@ class EventController extends Controller
     public function index(): View
     {
         $events = Event::paginate(21);
-        return view('events.index', ['events' => $events]);
+        return view('events.index.blade.php', ['events' => $events]);
     }
 
     /**
@@ -98,6 +98,6 @@ class EventController extends Controller
             ->where('content', 'LIKE', "%{$request['term']}%")
             ->paginate(21);
 
-        return view('main.events.index', ['events' => $events]);
+        return view('main.events.index.blade.php', ['events' => $events]);
     }
 }

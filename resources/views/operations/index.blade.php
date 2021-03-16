@@ -1,4 +1,4 @@
-@extends('main.shared.layout')
+@extends('shared.layouts.main')
 @section('content')
     <div class="boxed-container">
 
@@ -16,12 +16,12 @@
                             <!-- Container -->
                             <div class="container">
                                 <div class="page-banner-content">
-                                    <h3>Blog</h3>
+                                    <h3>Operations</h3>
                                 </div>
                                 <div class="banner-content">
                                     <ol class="breadcrumb">
                                         <li><a href="index.html">Home</a></li>
-                                        <li class="active">Blog</li>
+                                        <li class="active">Operations</li>
                                     </ol>
                                 </div>
                             </div><!-- Container /- -->
@@ -54,7 +54,7 @@
                                                         <p>{{$operation->content}}</p>
                                                         <p></p>
                                                     </div>
-                                                    <a href="#" title="Read More" class="read-more">Read More</a>
+                                                    <a href={{route('operations.show', $operation)}} title="Read More" class="read-more">Read More</a>
                                                 </div>
                                             </div>
                                         </div>

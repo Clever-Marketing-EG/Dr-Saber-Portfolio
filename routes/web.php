@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\EventController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\OperationController;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::get('/', [MainController::class, 'main'])->name('main.home');
+Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
 //Route::get('/articles', [MainController::class, 'articles'])->name('main.articles');
-//Route::get('/biography', [MainController::class, 'biography'])->name('biography');
 //Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
 
@@ -43,7 +42,6 @@ Route::resource('articles', ArticleController::class);
 */
 Route::resource('operations', OperationController::class);
 
-
 /*
 |--------------------------------------------------------------------------
 | Events Routes
@@ -51,24 +49,10 @@ Route::resource('operations', OperationController::class);
 */
 //==============================================================================
 
-// dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard/dashboard');
-});
 
-
-Route::get('/login', function () {
-    return view('dashboard/login');
-});
-
-
-
-Route::get('/dashboard', function () {
+Route::get('/dashboar', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
 
-Route::fallback(function () {
-    return 'Not Found!';
-});
+require __DIR__.'/auth.php';

@@ -14,7 +14,7 @@ class MainController extends Controller
 
     public function biography()
     {
-        return view('main/biography');
+        return view('main.biography');
     }
 
     public function contact()
