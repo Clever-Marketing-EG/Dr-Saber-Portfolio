@@ -27,28 +27,24 @@
                     @foreach($articles as $article)
                         <div class="type-post">
                             <div class="entry-cover">
-                                <a title="Blog" href="#">
+                                <a title="Blog" href={{route('articles.show', $article)}}>
                                     <img alt="blog" src={{$article->images[0]->url}} />
                                 </a>
                                 <div class="post-date-bg">
                                     <div class="post-date">
-                                        18 <span>June</span>
+                                        {{ strftime("%d", strtotime($article->created_at)) }}
+                                        <span>{{ strftime("%b", strtotime($article->created_at)) }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="latest-news-content">
                                 <div class="entry-header">
                                     <h3 class="entry-title"><a title="Using the latest medical technology" href="#">{{$article->title}}</a></h3>
-                                    <div class="entry-meta">
-                                        <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                        <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                        <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                    </div>
                                 </div>
                                 <div class="entry-content">
                                     <p>{{$article->content}}</p>
                                 </div>
-                                <a title="Read More" class="read-more" href="{{route('articles.show', $article)}}">Read more</a>
+                                <a title="Read More" class="read-more" href={{route('articles.show', $article)}}>Read more</a>
                             </div>
                         </div>
                     @endforeach
@@ -113,23 +109,23 @@
                                         <span><a href="#" title="Date"><i class="fa fa-calendar-o"></i>04 January 2014</a></span>
                                     </div>
                                 </div>
-                            </aside><!-- Widget Tag Cloud /- -->
+                    </aside><!-- Widget Tag Cloud /- -->
 
-                        </div><!-- Widget Area /- -->
-                    </div><!-- Row /- -->
-                    <nav class="ow-pagination text-left">
-                        <ul class="pagination">
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                        </ul>
-                    </nav>
-                </div><!-- Container /- -->
-            </div><!-- Blog Right Sidebar /- -->
-        </main>
+                </div><!-- Widget Area /- -->
+            </div><!-- Row /- -->
+            <nav class="ow-pagination text-left">
+                <ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </nav>
+        </div><!-- Container /- -->
+    </div><!-- Blog Right Sidebar /- -->
+    </main>
     </div>
 
 
 
-</div>
+    </div>
 @endsection
