@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\OperationController;
+use App\Http\Controllers\ResearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,13 @@ Route::resource('articles', ArticleController::class);
 |--------------------------------------------------------------------------
 */
 Route::resource('operations', OperationController::class);
+
+/*
+|--------------------------------------------------------------------------
+| Publications Routes
+|--------------------------------------------------------------------------
+*/
+Route::resource('publications', ResearchController::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -27,7 +27,7 @@
                         <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Doctors</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
                         <ul class="dropdown-menu">
-                            <li><a href="blog-2column.html" title="Blog Post">Scientific publications</a></li>
+                            <li><a href={{route('publications.index')}} title="Blog Post">Scientific publications</a></li>
                             <li><a href={{route('operations.index')}} title="Blog Post">Operations</a></li>
                         </ul>
                     </li>

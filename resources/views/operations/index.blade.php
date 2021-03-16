@@ -6,7 +6,7 @@
 
         </div>
 
-        <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+        <div data-offset="200" data-spy="scroll" data-target=".ow-navigation">
             <div class="boxed-container">
 
                 <div class="main-container">
@@ -76,7 +76,7 @@
             </div>
 
 
-        </body>
+        </div>
 
 
     </div>
