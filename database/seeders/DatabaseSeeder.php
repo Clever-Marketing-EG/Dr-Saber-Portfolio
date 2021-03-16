@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             ArticleSeeder::class,
             OperationSeeder::class,
             OperationSeeder::class,
-            ResearchSeeder::class
+            ResearchSeeder::class,
+            MediaSeeder::class
         ]);
     }
 }
