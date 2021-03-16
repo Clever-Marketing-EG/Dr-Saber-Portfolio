@@ -22,14 +22,13 @@
                     <li><a title="About" href="about.html">Biography</a></li>
                     <li><a title="About" href={{route('articles.index')}}>Events</a></li>
                     <li><a title="Services" href="services.html">Media</a></li>
-                    <li><a title="Work" href="gallery.html">Events</a></li>
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Doctors</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
                         <ul class="dropdown-menu">
                             <li><a href="blog-2column.html" title="Blog Post">Scientific publications</a></li>
-                            <li><a href="blogsidebar-left.html" title="Blog Post">Operations</a></li>
+                            <li><a href={{route('operations.index')}} title="Blog Post">Operations</a></li>
                         </ul>
                     </li>
                     <li><a title="Work" href="gallery.html">Contact Us</a></li>

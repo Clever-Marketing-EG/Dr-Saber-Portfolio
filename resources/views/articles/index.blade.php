@@ -131,66 +131,7 @@
                                     <a href="#" title="racing">racing</a>
                                 </div>
                             </aside><!-- Widget Tag Cloud /- -->
-                            <!-- Widget Accordion -->
-                            <aside id="widget_accordion" class="widget widget_accordion">
-                                <h3 class="widget-title">Accordion</h3>
-                                <div class="accordion-box">
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="faqheading1">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#faqcontent1" aria-expanded="true">Accordion 1</a>
-                                                </h4>
-                                            </div>
-                                            <div id="faqcontent1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqheading1">
-                                                <div class="panel-body">
-                                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                    <p>Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="faqheading2">
-                                                <h4 class="panel-title">
-                                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#faqcontent2" aria-expanded="true">Accordion 2</a>
-                                                </h4>
-                                            </div>
-                                            <div id="faqcontent2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="faqheading2">
-                                                <div class="panel-body">
-                                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                    <p>Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="faqheading3">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#faqcontent3" aria-expanded="true">Accordion 3</a>
-                                                </h4>
-                                            </div>
-                                            <div id="faqcontent3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqheading3">
-                                                <div class="panel-body">
-                                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                    <p>Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="faqheading4">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#faqcontent4" aria-expanded="true">Accordion 4</a>
-                                                </h4>
-                                            </div>
-                                            <div id="faqcontent4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqheading4">
-                                                <div class="panel-body">
-                                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                                    <p>Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </aside><!-- Widget Accordion -->
+                           
                         </div><!-- Widget Area /- -->
                     </div><!-- Row /- -->
                     <nav class="ow-pagination text-left">
@@ -205,75 +146,7 @@
         </main>
     </div>
 
-    <!-- Footer Main -->
-    <footer id="footer-main" class="footer-main container-fluid no-left-padding no-right-padding">
-        <!-- Container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-6 contact-info">
-                    <aside class="widget widget_info">
-                        <h3 class="widget-title">Contact info</h3>
-                        <p><i class="fa fa-phone"></i><a href="tel:386489550686" title="+386 489 550 686">+386 489 550 686</a></p>
-                        <p><i class="fa fa-envelope"></i><a href="mailto:yourdomain@name.com" title="yourdomain@name.com">yourdomain@name.com</a></p>
-                        <p><i class="fa fa-map-marker"></i>123, Las Vegas street lorem</p>
-                        <div class="footer-social">
-                            <i class="fa fa-heart"></i>
-                            <ul>
-                                <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#" title="Tumblr"><i class="fa fa-tumblr"></i></a></li>
-                                <li><a href="#" title="Vimeo"><i class="fa fa-vimeo"></i></a></li>
-                                <li><a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-6">
-                    <aside class="widget widget_workinghours">
-                        <span><i class="fa fa-clock-o"></i></span>
-                        <h3 class="widget-title">Working Hours</h3>
-                        <ul>
-                            <li><span>Monday</span> <b>9.00  AM  To  5.00 PM</b></li>
-                            <li><span>tuesday</span> <b>9.00  AM  To  5.00 PM	</b></li>
-                            <li><span>wednesday</span> <b>9.00  AM  To  5.00 PM</b></li>
-                            <li><span>thursday</span> <b>9.00  AM  To  5.00 PM</b></li>
-                            <li><span>friday</span> <b>9.00  AM  To  5.00 PM</b></li>
-                            <li><span>Saturday</span> <b>11.00  AM  To  3.00 PM</b></li>
-                            <li><span>Sunday</span> <b>Closed</b></li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-6 contact-form">
-                    <h3 class="widget-title">Any Questions ?</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="full Name" name="contact-fname" id="input_fname" required="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="email Address" name="contact-email" id="input_email" required="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="subject" name="contact-subject" id="input_subject" />
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="message" rows="4" name="contact-message" id="input_message" ></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button title="Learn More" id="que_btn_submit" type="submit" name="post">Learn more</button>
-                        </div>
-                        <div id="alert-msg-que" class="alert-msg"></div>
-                    </form>
-                </div>
-            </div>
-        </div><!-- Container /- -->
-    </footer><!-- Footer Main /- -->
 
-    <div class="footer-bottom">
-        <!-- Container -->
-        <div class="container">
-            <p>&copy; 2017 Doctor Theme. All Rights Reserved</p>
-        </div><!-- Container /- -->
-    </div>
+
 </div>
 @endsection

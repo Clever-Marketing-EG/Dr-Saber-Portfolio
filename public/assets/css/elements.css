@@ -667,7 +667,7 @@ body.boxed-layout::before {
 	margin-bottom: 40px;
 }
 .section-header > h3 {
-	color: #333;
+	color: #03296fba !important;
 	position: relative;
 	display: inline-block;
 	border: 2px solid #f1f1f1;
@@ -1560,7 +1560,7 @@ body.boxed-layout::before {
 	word-wrap: break-word;
 }
 .team-section .team-content span.team-catagory {
-	background-color: #333;
+	background-color: #03296fba;
 	color: #fff;
 	font-family: 'Lato', sans-serif;
 	font-size: 17px;
@@ -2169,9 +2169,10 @@ body.boxed-layout::before {
 
 /* - Offer Section */
 .offer-section {
-	background-image: url("../../assets/images/offer-bg.jpg");
+	/* background-image: url("../../assets/images/offer-bg.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
+    background-color: #f1f1f1;
 	position: relative;
 	padding-top: 80px;
 	padding-bottom: 50px;
@@ -2185,7 +2186,7 @@ body.boxed-layout::before {
 	background-color: #b5b7bc;
 }
 .offer-section .offer-box {
-	background-color: #02d2eb;
+	background-color: #03296fba;
 	border-radius: 10px;
 	padding: 42px 35px;
 	margin-bottom: 30px;

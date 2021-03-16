@@ -150,15 +150,104 @@
                         </div>
                     </div><!-- END OF SLIDER WRAPPER -->
                 </div><!-- Slider Section /- -->
+                <!-- Offer Section -->
+                
+                <div class="offer-section container-fluid no-left-padding no-right-padding">
+                    <!-- Container -->
+                    <div class="container">
+                        <!-- Section Header -->
+                        <div class="section-header">
+                            <h3>Surgeries</h3>
+                        </div><!-- Section Header /- -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="offer-box">
+                                    <i class="fa fa-smile-o"></i>
+                                    <h5>Special skilled surgeries</h5>
+                                    <p>In crack commando was sent to prison by a military court for a crime they didn't
+                                        commit. These men prompt-</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="offer-box">
+                                    <i class="fa fa-smile-o"></i>
+                                    <h5>Major surgeries</h5>
+                                    <p>Come aboard expecting you. Love life's sweetest reward Let it flow it floats back to
+                                        you. It's a beautiful Day.</p>
+                                </div>
+                            </div>
 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="offer-box">
+                                    <i class="fa fa-smile-o"></i>
+                                    <h5>Medium surgeries</h5>
+                                    <p>In crack commando was sent to prison by a military court for a crime they didn't
+                                        commit. These men prompt-</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="offer-box">
+                                    <i class="fa fa-smile-o"></i>
+                                    <h5>Minor surgeries</h5>
+                                    <p>Come aboard expecting you. Love life's sweetest reward Let it flow it floats back to
+                                        you. It's a beautiful Day.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Container -->
+                </div><!-- Offer Section /- -->
+                <!-- Team Section -->
+                <div id="team-section" class="team-section container-fluid no-left-padding no-right-padding">
+                    <!-- Container -->
+                    <div class="container">
+                        <!-- Section Header -->
+                        <div class="section-header">
+                            <h3>Scientific Publications </h3>
+                        </div>
+                        <div class="team-carousel">
+                            <div class="col-md-12">
+                                <div class="team-content">
+                                    <div class="team-box">
+                                        <img src="assets/images/team-1.png" alt="team" />
+                                    </div>
+                                    <span class="team-catagory">Pathologist</span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="team-content">
+                                    <div class="team-box">
+                                        <img src="assets/images/team-2.png" alt="team" />
+                                    </div>
+                                    <span class="team-catagory">Cardiologist</span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="team-content">
+                                    <div class="team-box">
+                                        <img src="assets/images/team-3.png" alt="team" />
+                                    </div>
+                                    <span class="team-catagory">Neurologist</span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="team-content">
+                                    <div class="team-box">
+                                        <img src="assets/images/team-4.png" alt="team" />
+                                    </div>
+                                    <span class="team-catagory">Pediatrician</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Container /- -->
+                </div><!-- Team Section /- -->
                 <!-- Latest News -->
                 <div class="latest-news container-fluid no-left-padding no-right-padding">
                     <!-- Container -->
                     <div class="container">
                         <!-- Section Header -->
-                        <div class="section-header">
-                            <h3>Our News</h3>
-                        </div><!-- Section Header /- -->
+
 
                         <div class="row">
                             <div class="col-md-6">

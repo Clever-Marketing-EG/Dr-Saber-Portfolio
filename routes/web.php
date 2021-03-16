@@ -41,6 +41,7 @@ Route::resource('articles', ArticleController::class);
 | Operations Routes
 |--------------------------------------------------------------------------
 */
+Route::resource('operations', OperationController::class);
 
 
 /*
