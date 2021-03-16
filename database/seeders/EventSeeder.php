@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Event;
+use App\Models\Image;
 use Illuminate\Database\Seeder;
 
 class EventSeeder extends Seeder
@@ -14,6 +15,8 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        Event::factory()->count(50)->create();
+        Event::factory(100)
+            ->has(Image::factory()->count(5))
+            ->create();
     }
 }

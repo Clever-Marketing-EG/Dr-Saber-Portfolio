@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -30,7 +28,6 @@ class ArticleController extends Controller
     public function create(): View
     {
         //TODO: create a form for articles
-        return view('dashboard/articles/create');
     }
 
     /**
@@ -48,11 +45,12 @@ class ArticleController extends Controller
      * Display the specified resource.
      *
      * @param Article $article
-     * @return Response
+     * @return View
      */
     public function show(Article $article)
     {
-        //
+        $article->load('images');
+        return view('articles.show', $article);
     }
 
     /**

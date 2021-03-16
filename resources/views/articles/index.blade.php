@@ -28,7 +28,7 @@
                         <div class="type-post">
                             <div class="entry-cover">
                                 <a title="Blog" href="#">
-                                    <img alt="blog" src={{$article->image_url}} />
+                                    <img alt="blog" src={{$article->images[0]->url}} />
                                 </a>
                                 <div class="post-date-bg">
                                     <div class="post-date">
