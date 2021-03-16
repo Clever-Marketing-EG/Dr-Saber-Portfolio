@@ -24,9 +24,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [MainController::class, 'main'])->name('main.home');
 Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
-//Route::get('/articles', [MainController::class, 'articles'])->name('main.articles');
-//Route::get('/contact', [MainController::class, 'contact'])->name('contact');
-
 
 /*
 |--------------------------------------------------------------------------
@@ -44,9 +41,10 @@ Route::resource('operations', OperationController::class);
 
 /*
 |--------------------------------------------------------------------------
-| Events Routes
+| Media Routes
 |--------------------------------------------------------------------------
 */
+
 //==============================================================================
 
 

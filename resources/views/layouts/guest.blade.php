@@ -15,6 +15,9 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+        <link rel="icon" type="image/x-icon" href={{asset('assets/images/logo.jpg')}} />
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
