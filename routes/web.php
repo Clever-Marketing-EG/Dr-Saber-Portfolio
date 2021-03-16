@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [MainController::class, 'main'])->name('main.home');
 Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
+Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
+
 //Route::get('/articles', [MainController::class, 'articles'])->name('main.articles');
 //Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
@@ -48,7 +50,7 @@ Route::resource('operations', OperationController::class);
 | Publications Routes
 |--------------------------------------------------------------------------
 */
-Route::resource('publications', ResearchController::class);
+Route::resource('research', ResearchController::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -808,17 +808,18 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
     margin-top: 25px;
 }
 
-.icon-container{
+.icon-container {
     background-color: #03296fba;
-    box-shadow: 0 3px 35px 0 rgb(78 78 78 / 0.1);
+    box-shadow: 0 3px 35px 0 rgb(78 78 78 / 10%);
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    color: #fff;
+    background: #fff;
+    border: 2px solid;
 }
 .icon-container i{
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 .mb{
     margin-bottom: 5px;

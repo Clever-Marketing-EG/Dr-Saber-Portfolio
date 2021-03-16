@@ -27,11 +27,11 @@
                         <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Doctors</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
                         <ul class="dropdown-menu">
-                            <li><a href={{route('publications.index')}} title="Blog Post">Scientific publications</a></li>
+                            <li><a href={{route('research.index')}} title="Blog Post">Scientific publications</a></li>
                             <li><a href={{route('operations.index')}} title="Blog Post">Operations</a></li>
                         </ul>
                     </li>
-                    <li><a title="Work" href="gallery.html">Contact Us</a></li>
+                    <li><a title="Work" href={{route('main.contact')}}>Contact Us</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language</a>
                         <i class="ddl-switch fa fa-angle-down"></i>

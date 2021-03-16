@@ -14,37 +14,31 @@
             </div>
         </div><!-- Container /- -->
     </div><!-- Page Banner -->
-    <div class="container">
-        <!-- Section Header -->
-        <div class="section-header">
-            <br /><br />
-        </div>
+
+
+    <!-- Gallery Section -->
+    <div id="gallery-section" class="gallery-section container-fluid no-left-padding no-right-padding">
+        <!-- Container -->
         <div class="container">
-            <div class="row">
-                @foreach ($research as $publication)
-                    <div class="col-md-4">
 
-                        <div class="type-post">
-                            <img alt="blog" src={{ $publication->image_url }} />
+            <ul class="portfolio-list no-left-padding">
+                @foreach ($researches as $research)
 
-                            <div class="latest-news-content">
-                                <div class="entry-header">
-                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="#">
-                                            {{ $publication->title }}
-                                        </a></h3>
-
-                                </div>
-                                <div class="entry-content">
-                                    <p>{{ $publication->content }}</p>
-                                    <p></p>
-                                </div>
+                    <li class="col-md-4 col-sm-4 col-xs-6 design">
+                        <div class="content-image-block">
+                            <img src={{$research->image_url}} alt="gallery">
+                            <div class="content-block-hover">
+                                <span>{{ $research->title }}</span>
+                                <br />
+                                <a title="Read More" class="read-more"
+                                    href={{ route('research.show', $research) }}>Read more</a>
                             </div>
                         </div>
-                    </div>
+                    </li>
                 @endforeach
 
-
-            </div>
-        </div>
-    </div><!-- Container /- -->
+            </ul>
+        
+        </div><!-- Container /- -->
+    </div><!-- Gallery Section -->
 @endsection

@@ -10,7 +10,7 @@
             </div>
             <div class="banner-content">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href={{route('main.home')}}>Home</a></li>
                     <li class="active">Article</li>
                 </ol>
             </div>

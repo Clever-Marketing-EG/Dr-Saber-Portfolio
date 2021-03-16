@@ -260,7 +260,7 @@
                             </div>
                             <div class="latest-news-content">
                                 <div class="entry-header">
-                                    <h3 class="entry-title"><a title="Patients Share Success Stories" href="#">Events</a>
+                                    <h3 class="entry-title"><a title="Patients Share Success Stories" href="#">News</a>
                                     </h3>
 
                                 </div>

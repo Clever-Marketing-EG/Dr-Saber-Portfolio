@@ -16,8 +16,8 @@ class ResearchController extends Controller
      */
     public function index(): View
     {
-        $publications = Research::paginate(15);
-        return View('publications.index', ['research' => $publications]);
+        $researches = Research::paginate(15);
+        return View('publications.index', ['researches' => $researches]);
     }
 
     /**
@@ -47,7 +47,7 @@ class ResearchController extends Controller
      * @param  \App\Models\Research  $research
      * @return View
      */
-    public function show(Research $research): View
+    public function show(Research $research)
     {
         return View('publications.show', ['research' => $research]);
     }

@@ -1146,7 +1146,7 @@ body.boxed-layout::before {
 
 /* - Gallery Section */
 .gallery-section {
-	background-color: #f1f1f1;
+	background-color: #fff;
 	padding-top: 80px;
 	padding-bottom: 68px;
 	overflow: hidden;
@@ -1223,7 +1223,7 @@ body.boxed-layout::before {
 }
 .gallery-section .content-image-block::before {
 	content: "";
-	background-color: rgba(14, 204, 227, 0.902);
+	background-color: #03296fba;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -1288,7 +1288,8 @@ body.boxed-layout::before {
 	text-decoration: none;
 }
 .gallery-section .content-block-hover a:hover {
-	color: #4c4c4c;
+	color: #fff;
+    font-size: 20px;
 }
 .gallery-section .content-block-hover a:first-of-type > i {
 	padding-right: 10px;
