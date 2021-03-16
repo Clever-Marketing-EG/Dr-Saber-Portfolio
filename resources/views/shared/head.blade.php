@@ -41,7 +41,7 @@
 <link href={{asset("assets/css/header.css")}} rel="stylesheet">
 <link href={{asset("assets/css/rtl.css")}} rel="stylesheet">
 <link id="color" href={{asset("assets/css/color-schemes/default.css")}} rel="stylesheet"/>
-
+<link href={{asset('index.css')}} rel="stylesheet" />
 <!-- Custom - Theme CSS -->
 <link rel="stylesheet" type="text/css" href={{asset("style.css")}}>
 
