@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
@@ -30,6 +29,6 @@ class Article extends Model
      */
     public function images(): HasMany
     {
-        return $this->hasMany(Image::class, 'external_id');
+        return $this->hasMany(Image::class);
     }
 }

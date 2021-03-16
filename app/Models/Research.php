@@ -3,7 +3,11 @@
 namespace App\Models;
 
 
-class Research extends Event
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Research extends Model
 {
+    use HasFactory;
 
 }

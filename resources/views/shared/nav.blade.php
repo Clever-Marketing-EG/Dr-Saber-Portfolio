@@ -20,7 +20,7 @@
                 <ul class="nav navbar-nav menubar navbar-left">
                     <li><a title="Home" href={{route('main.home')}}>Home</a></li>
                     <li><a title="About" href={{route('main.biography')}}>Biography</a></li>
-                    <li><a title="About" href={{route('articles.index')}}>Events</a></li>
+                    <li><a title="About" href={{route('articles.index')}}>News</a></li>
                     <li><a title="Services" href="services.html">Media</a></li>
 
                     <li class="dropdown">

@@ -31,7 +31,7 @@ class ArticleFactory extends Factory
             'content' => $this->faker->text,
             'content_ar' => $this->faker->text,
             'meta' => $meta,
-            'video_url' => 'https://www.youtube.com/watch?v=WsptdUFthWI'
+            'video_url' => 'https://www.youtube.com/embed/WsptdUFthWI'
         ];
     }
 }
