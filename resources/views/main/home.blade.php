@@ -246,7 +246,7 @@
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry. Lorem Ipsum has been the industry's standard .</p>
                                 </div>
-                                <a href="#" title="Read More" class="read-more">Read More</a>
+                                <a href={{route('operations.index')}} title="See More" class="read-more">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -268,7 +268,7 @@
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                                         industry. Lorem Ipsum has been the industry's standard .</p>
                                 </div>
-                                <a href="#" title="Read More" class="read-more">Read More</a>
+                                <a href={{route('articles.index')}} title="See More" class="read-more">Read More</a>
                             </div>
                         </div>
                     </div>
