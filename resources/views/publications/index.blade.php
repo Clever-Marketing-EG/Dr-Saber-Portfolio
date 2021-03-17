@@ -4,13 +4,7 @@
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
-                <h3>Scientific Publications</h3>
-            </div>
-            <div class="banner-content">
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Scientific Publications</li>
-                </ol>
+                <h3>@lang('nav.Scientific_Publications')</h3>
             </div>
         </div><!-- Container /- -->
     </div><!-- Page Banner -->
@@ -26,19 +20,25 @@
 
                     <li class="col-md-4 col-sm-4 col-xs-6 design">
                         <div class="content-image-block">
-                            <img src={{$research->image_url}} alt="gallery">
+                            <img src={{$research->image_url}} alt="gallery" alt="...">
                             <div class="content-block-hover">
-                                <span>{{ $research->title }}</span>
+                                <span>
+                                    @if(Session::get('locale') == 'ar')
+                                        {{ $research->title_ar }}
+                                    @else
+                                        {{$research->title}}
+                                    @endif
+                                </span>
                                 <br />
                                 <a title="Read More" class="read-more"
-                                    href={{ route('research.show', $research) }}>Read more</a>
+                                   href={{ route('research.show', $research) }}>@lang('helpers.read_more')</a>
                             </div>
                         </div>
                     </li>
                 @endforeach
 
             </ul>
-        
+
         </div><!-- Container /- -->
     </div><!-- Gallery Section -->
 @endsection

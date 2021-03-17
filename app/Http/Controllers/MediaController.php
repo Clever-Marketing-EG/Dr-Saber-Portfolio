@@ -40,16 +40,6 @@ class MediaController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Media  $media
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Media $media)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
