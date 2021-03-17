@@ -11,7 +11,7 @@ return [
     'Name' => 'د. صابر وهيب',
     'Home' => 'الصفحة الرئيسية',
     'Biography' => 'السيرة الذاتية',
-    'News' => 'أخر الأخبار',
+    'News' => 'آخر الأخبار',
     'Media' => 'وسائط',
     'For_Doctors' => 'للأطباء',
     'Scientific_Publications' => 'منشورات علمية',
