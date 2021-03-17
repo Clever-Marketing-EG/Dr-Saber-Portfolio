@@ -11,7 +11,18 @@ class MainController extends Controller
 {
     public function main()
     {
+        // Cookie::queue(Cookie::forever('lang', 'ar'));
         return view('main.home');
+    }
+    public function en()
+    {
+        Cookie::queue(Cookie::forever('lang', 'en'));
+        return redirect()->back();
+    }
+    public function ar()
+    {
+        Cookie::queue(Cookie::forever('lang', 'ar'));
+        return redirect()->back();
     }
 
 
@@ -29,5 +40,4 @@ class MainController extends Controller
     {
         return view('main.contact');
     }
-
 }

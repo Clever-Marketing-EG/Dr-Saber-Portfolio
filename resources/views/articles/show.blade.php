@@ -11,8 +11,13 @@
                 </div>
                 <div class="banner-content">
                     <ol class="breadcrumb">
-                        <li><a href={{route('main.home')}}>Home</a></li>
-                        <li class="active">Gallery Single</li>
+                        @if($_COOKIES['lang'] == 'ar')
+                            
+                        @else
+                            <li><a href={{route('main.home')}}>Home</a></li>
+                            <li class="active">Gallery Single</li>
+                        @endif
+
                     </ol>
                 </div>
             </div><!-- Container /- -->

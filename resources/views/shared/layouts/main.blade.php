@@ -6,6 +6,7 @@
 <head>
     @include('shared.head')
 </head>
+
 <body>
     @include('shared.nav')
     <div class="main-container">
@@ -16,4 +17,5 @@
     @include('shared.footer')
     @include('shared.scripts')
 </body>
+
 </html>
