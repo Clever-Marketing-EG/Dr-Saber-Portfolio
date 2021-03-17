@@ -10,5 +10,6 @@ return [
 
     'read_more' => 'إقرأ المزيد',
     'search' => 'بحث',
-    'search_here' => 'إبحث هنا'
+    'search_here' => 'إبحث هنا',
+    'additional_media' => 'وسائط إضافية'
 ];
