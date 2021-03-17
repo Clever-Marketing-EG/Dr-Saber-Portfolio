@@ -3,20 +3,24 @@
 @section('content')
     <div id="articles-show">
         <!-- Page Banner -->
-        <div class="page-banner container-fluid no-left-padding no-right-padding" style="background-image: url({{$article->images[0]->url}})">
+        <div class="page-banner container-fluid no-left-padding no-right-padding"
+            style="background-image: url({{ $article->images[0]->url }})">
             <!-- Container -->
             <div class="container">
                 <div class="page-banner-content">
-                    <h3>{{$article->title}}</h3>
+                    <h3>
+                        @if (Session::get('locale') == 'ar')
+                            {{ $article->title_ar }}
+                        @else
+                            {{ $article->title }}
+                        @endif
+                    </h3>
                 </div>
                 <div class="banner-content">
                     <ol class="breadcrumb">
-                        @if($_COOKIES['lang'] == 'ar')
-                            
-                        @else
-                            <li><a href={{route('main.home')}}>Home</a></li>
-                            <li class="active">Gallery Single</li>
-                        @endif
+
+                        <li><a href={{ route('main.home') }}>Home</a></li>
+                        <li class="active">Gallery Single</li>
 
                     </ol>
                 </div>
@@ -30,18 +34,18 @@
             <div class="container">
                 <div class="flexslider gallery-details-full">
                     <ul class="slides">
-                        @foreach($article->images as $image)
+                        @foreach ($article->images as $image)
                             <li>
-                                <img src={{$image->url}} alt="large-thumb" width="1170" height="500"/>
+                                <img src={{ $image->url }} alt="large-thumb" width="1170" height="500" />
                             </li>
                         @endforeach
                     </ul>
                 </div>
                 <div class="flexslider gallery-details-thumb">
                     <ul class="slides">
-                        @foreach($article->images as $image)
+                        @foreach ($article->images as $image)
                             <li>
-                                <img src={{$image->url}} alt="thumb" width="230" height="190"/>
+                                <img src={{ $image->url }} alt="thumb" width="230" height="190" />
                             </li>
                         @endforeach
                     </ul>
@@ -49,8 +53,8 @@
                 <div class="row">
                     <div class="gallery-info-content">
                         <div class="info-content">
-                            <h3>{{$article->title}}</h3>
-                            <p>{{$article->content}}</p>
+                            <h3>{{ $article->title }}</h3>
+                            <p>{{ $article->content }}</p>
                         </div>
                     </div>
                 </div>
@@ -58,7 +62,9 @@
                 <div class="row additional-media">
                     <div class="info-content">
                         <h3>Additional Media</h3>
-                        <iframe width="100%" height="100%" src={{$article->video_url}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="100%" src={{ $article->video_url }} frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div><!-- Container /- -->

@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="banner-content">
                                     <ol class="breadcrumb">
-                                        <li><a href={{route('main.home')}}>Home</a></li>
+                                        <li><a href={{ route('main.home') }}>Home</a></li>
                                         <li class="active">Operations</li>
                                     </ol>
                                 </div>
@@ -38,7 +38,7 @@
                                             <div class="type-post">
                                                 <div class="entry-cover">
                                                     <a title="Blog" href="#">
-                                                        <img alt="blog" src={{$operation->image_url}} />
+                                                        <img alt="blog" src={{ $operation->image_url }} />
                                                     </a>
 
                                                 </div>
@@ -46,15 +46,28 @@
                                                     <div class="entry-header">
                                                         <h3 class="entry-title"><a
                                                                 title="Using the latest medical technology" href="#">
-                                                                {{ $operation->title }}
+                                                                @if (Session::get('locale') == 'ar')
+                                                                    {{ $operation->title_ar }}
+                                                                @else
+                                                                    {{ $operation->title }}
+                                                                @endif
+
                                                             </a></h3>
 
                                                     </div>
                                                     <div class="entry-content">
-                                                        <p>{{$operation->content}}</p>
+                                                        <p>
+                                                            @if (Session::get('locale') == 'ar')
+                                                                {{ $operation->content_ar }}
+
+                                                            @else
+                                                                {{ $operation->content }}
+                                                            @endif
+                                                        </p>
                                                         <p></p>
                                                     </div>
-                                                    <a href={{route('operations.show', $operation)}} title="Read More" class="read-more">Read More</a>
+                                                    <a href={{ route('operations.show', $operation) }} title="Read More"
+                                                        class="read-more">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
