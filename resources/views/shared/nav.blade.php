@@ -36,8 +36,8 @@
                         <a href="#" class="dropdown-toggle" title="Blog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language</a>
                         <i class="ddl-switch fa fa-angle-down"></i>
                         <ul class="dropdown-menu">
-                            <li><a href="blog-2column.html" title="Blog Post">EN</a></li>
-                            <li><a href="blogsidebar-left.html" title="Blog Post">AR</a></li>
+                            <li><a href={{route('main.en')}} title="Blog Post">EN</a></li>
+                            <li><a href={{route('main.ar')}} title="Blog Post">AR</a></li>
                         </ul>
                     </li>
                 </ul>

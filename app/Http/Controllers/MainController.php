@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Cookie;
 
 class MainController extends Controller
 {
     public function main()
     {
+        // Cookie::queue(Cookie::forever('lang', 'ar'));
         return view('main.home');
+    }
+    public function en()
+    {
+        Cookie::queue(Cookie::forever('lang', 'en'));
+        return redirect()->back();
+    }
+    public function ar()
+    {
+        Cookie::queue(Cookie::forever('lang', 'ar'));
+        return redirect()->back();
     }
 
     public function biography()
@@ -21,5 +33,4 @@ class MainController extends Controller
     {
         return view('main.contact');
     }
-
 }
