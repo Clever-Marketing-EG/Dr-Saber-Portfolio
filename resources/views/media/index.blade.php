@@ -6,12 +6,12 @@
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
-                <h3>Blog</h3>
+                <h3>Media</h3>
             </div>
             <div class="banner-content">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Blog</li>
+                    <li><a href={{route('main.home')}}>Home</a></li>
+                    <li class="active">Media</li>
                 </ol>
             </div>
         </div><!-- Container /- -->
@@ -42,167 +42,35 @@
 
                 <!-- Content Area -->
                 <div class="content-area col-md-8 col-sm-8 col-xs-12">
-                    <div class="type-post">
-                        <div class="entry-cover">
-                            <a title="Blog" href="#">
-                                <img alt="blog" src="assets/images/blog-9.jpg" />
-                            </a>
-                            <div class="post-date-bg">
-                                <div class="post-date">
-                                    18 <span>June</span>
+                    @foreach($media as $mediaItem)
+                        <div class="type-post">
+                            <div class="entry-cover">
+                                <a title="Blog" href="#">
+                                    <iframe width="100%" height="315" src="{{$mediaItem->video_url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                                </a>
+                                <div class="post-date-bg">
+                                    <div class="post-date">
+                                        18 <span>June</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="latest-news-content">
-                            <div class="entry-header">
-                                <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                <div class="entry-meta">
-                                    <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                    <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                    <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
+                            <div class="latest-news-content">
+                                <div class="entry-header">
+                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
+                                    <div class="entry-meta">
+                                        <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
+                                        <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
+                                        <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
+                                    </div>
                                 </div>
+                                <div class="entry-content">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
+                                </div>
+                                <a href="#" title="Read More" class="read-more">Read more</a>
                             </div>
-                            <div class="entry-content">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                            </div>
-                            <a href="#" title="Read More" class="read-more">Read more</a>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="type-post">
-                        <div class="entry-cover">
-                            <a title="Blog" href="#">
-                                <img alt="blog" src="assets/images/blog-10.jpg" />
-                            </a>
-                            <div class="post-date-bg">
-                                <div class="post-date">
-                                    18 <span>June</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="latest-news-content">
-                            <div class="entry-header">
-                                <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                <div class="entry-meta">
-                                    <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                    <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                    <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                            </div>
-                            <a href="#" title="Read More" class="read-more">Read more</a>
-                        </div>
-                    </div>
-
-                    <div class="type-post">
-                        <div class="entry-cover">
-                            <a title="Blog" href="#">
-                                <img alt="blog" src="assets/images/blog-11.jpg" />
-                            </a>
-                            <div class="post-date-bg">
-                                <div class="post-date">
-                                    18 <span>June</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="latest-news-content">
-                            <div class="entry-header">
-                                <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                <div class="entry-meta">
-                                    <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                    <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                    <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                            </div>
-                            <a href="#" title="Read More" class="read-more">Read more</a>
-                        </div>
-                    </div>
-
-                    <div class="type-post">
-                        <div class="entry-cover">
-                            <a title="Blog" href="#">
-                                <img alt="blog" src="assets/images/blog-12.jpg" />
-                            </a>
-                            <div class="post-date-bg">
-                                <div class="post-date">
-                                    18 <span>June</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="latest-news-content">
-                            <div class="entry-header">
-                                <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                <div class="entry-meta">
-                                    <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                    <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                    <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                            </div>
-                            <a href="#" title="Read More" class="read-more">Read more</a>
-                        </div>
-                    </div>
-
-                    <div class="type-post">
-                        <div class="entry-cover">
-                            <a title="Blog" href="#">
-                                <img alt="blog" src="assets/images/blog-13.jpg" />
-                            </a>
-                            <div class="post-date-bg">
-                                <div class="post-date">
-                                    18 <span>June</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="latest-news-content">
-                            <div class="entry-header">
-                                <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                <div class="entry-meta">
-                                    <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                    <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                    <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                            </div>
-                            <a href="#" title="Read More" class="read-more">Read more</a>
-                        </div>
-                    </div>
-
-                    <div class="type-post">
-                        <div class="entry-cover">
-                            <a title="Blog" href="#">
-                                <img alt="blog" src="assets/images/blog-14.jpg" />
-                            </a>
-                            <div class="post-date-bg">
-                                <div class="post-date">
-                                    18 <span>June</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="latest-news-content">
-                            <div class="entry-header">
-                                <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                <div class="entry-meta">
-                                    <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                    <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                    <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                </div>
-                            </div>
-                            <div class="entry-content">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                            </div>
-                            <a href="#" title="Read More" class="read-more">Read more</a>
-                        </div>
-                    </div>
                 </div><!-- Content Area /- -->
             </div><!-- Row /- -->
             <nav class="ow-pagination text-right">

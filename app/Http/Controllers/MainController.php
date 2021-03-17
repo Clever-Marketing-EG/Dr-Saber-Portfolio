@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\App;
 
 class MainController extends Controller
 {
@@ -11,6 +13,12 @@ class MainController extends Controller
     {
         return view('main.home');
     }
+
+
+    public function test() {
+        dd(App::currentLocale());
+    }
+
 
     public function biography()
     {
