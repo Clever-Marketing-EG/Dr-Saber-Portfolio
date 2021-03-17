@@ -7,18 +7,11 @@
             <!-- Container -->
             <div class="container">
                 <div class="page-banner-content">
-                    <h3>{{$article->title}}</h3>
-                </div>
-                <div class="banner-content">
-                    <ol class="breadcrumb">
-                        @if($_COOKIES['lang'] == 'ar')
-                            
-                        @else
-                            <li><a href={{route('main.home')}}>Home</a></li>
-                            <li class="active">Gallery Single</li>
-                        @endif
-
-                    </ol>
+                    @if(Session::get('locale') == 'ar')
+                        <h3>{{$article->title_ar}}</h3>
+                    @else
+                        <h3>{{$article->title}}w</h3>
+                    @endif
                 </div>
             </div><!-- Container /- -->
         </div><!-- Page Banner -->
@@ -49,15 +42,20 @@
                 <div class="row">
                     <div class="gallery-info-content">
                         <div class="info-content">
-                            <h3>{{$article->title}}</h3>
-                            <p>{{$article->content}}</p>
+                            @if(Session::get('locale') == 'ar')
+                                <h3>{{$article->title_ar}}</h3>
+                                <p>{{$article->content_ar}}</p>
+                            @else
+                                <h3>{{$article->title}}</h3>
+                                <p>{{$article->content}}</p>
+                            @endif
                         </div>
                     </div>
                 </div>
 
                 <div class="row additional-media">
                     <div class="info-content">
-                        <h3>Additional Media</h3>
+                        <h3>@lang('helpers.additional_media')</h3>
                         <iframe width="100%" height="100%" src={{$article->video_url}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
