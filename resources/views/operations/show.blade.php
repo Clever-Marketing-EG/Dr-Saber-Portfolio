@@ -15,12 +15,7 @@
                     @endif
                 </h3>
             </div>
-            <div class="banner-content">
-                <ol class="breadcrumb">
-                    <li><a href={{ route('main.home') }}>Home</a></li>
-                    <li class="active">Gallery Single</li>
-                </ol>
-            </div>
+         
         </div><!-- Container /- -->
     </div><!-- Page Banner -->
 

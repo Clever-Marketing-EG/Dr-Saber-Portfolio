@@ -18,12 +18,7 @@
                                 <div class="page-banner-content">
                                     <h3>Operations</h3>
                                 </div>
-                                <div class="banner-content">
-                                    <ol class="breadcrumb">
-                                        <li><a href={{ route('main.home') }}>Home</a></li>
-                                        <li class="active">Operations</li>
-                                    </ol>
-                                </div>
+                             
                             </div><!-- Container /- -->
                         </div><!-- Page Banner -->
 
