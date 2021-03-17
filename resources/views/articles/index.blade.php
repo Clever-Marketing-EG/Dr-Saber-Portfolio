@@ -5,13 +5,7 @@
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
-                <h3>News</h3>
-            </div>
-            <div class="banner-content">
-                <ol class="breadcrumb">
-                    <li><a href={{route('main.home')}}>Home</a></li>
-                    <li class="active">News</li>
-                </ol>
+                <h3>@lang('nav.News')</h3>
             </div>
         </div><!-- Container /- -->
     </div><!-- Page Banner -->
@@ -39,27 +33,34 @@
                             </div>
                             <div class="latest-news-content">
                                 <div class="entry-header">
-                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="#">{{$article->title}}</a></h3>
+                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="#">
+                                            @if(Session::get('locale') == 'ar')
+                                                {{$article->title_ar}}
+                                            @else
+                                                {{$article->title}}
+                                            @endif
+                                        </a></h3>
                                 </div>
                                 <div class="entry-content">
-                                    <p>{{$article->content}}</p>
+                                    @if(Session::get('locale') == 'ar')
+                                        <p>{{$article->content_ar}}</p>
+                                    @else
+                                        <p>{{$article->content}}</p>
+                                    @endif
                                 </div>
-                                <a title="Read More" class="read-more" href={{route('articles.show', $article)}}>Read more</a>
+                                <a title="Read More" class="read-more" href={{route('articles.show', $article)}}>@lang('helpers.read_more')</a>
                             </div>
                         </div>
                     @endforeach
-                    <div>
-                        {{ $articles->onEachSide(2)->links() }}
-                    </div>
                 </div><!-- Content Area /- -->
                 <!-- Widget Area -->
                 <div class="widget-area col-md-4 col-sm-4 col-xs-12">
                     <!-- Widget Search -->
                     <aside id="search" class="widget widget_search">
-                        <h3 class="widget-title">Search</h3>
+                        <h3 class="widget-title">@lang('helpers.search')</h3>
                         <form method="get" class="searchform" action="#">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search Here . . . ">
+                                <input type="text" class="form-control" placeholder="@lang('helpers.search_here')" />
                                 <span class="input-group-btn">
 											<button class="btn btn-search" title="Search" type="button"><i class="fa fa-search"></i></button>
 										</span>
@@ -69,11 +70,6 @@
                     <!-- Widget Latest Posts -->
                     <aside id="widget_latestposts" class="widget widget_latestposts">
                         <div class="latest-detail-tab">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs wc-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#popular" role="tab" data-toggle="tab">Popular</a></li>
-                                <li role="presentation"><a href="#recent" role="tab" data-toggle="tab">Recent</a></li>
-                            </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="popular">
@@ -114,11 +110,7 @@
                 </div><!-- Widget Area /- -->
             </div><!-- Row /- -->
             <nav class="ow-pagination text-left">
-                <ul class="pagination">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
+                {{ $articles->onEachSide(2)->links() }}
             </nav>
         </div><!-- Container /- -->
     </div><!-- Blog Right Sidebar /- -->
