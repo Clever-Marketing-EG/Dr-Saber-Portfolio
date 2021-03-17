@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\App;
 
 class MainController extends Controller
 {
@@ -23,6 +24,12 @@ class MainController extends Controller
         Cookie::queue(Cookie::forever('lang', 'ar'));
         return redirect()->back();
     }
+
+
+    public function test() {
+        dd(App::currentLocale());
+    }
+
 
     public function biography()
     {

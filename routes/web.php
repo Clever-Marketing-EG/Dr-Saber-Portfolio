@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\OperationController;
@@ -28,7 +29,12 @@ Route::get('/', [MainController::class, 'main'])->name('main.home');
 Route::get('/en', [MainController::class, 'en'])->name('main.en');
 Route::get('/ar', [MainController::class, 'ar'])->name('main.ar');
 Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
+Route::get('/test', [MainController::class, 'test'])->name('main.test');
 Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
+
+Route::get('/en', [LocalizationController::class, 'en'])->name('lang.en');
+Route::get('/ar', [LocalizationController::class, 'ar'])->name('lang.ar');
+
 
 /*
 |--------------------------------------------------------------------------
