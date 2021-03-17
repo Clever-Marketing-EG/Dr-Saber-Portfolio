@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\MediaController;
 use App\Http\Controllers\OperationController;
+use App\Http\Controllers\ResearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'main'])->name('main.home');
 Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
 
+Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
+
 /*
 |--------------------------------------------------------------------------
 | articles Routes
@@ -41,10 +45,17 @@ Route::resource('operations', OperationController::class);
 
 /*
 |--------------------------------------------------------------------------
+| Publications Routes
+|--------------------------------------------------------------------------
+*/
+Route::resource('research', ResearchController::class);
+
+/*
+|--------------------------------------------------------------------------
 | Media Routes
 |--------------------------------------------------------------------------
 */
-
+Route::resource('media', MediaController::class);
 
 //==============================================================================
 

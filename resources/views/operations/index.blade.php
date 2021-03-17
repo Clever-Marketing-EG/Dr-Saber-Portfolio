@@ -6,7 +6,7 @@
 
         </div>
 
-        <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+        <div data-offset="200" data-spy="scroll" data-target=".ow-navigation">
             <div class="boxed-container">
 
                 <div class="main-container">
@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="banner-content">
                                     <ol class="breadcrumb">
-                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href={{route('main.home')}}>Home</a></li>
                                         <li class="active">Operations</li>
                                     </ol>
                                 </div>
@@ -76,7 +76,7 @@
             </div>
 
 
-        </body>
+        </div>
 
 
     </div>

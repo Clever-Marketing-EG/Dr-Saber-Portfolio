@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Media;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class MediaController extends Controller
@@ -10,11 +11,12 @@ class MediaController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return View
      */
-    public function index()
+    public function index(): View
     {
-        //
+        $media = Media::paginate(12);
+        return view('media.index', ['media' => $media]);
     }
 
     /**

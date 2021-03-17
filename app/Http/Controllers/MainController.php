@@ -19,7 +19,7 @@ class MainController extends Controller
 
     public function contact()
     {
-        return view('main/contact');
+        return view('main.contact');
     }
 
 }

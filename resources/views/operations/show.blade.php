@@ -36,7 +36,7 @@
                     </div>
                     @if($operation->video_url)
                         <div class="col-md-6">
-                            <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src={{$operation->video_url}}></iframe>
+                            <iframe width="100%" height="430" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src={{$operation->video_url}}></iframe>
                         </div>
                     @endif
                 </div>

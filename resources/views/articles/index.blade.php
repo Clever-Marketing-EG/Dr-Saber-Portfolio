@@ -5,12 +5,12 @@
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
-                <h3>Blog</h3>
+                <h3>News</h3>
             </div>
             <div class="banner-content">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Blog</li>
+                    <li><a href={{route('main.home')}}>Home</a></li>
+                    <li class="active">News</li>
                 </ol>
             </div>
         </div><!-- Container /- -->

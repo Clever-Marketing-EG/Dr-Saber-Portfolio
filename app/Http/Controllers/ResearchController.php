@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Research;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Response;
 
 class ResearchController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return View
      */
-    public function index()
+    public function index(): View
     {
-        //
+        $researches = Research::paginate(15);
+        return View('publications.index', ['researches' => $researches]);
     }
 
     /**
@@ -42,11 +45,11 @@ class ResearchController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Research  $research
-     * @return \Illuminate\Http\Response
+     * @return View
      */
     public function show(Research $research)
     {
-        //
+        return View('publications.show', ['research' => $research]);
     }
 
     /**
