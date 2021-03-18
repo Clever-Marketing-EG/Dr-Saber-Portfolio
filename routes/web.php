@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticlesDashboardController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MediaController;
@@ -26,8 +27,6 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::get('/', [MainController::class, 'main'])->name('main.home');
-Route::get('/en', [MainController::class, 'en'])->name('main.en');
-Route::get('/ar', [MainController::class, 'ar'])->name('main.ar');
 Route::get('/biography', [MainController::class, 'biography'])->name('main.biography');
 Route::get('/test', [MainController::class, 'test'])->name('main.test');
 Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
@@ -67,9 +66,18 @@ Route::resource('media', MediaController::class)->except('show');
 //==============================================================================
 
 
-Route::get('/dashboar', function () {
+Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+Route::group([
+    'prefix' => 'dashboard',
+    'middleware' => ['auth']
+], function () {
+    Route::get('articles', [ArticlesDashboardController::class, 'index'])->name('dashboard.index');
+});
+
 
 
 require __DIR__.'/auth.php';
