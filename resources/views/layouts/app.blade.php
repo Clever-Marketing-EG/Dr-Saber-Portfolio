@@ -47,23 +47,24 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link active" aria-current="page" href={{route('dashboard')}}>
                             <span data-feather="home"></span>
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href={{route('dashboard.index')}}>
                             <span data-feather="file"></span>
-                            Orders
+                            Articles
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="shopping-cart"></span>
-                            Products
+                        <a class="nav-link" href={{route('surgeries.index')}}>
+                            <span data-feather="file"></span>
+                            Operations
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <span data-feather="users"></span>
@@ -129,7 +130,7 @@
             <main>
                 {{ $slot }}
             </main>
-            {{--            <h2>Section title</h2>--}}
+                       {{-- <h2>Section title</h2>--}}
             {{--            <div class="table-responsive">--}}
             {{--                <table class="table table-striped table-sm">--}}
             {{--                    <thead>--}}
@@ -256,7 +257,7 @@
             {{--                    </tr>--}}
             {{--                    </tbody>--}}
             {{--                </table>--}}
-            {{--            </div>--}}
+            {{--            </div> --}}
         </main>
     </div>
 </div>

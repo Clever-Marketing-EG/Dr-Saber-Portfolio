@@ -43,10 +43,6 @@
                 <div class="row">
                     <div class="gallery-info-content">
                         <div class="info-content">
-<<<<<<< HEAD
-                            <h3>{{ $article->title }}</h3>
-                            <p>{{ $article->content }}</p>
-=======
                             @if(Session::get('locale') == 'ar')
                                 <h3>{{$article->title_ar}}</h3>
                                 <p>{{$article->content_ar}}</p>
@@ -54,22 +50,14 @@
                                 <h3>{{$article->title}}</h3>
                                 <p>{{$article->content}}</p>
                             @endif
->>>>>>> c6395f970439072403555bdc01e7cf25845a5ec1
                         </div>
                     </div>
                 </div>
 
                 <div class="row additional-media">
                     <div class="info-content">
-<<<<<<< HEAD
-                        <h3>Additional Media</h3>
-                        <iframe width="100%" height="100%" src={{ $article->video_url }} frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-=======
                         <h3>@lang('helpers.additional_media')</h3>
                         <iframe width="100%" height="100%" src={{$article->video_url}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
->>>>>>> c6395f970439072403555bdc01e7cf25845a5ec1
                     </div>
                 </div>
             </div><!-- Container /- -->

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticlesDashboardController;
+use App\Http\Controllers\SurgeriesDashboardController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MediaController;
@@ -76,6 +77,12 @@ Route::group([
     'middleware' => ['auth']
 ], function () {
     Route::get('articles', [ArticlesDashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('articles/show/{article}', [ArticlesDashboardController::class, 'show'])->name('dashboard.show');
+    Route::post('articles',[ArticlesDashboardController::class, 'destroy'])->name('dashboard.delete');
+
+    Route::get('surgeries', [SurgeriesDashboardController::class, 'index'])->name('surgeries.index');
+    Route::get('surgeries/show/{operation}', [SurgeriesDashboardController::class, 'show'])->name('surgeries.show');
+
 });
 
 

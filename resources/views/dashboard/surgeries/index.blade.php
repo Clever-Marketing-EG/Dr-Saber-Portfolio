@@ -11,13 +11,13 @@
 
                 </tr>
             </thead>
-            @foreach ($articles as $article)
+            @foreach ($operations as $operation)
                 <tbody>
                     <tr>
-                        <td>{{ $article->title }}</td>
-                        <td>{{ $article->title_ar }}</td>
-                        <td><a class="btn btn-primary" href="{{ route('dashboard.show', $article) }}">Show</a></td>
-                        <td><a href="{{ route('articles.edit', $article) }}" class="btn btn-secondary">Edit</a></td>
+                        <td>{{ $operation->title }}</td>
+                        <td>{{ $operation->title_ar }}</td>
+                        <td><a class="btn btn-primary" href="{{ route('surgeries.show', $operation) }}">Show</a></td>
+                        <td><a href="{{ route('articles.edit', $operation) }}" class="btn btn-secondary">Edit</a></td>
                         <td>
                             <form method="POST" action="{{ route('dashboard.delete') }}">
                                 @csrf
