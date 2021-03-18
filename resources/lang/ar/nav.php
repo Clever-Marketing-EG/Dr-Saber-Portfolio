@@ -14,8 +14,8 @@ return [
     'News' => 'آخر الأخبار',
     'Media' => 'وسائط',
     'For_Doctors' => 'للأطباء',
-    'Scientific_Publications' => 'منشورات علمية',
-    'Operations' => 'عمليات',
+    'Scientific_Publications' => 'المنشورات العلمية',
+    'Operations' => 'العمليات',
     'Contact_Us' => 'تواصل معنا',
     'Language' => 'اللغة'
 

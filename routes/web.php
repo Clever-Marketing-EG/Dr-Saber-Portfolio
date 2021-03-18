@@ -62,7 +62,7 @@ Route::resource('research', ResearchController::class);
 | Media Routes
 |--------------------------------------------------------------------------
 */
-Route::resource('media', MediaController::class);
+Route::resource('media', MediaController::class)->except('show');
 
 //==============================================================================
 

@@ -6,13 +6,7 @@
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
-                <h3>About Us</h3>
-            </div>
-            <div class="banner-content">
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">about us</li>
-                </ol>
+                <h3>@lang('nav.Biography')</h3>
             </div>
         </div><!-- Container /- -->
     </div><!-- Page Banner -->

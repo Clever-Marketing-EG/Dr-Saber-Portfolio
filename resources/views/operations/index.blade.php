@@ -16,9 +16,8 @@
                             <!-- Container -->
                             <div class="container">
                                 <div class="page-banner-content">
-                                    <h3>Operations</h3>
+                                    <h3>@lang('nav.Operations')</h3>
                                 </div>
-                             
                             </div><!-- Container /- -->
                         </div><!-- Page Banner -->
 
@@ -41,39 +40,32 @@
                                                     <div class="entry-header">
                                                         <h3 class="entry-title"><a
                                                                 title="Using the latest medical technology" href="#">
-                                                                @if (Session::get('locale') == 'ar')
-                                                                    {{ $operation->title_ar }}
+                                                                @if(Session::get('locale') == 'ar')
+                                                                    {{$operation->title_ar}}
                                                                 @else
                                                                     {{ $operation->title }}
                                                                 @endif
-
                                                             </a></h3>
 
                                                     </div>
                                                     <div class="entry-content">
                                                         <p>
-                                                            @if (Session::get('locale') == 'ar')
-                                                                {{ $operation->content_ar }}
-
+                                                            @if(Session::get('locale') == 'ar')
+                                                                {{$operation->content_ar}}
                                                             @else
-                                                                {{ $operation->content }}
+                                                                {{$operation->content}}
                                                             @endif
                                                         </p>
                                                         <p></p>
                                                     </div>
-                                                    <a href={{ route('operations.show', $operation) }} title="Read More"
-                                                        class="read-more">Read More</a>
+                                                    <a href="{{route('operations.show', $operation)}}" title="Read More" class="read-more">@lang('helpers.read_more')</a>
                                                 </div>
                                             </div>
                                         </div>
                                     @endforeach
                                 </div>
                                 <nav class="ow-pagination text-center">
-                                    <ul class="pagination">
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                    </ul>
+                                    {{$operations->links()}}
                                 </nav>
                             </div><!-- Container /- -->
                         </div><!-- Latest News /- -->

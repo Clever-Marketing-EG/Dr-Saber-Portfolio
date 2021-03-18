@@ -11,5 +11,7 @@ return [
     'read_more' => 'إقرأ المزيد',
     'search' => 'بحث',
     'search_here' => 'إبحث هنا',
-    'additional_media' => 'وسائط إضافية'
+    'additional_media' => 'وسائط إضافية',
+    'surgeries' => 'العمليات الجراحية',
+    'information' => 'معلومات'
 ];

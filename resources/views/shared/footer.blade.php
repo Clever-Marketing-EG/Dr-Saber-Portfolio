@@ -3,13 +3,13 @@
         <div class="row">
             <div class="col-md-4">
                 <img src={{asset("assets/images/logo.jpg")}}  alt="..."/>
-                <h1 class="name">Dr.Saber Waheeb</h1>
+                <h1 class="name">@lang('nav.Name')</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt suscipit itaque illo, vero laborum
                     ipsa voluptatem temporibus nostrum! Assumenda tempora libero, dolores nobis autem possimus
                     voluptatibus accusamus voluptatum voluptas! Corporis.</p>
             </div>
             <div class="col-md-5 section-two">
-                <h6 class="footer-title">information</h6>
+                <h6 class="footer-title">@lang('helpers.information')</h6>
                 <div class="row mb">
                     <div class="col-md-6 icon-container"> <i class="fa fa-phone" style="margin-left: -5px;margin-right: -5px"></i></div>
                     <span class="col-md-6">01224745749</span>

@@ -6,13 +6,7 @@
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
-                <h3>Media</h3>
-            </div>
-            <div class="banner-content">
-                <ol class="breadcrumb">
-                    <li><a href={{route('main.home')}}>Home</a></li>
-                    <li class="active">Media</li>
-                </ol>
+                <h3>@lang('nav.Media')</h3>
             </div>
         </div><!-- Container /- -->
     </div><!-- Page Banner -->
@@ -27,10 +21,10 @@
                 <div class="widget-area col-md-4 col-sm-4 col-xs-12">
                     <!-- Widget Search -->
                     <aside id="search" class="widget widget_search">
-                        <h3 class="widget-title">Search</h3>
+                        <h3 class="widget-title">@lang('helpers.search')</h3>
                         <form method="get" class="searchform" action="#">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search Here . . . ">
+                                <input type="text" class="form-control" placeholder="@lang('helpers.search_here')">
                                 <span class="input-group-btn">
 											<button class="btn btn-search" title="Search" type="button"><i class="fa fa-search"></i></button>
 										</span>
@@ -50,23 +44,30 @@
                                 </a>
                                 <div class="post-date-bg">
                                     <div class="post-date">
-                                        18 <span>June</span>
+                                        {{ strftime("%d", strtotime($mediaItem->created_at)) }}
+                                        <span>{{ strftime("%b", strtotime($mediaItem->created_at)) }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="latest-news-content">
                                 <div class="entry-header">
-                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="#">Using the latest medical technology</a></h3>
-                                    <div class="entry-meta">
-                                        <div class="byline"><a href="#" title="adminol"><i class="fa fa-user-o"></i>by adminol</a></div>
-                                        <div class="post-time"><a href="#" title="10 minutes ago"><i class="fa fa-clock-o"></i>10 minutes ago</a></div>
-                                        <div class="post-comment"><a href="#" title="4 Comments"><i class="fa fa-commenting-o"></i>4 Comments</a></div>
-                                    </div>
+                                    <h3 class="entry-title">
+                                            @if(Session::get('locale') == 'ar')
+                                                {{$mediaItem->title_ar}}
+                                            @else
+                                                {{$mediaItem->title}}
+                                            @endif
+                                        </a></h3>
                                 </div>
                                 <div class="entry-content">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
+                                    <p>
+                                        @if(Session::get('locale') == 'ar')
+                                            {{$mediaItem->content_ar}}
+                                        @else
+                                            {{$mediaItem->content}}
+                                        @endif
+                                    </p>
                                 </div>
-                                <a href="#" title="Read More" class="read-more">Read more</a>
                             </div>
                         </div>
                     @endforeach
