@@ -797,14 +797,14 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #03296fba;
-    padding: 40px;
+    padding-top: 40px;
 }
 .new-footer img{
     width: 80px;
     height: 80px;
     border-radius: 15px;
     box-shadow: 0 3px 35px 0 rgb(78 78 78 / 0.1);
-    margin-left: 40px;
+    /* margin-left: 40px; */
     margin-top: 25px;
 }
 
@@ -853,13 +853,13 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
 }
 @media only screen and (max-width:790px){
     .map-container{
-        margin-left: 0px;
+       margin: 20px;
     }
 }
 .name{
     color: #03296fba;
     font-weight: bold;
     font-size: 15px;
-    margin-left: 40px;
+    /* margin: 40px; */
     margin-bottom: -20px;
 }

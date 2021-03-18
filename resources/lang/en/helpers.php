@@ -11,6 +11,8 @@ return [
     'read_more' => 'Read More',
     'search' => 'Search',
     'search_here' => 'Search Here',
-    'additional_media' => 'Additional Media'
+    'additional_media' => 'Additional Media',
+    'surgeries' => 'Surgeries',
+    'information' => 'Information'
 
 ];

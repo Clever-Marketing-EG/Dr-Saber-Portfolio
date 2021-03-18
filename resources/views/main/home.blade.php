@@ -137,7 +137,7 @@
             <div class="container">
                 <!-- Section Header -->
                 <div class="section-header">
-                    <h3>Surgeries</h3>
+                    <h3>@lang('helpers.surgeries')</h3>
                 </div><!-- Section Header /- -->
                 <div class="row">
                     <div class="col-md-6">
@@ -184,7 +184,7 @@
             <div class="container">
                 <!-- Section Header -->
                 <div class="section-header">
-                    <h3>Scientific Publications </h3>
+                    <h3>@lang('nav.Scientific_Publications')</h3>
                 </div>
                 <div class="team-carousel">
                     <div class="col-md-12">
@@ -231,7 +231,7 @@
                     <div class="col-md-6">
                         <div class="type-post">
                             <div class="entry-cover">
-                                <a title="Blog" href="#">
+                                <a title="Blog" href={{route('operations.index')}}>
                                     <img alt="blog" src="assets/images/blog-1.jpg" />
                                 </a>
 
@@ -239,7 +239,7 @@
                             <div class="latest-news-content">
                                 <div class="entry-header">
                                     <h3 class="entry-title"><a title="Patients Share Success Stories"
-                                            href="#">Operations</a></h3>
+                                            href={{route('operations.index')}}>@lang('nav.Operations')</a></h3>
 
                                 </div>
                                 <div class="entry-content">
@@ -253,14 +253,14 @@
                     <div class="col-md-6">
                         <div class="type-post">
                             <div class="entry-cover">
-                                <a title="Blog" href="#">
+                                <a title="Blog" href={{route('articles.index')}}>
                                     <img alt="blog" src="assets/images/blog-1.jpg" />
                                 </a>
 
                             </div>
                             <div class="latest-news-content">
                                 <div class="entry-header">
-                                    <h3 class="entry-title"><a title="Patients Share Success Stories" href="#">News</a>
+                                    <h3 class="entry-title"><a title="Patients Share Success Stories" href={{route('articles.index')}}>@lang('nav.News')</a>
                                     </h3>
 
                                 </div>

@@ -3,7 +3,8 @@
 @section('content')
     <div id="articles-show">
         <!-- Page Banner -->
-        <div class="page-banner container-fluid no-left-padding no-right-padding" style="background-image: url({{$article->images[0]->url}})">
+        <div class="page-banner container-fluid no-left-padding no-right-padding"
+            style="background-image: url({{ $article->images[0]->url }})">
             <!-- Container -->
             <div class="container">
                 <div class="page-banner-content">
@@ -23,18 +24,18 @@
             <div class="container">
                 <div class="flexslider gallery-details-full">
                     <ul class="slides">
-                        @foreach($article->images as $image)
+                        @foreach ($article->images as $image)
                             <li>
-                                <img src={{$image->url}} alt="large-thumb" width="1170" height="500"/>
+                                <img src={{ $image->url }} alt="large-thumb" width="1170" height="500" />
                             </li>
                         @endforeach
                     </ul>
                 </div>
                 <div class="flexslider gallery-details-thumb">
                     <ul class="slides">
-                        @foreach($article->images as $image)
+                        @foreach ($article->images as $image)
                             <li>
-                                <img src={{$image->url}} alt="thumb" width="230" height="190"/>
+                                <img src={{ $image->url }} alt="thumb" width="230" height="190" />
                             </li>
                         @endforeach
                     </ul>
@@ -42,6 +43,10 @@
                 <div class="row">
                     <div class="gallery-info-content">
                         <div class="info-content">
+<<<<<<< HEAD
+                            <h3>{{ $article->title }}</h3>
+                            <p>{{ $article->content }}</p>
+=======
                             @if(Session::get('locale') == 'ar')
                                 <h3>{{$article->title_ar}}</h3>
                                 <p>{{$article->content_ar}}</p>
@@ -49,14 +54,22 @@
                                 <h3>{{$article->title}}</h3>
                                 <p>{{$article->content}}</p>
                             @endif
+>>>>>>> c6395f970439072403555bdc01e7cf25845a5ec1
                         </div>
                     </div>
                 </div>
 
                 <div class="row additional-media">
                     <div class="info-content">
+<<<<<<< HEAD
+                        <h3>Additional Media</h3>
+                        <iframe width="100%" height="100%" src={{ $article->video_url }} frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+=======
                         <h3>@lang('helpers.additional_media')</h3>
                         <iframe width="100%" height="100%" src={{$article->video_url}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+>>>>>>> c6395f970439072403555bdc01e7cf25845a5ec1
                     </div>
                 </div>
             </div><!-- Container /- -->

@@ -2,4 +2,9 @@
   margin-top: 5rem;
 }
 
+#footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*# sourceMappingURL=index.css.map */

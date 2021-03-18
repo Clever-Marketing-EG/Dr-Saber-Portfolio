@@ -32,7 +32,7 @@
                                             <div class="type-post">
                                                 <div class="entry-cover">
                                                     <a title="Blog" href="#">
-                                                        <img alt="blog" src={{$operation->image_url}} />
+                                                        <img alt="blog" src={{ $operation->image_url }} />
                                                     </a>
 
                                                 </div>
