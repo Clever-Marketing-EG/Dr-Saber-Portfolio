@@ -6,7 +6,6 @@ use App\Http\Controllers\Home\OperationController as HomeOperations;
 use App\Http\Controllers\Home\ResearchController as HomeResearch;
 
 use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
-use App\Http\Controllers\ArticlesDashboardController;
 use App\Http\Controllers\SurgeriesDashboardController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MainController;
