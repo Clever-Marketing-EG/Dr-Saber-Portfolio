@@ -1,6 +1,9 @@
 <x-app-layout>
-    <h2>Section title</h2>
-    <a href="{{route('articles.create')}}" class="btn btn-secondary">Add</a>
+    <h2>Articles List</h2>
+    <a href="{{route('articles.create')}}" class="btn btn-success">Add</a>
+    <br>
+    <br>
+    @include('shared.flash')
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -28,7 +31,7 @@
                     </tr>
                 </tbody>
             @endforeach
-
         </table>
+        {{$articles->links()}}
     </div>
 </x-app-layout>

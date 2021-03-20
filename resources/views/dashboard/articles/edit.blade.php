@@ -1,36 +1,43 @@
 <x-app-layout>
 
-    <h2>Edit</h2>
-    <form method="POST" action="{{ route('dashboard.update', $article) }}">
+    <h2>Editing</h2>
+    @if($errors->any())
+        <div class="alert alert-warning" role="alert">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <form method="POST" action="{{ route('articles.update', $article) }}">
         @csrf
         @method('PATCH')
         <div class="container">
             <div class="row">
-                @error('title')
-                    <span class="alert alert-danger">{{ $message }}</span>
-                @enderror
                 <div class="form-group col-md-6">
                     <label>Title:</label>
-                    <input type="text" name="title" class="form-control" value="{{ $article->title }}"
-                        placeholder="{{ $article->title }}">
+                    <input type="text" name="title" value="{{$article->title}}" class="form-control" />
                 </div>
-                @error('title_ar')
-                    <span class="alert alert-danger">{{ $message }}</span>
-                @enderror
                 <div class="form-group col-md-6">
                     <label>Title (AR):</label>
-                    <input type="text" name="title_ar" class="form-control" value="{{ $article->title_ar }}"
-                        placeholder="{{ $article->title_ar }}">
+                    <input type="text" name="title_ar" value="{{$article->title_ar}}" class="form-control">
                 </div>
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                     <label>Content:</label>
-                    <input type="text" name="name" class="form-control" value="{{ $article->content }}"
-                        placeholder="{{ $article->content }}">
+                    <textarea type="text" name="content" class="form-control" rows="10">{{$article->content}}</textarea>
                 </div>
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                     <label>Content (AR):</label>
-                    <input type="text" name="name" class="form-control" value="{{ $article->content_ar }}"
-                        placeholder="{{ $article->content_ar }}">
+                    <textarea type="text" name="content_ar" class="form-control" rows="10">{{$article->content_ar}}</textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Video URL:</label>
+                    <input type="text" name="video_url" class="form-control" value="{{$article->video_url}}" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Meta:</label>
+                    <input type="text" name="meta" class="form-control" value="{{ str_replace('',',', str_replace(array('"','[',']'),'',$article->meta) )}}"/>
                 </div>
             </div>
 

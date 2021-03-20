@@ -41,8 +41,9 @@ class ArticleController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        Article::saveArticle($request);
-        return redirect()->route('articles.index');
+        $validated = Article::validateArticle($request);
+        Article::create($validated);
+        return redirect()->route('articles.index')->with('Article created successfully!');
     }
 
     /**
@@ -73,18 +74,13 @@ class ArticleController extends Controller
      * @param Request $request
      * @param Article $article
      * @return RedirectResponse
+     * @throws ValidationException
      */
     public function update(Request $request, Article $article): RedirectResponse
     {
-        $validated = $request->validate([
-            'title' => 'min:3|string',
-            'title_ar' => 'min:3|string',
-            'content' => 'min:3|text',
-            'content_ar' => 'min:3|text'
-        ]);
+        $validated = Article::validateArticle($request);
         $article->update($validated);
-        toast('Edited successfully!', 'success');
-        return redirect()->route('dashboard.index');
+        return redirect()->route('articles.index')->with('success', 'Article updated successfully!');
     }
 
     /**

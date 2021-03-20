@@ -34,10 +34,12 @@
                 <div class="form-group col-md-6">
                     <label>Video URL:</label>
                     <input type="text" name="video_url" class="form-control" value="{{old('video_url')}}" />
+                    <small class="form-text text-muted">Enter a valid YouTube video URL</small>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Meta:</label>
                     <input type="text" name="meta" class="form-control" value="{{old('meta')}}"/>
+                    <small class="form-text text-muted">Enter Meta tags separated by commas ","</small>
                 </div>
             </div>
 

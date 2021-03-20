@@ -42,7 +42,7 @@ class Article extends Model
      * @return mixed
      * @throws ValidationException
      */
-    public static function saveArticle(Request $request)
+    public static function validateArticle(Request $request)
     {
         $validated = $request->validate([
             'title' => 'required|min:3|string',
@@ -69,14 +69,12 @@ class Article extends Model
         }
         $metas = rtrim($metas, ",");
         $metas .= ']';
-        $data = array_merge(
+        return array_merge(
             $validated,
             [
                 'video_url' => 'https://www.youtube.com/embed/'.$vidMatches[5],
                 'meta' => $metas
             ]
         );
-
-        return Article::create($data);
     }
 }
