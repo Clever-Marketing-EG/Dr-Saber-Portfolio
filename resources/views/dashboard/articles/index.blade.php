@@ -1,6 +1,6 @@
 <x-app-layout>
-
     <h2>Section title</h2>
+    <a href="{{route('dashboard.articles.add', $articles)}}" class="btn btn-secondary">Add</a>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -17,10 +17,11 @@
                         <td>{{ $article->title }}</td>
                         <td>{{ $article->title_ar }}</td>
                         <td><a class="btn btn-primary" href="{{ route('dashboard.show', $article) }}">Show</a></td>
-                        <td><a href="{{ route('articles.edit', $article) }}" class="btn btn-secondary">Edit</a></td>
+                        <td><a href="{{ route('dashboard.articles.edit', $article) }}" class="btn btn-secondary">Edit</a></td>
                         <td>
-                            <form method="POST" action="{{ route('dashboard.delete') }}">
+                            <form method="POST" action="{{ route('dashboard.delete', $article) }}">
                                 @csrf
+                                @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>

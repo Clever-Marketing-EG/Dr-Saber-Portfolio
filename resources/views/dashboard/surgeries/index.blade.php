@@ -17,10 +17,11 @@
                         <td>{{ $operation->title }}</td>
                         <td>{{ $operation->title_ar }}</td>
                         <td><a class="btn btn-primary" href="{{ route('surgeries.show', $operation) }}">Show</a></td>
-                        <td><a href="{{ route('articles.edit', $operation) }}" class="btn btn-secondary">Edit</a></td>
+                        <td><a href="{{ route('surgeries.edit', $operation) }}" class="btn btn-secondary">Edit</a></td>
                         <td>
-                            <form method="POST" action="{{ route('dashboard.delete') }}">
+                            <form method="POST" action="{{ route('surgeries.delete', $operation) }}">
                                 @csrf
+                                @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>

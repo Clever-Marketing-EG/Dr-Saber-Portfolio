@@ -78,10 +78,19 @@ Route::group([
 ], function () {
     Route::get('articles', [ArticlesDashboardController::class, 'index'])->name('dashboard.index');
     Route::get('articles/show/{article}', [ArticlesDashboardController::class, 'show'])->name('dashboard.show');
-    Route::post('articles',[ArticlesDashboardController::class, 'destroy'])->name('dashboard.delete');
+    Route::delete('articles/{article}',[ArticlesDashboardController::class, 'destroy'])->name('dashboard.delete');
+    Route::get('articles/{article}/edit', [ArticlesDashboardController::class, 'edit'])->name('dashboard.articles.edit');
+    Route::patch('articles/edit/{article}',[ArticlesDashboardController::class, 'update'])->name('dashboard.update');
+    Route::get('articles/add', [ArticlesDashboardController::class, 'add'])->name('dashboard.articles.add');
+    Route::post('articles/store', [ArticlesDashboardController::class, 'store'])->name('dashboard.articles.store');
+
+
 
     Route::get('surgeries', [SurgeriesDashboardController::class, 'index'])->name('surgeries.index');
     Route::get('surgeries/show/{operation}', [SurgeriesDashboardController::class, 'show'])->name('surgeries.show');
+    Route::delete('surgeries/{operation}',[SurgeriesDashboardController::class, 'destroy'])->name('surgeries.delete');
+    Route::get('surgeries/{operation}/edit', [SurgeriesDashboardController::class, 'edit'])->name('surgeries.edit');
+    Route::patch('surgeries/edit/{operation}',[SurgeriesDashboardController::class, 'update'])->name('surgeries.update');
 
 });
 
