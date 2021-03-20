@@ -31,7 +31,7 @@
                                 </span>
                                 <br />
                                 <a title="Read More" class="read-more"
-                                   href={{ route('research.show', $research) }}>@lang('helpers.read_more')</a>
+                                   href={{ route('main.research.show', $research) }}>@lang('helpers.read_more')</a>
                             </div>
                         </div>
                     </li>

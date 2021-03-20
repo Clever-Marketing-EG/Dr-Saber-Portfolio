@@ -58,7 +58,7 @@
                                                         </p>
                                                         <p></p>
                                                     </div>
-                                                    <a href="{{route('operations.show', $operation)}}" title="Read More" class="read-more">@lang('helpers.read_more')</a>
+                                                    <a href="{{route('main.operations.show', $operation)}}" title="Read More" class="read-more">@lang('helpers.read_more')</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -11,7 +11,7 @@ return [
     'Name' => 'Dr. Saber Waheeb',
     'Home' => 'Home',
     'Biography' => 'Biography',
-    'News' => 'News ',
+    'News' => 'News',
     'Media' => 'Media',
     'For_Doctors' => 'For Doctors',
     'Scientific_Publications' => 'Scientific Publications',

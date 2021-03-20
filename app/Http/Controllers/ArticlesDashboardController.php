@@ -15,6 +15,7 @@ class ArticlesDashboardController extends Controller
         $articles = Article::paginate(20);
         return view('dashboard.articles.index', ['articles' => $articles]);
     }
+
     public function show(Article $article)
     {
         return view('dashboard.articles.show', ['article' => $article]);
@@ -34,6 +35,7 @@ class ArticlesDashboardController extends Controller
         $article = Article::create($validated);
         return redirect()->route('dashboard.index');
     }
+
     public function update(Request $request, Article $article)
     {
         $validated = $request->validate([
@@ -41,13 +43,12 @@ class ArticlesDashboardController extends Controller
             'title_ar' => 'min:3|string',
             'content' => 'min:3|text',
             'content_ar' => 'min:3|text'
-
-
         ]);
         $article->update($validated);
         toast('Edited successfully!', 'success');
         return redirect()->route('dashboard.index');
     }
+
     public function edit(Article $article)
     {
         return view('dashboard.articles.edit', ['article' => $article]);

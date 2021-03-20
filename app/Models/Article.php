@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 
 class Article extends Model
@@ -30,5 +32,51 @@ class Article extends Model
     public function images(): HasMany
     {
         return $this->hasMany(Image::class);
+    }
+
+
+    /**
+     * Saves a new Article after validation steps
+     *
+     * @param Request $request
+     * @return mixed
+     * @throws ValidationException
+     */
+    public static function saveArticle(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required|min:3|string',
+            'title_ar' => 'required|min:3|string',
+            'content' => 'required|min:3|string',
+            'content_ar' => 'required|min:3|string',
+        ]);
+
+        if(!preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
+        {
+            throw ValidationException::withMessages(['YouTube video URL is not valid']);
+        }
+
+        if(!preg_match("/[^,\s?]*/", $request['meta'], $metaMatches))
+        {
+            throw ValidationException::withMessages(['Meta words must be separated by commas']);
+        }
+
+        $metaArray = explode(',', $request['meta']);
+        $metas = '[';
+        foreach($metaArray as $meta)
+        {
+            $metas .= '"'.$meta.'"'. ',';
+        }
+        $metas = rtrim($metas, ",");
+        $metas .= ']';
+        $data = array_merge(
+            $validated,
+            [
+                'video_url' => 'https://www.youtube.com/embed/'.$vidMatches[5],
+                'meta' => $metas
+            ]
+        );
+
+        return Article::create($data);
     }
 }

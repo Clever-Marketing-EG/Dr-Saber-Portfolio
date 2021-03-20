@@ -21,7 +21,7 @@
                     @foreach($articles as $article)
                         <div class="type-post">
                             <div class="entry-cover">
-                                <a title="Blog" href={{route('articles.show', $article)}}>
+                                <a title="Blog" href={{route('main.article.show', $article)}}>
                                     <img alt="blog" src={{$article->images[0]->url}} />
                                 </a>
                                 <div class="post-date-bg">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="latest-news-content">
                                 <div class="entry-header">
-                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="#">
+                                    <h3 class="entry-title"><a title="Using the latest medical technology" href="{{route('main.article.show', $article)}}">
                                             @if(Session::get('locale') == 'ar')
                                                 {{$article->title_ar}}
                                             @else
@@ -48,7 +48,7 @@
                                         <p>{{$article->content}}</p>
                                     @endif
                                 </div>
-                                <a title="Read More" class="read-more" href={{route('articles.show', $article)}}>@lang('helpers.read_more')</a>
+                                <a title="Read More" class="read-more" href="{{route('main.article.show', $article)}}">@lang('helpers.read_more')</a>
                             </div>
                         </div>
                     @endforeach
@@ -105,6 +105,8 @@
                                         <span><a href="#" title="Date"><i class="fa fa-calendar-o"></i>04 January 2014</a></span>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
                     </aside><!-- Widget Tag Cloud /- -->
 
                 </div><!-- Widget Area /- -->
@@ -114,10 +116,4 @@
             </nav>
         </div><!-- Container /- -->
     </div><!-- Blog Right Sidebar /- -->
-    </main>
-    </div>
-
-
-
-    </div>
 @endsection
