@@ -1,7 +1,7 @@
 <x-app-layout>
     <h2>Articles List</h2>
     <a href="{{route('articles.create')}}" class="btn btn-success">Add</a>
-    <br> 
+    <br>
     <br>
     @include('shared.flash')
     <div class="table-responsive">
@@ -10,8 +10,9 @@
                 <tr>
                     <th>Title</th>
                     <th>Title(AR)</th>
-                    <th>Actions</th>
-
+                    <th>Show</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             @foreach ($articles as $article)

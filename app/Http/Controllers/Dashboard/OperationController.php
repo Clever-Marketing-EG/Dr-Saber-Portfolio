@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use Exception;
 use Illuminate\Http\Request;
 use App\Models\Operation;
 use Illuminate\Contracts\View\View;
@@ -19,7 +20,7 @@ class OperationController extends Controller
      */
     public function index(): View
     {
-        $operations = Operation::paginate(20);
+        $operations = Operation::paginate(30);
         return view('dashboard.operations.index', ['operations' => $operations]);
     }
 
@@ -88,7 +89,6 @@ class OperationController extends Controller
     public function update(Request $request, Operation $operation): RedirectResponse
     {
         $validated = Operation::validateOperation($request);
-//        dd($validated);
         $operation->title = $validated['title'];
         $operation->title_ar = $validated['title_ar'];
         $operation->content = $validated['content'];
@@ -102,9 +102,9 @@ class OperationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Operation $operation
-     * @return Response
+     * @param Operation $operation
      * @return RedirectResponse
+     * @throws Exception
      */
     public function destroy(Operation $operation): RedirectResponse
     {

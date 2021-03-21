@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
 use App\Http\Controllers\Dashboard\OperationController as DashboardOperations;
 use App\Http\Controllers\Dashboard\MediaController as DashboardMedia;
-
+use App\Http\Controllers\Dashboard\ResearchController as DashboardResearch;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +26,7 @@ Route::group([
 
     Route::resource('articles', DashboardArticles::class);
     Route::resource('operations', DashboardOperations::class);
+    Route::resource('researches', DashboardResearch::class);
     Route::resource('media', DashboardMedia::class);
 
 

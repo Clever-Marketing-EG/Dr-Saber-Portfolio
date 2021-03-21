@@ -11,8 +11,9 @@
                 <tr>
                     <th>Title</th>
                     <th>Title(AR)</th>
-                    <th>Actions</th>
-
+                    <th>Show</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             @foreach ($operations as $operation)

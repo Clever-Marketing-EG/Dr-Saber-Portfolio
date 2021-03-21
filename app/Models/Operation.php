@@ -43,8 +43,6 @@ class Operation extends Model
 
         $path = $request->image->store('operations_images');
 
-//        dd($path);
-
         unset($validated['image']);
         return array_merge(
             $validated,
