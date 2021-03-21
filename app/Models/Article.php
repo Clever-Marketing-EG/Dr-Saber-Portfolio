@@ -36,7 +36,7 @@ class Article extends Model
 
 
     /**
-     * Saves a new Article after validation steps
+     * validate Article data
      *
      * @param Request $request
      * @return mixed
@@ -58,7 +58,7 @@ class Article extends Model
 
         if(!preg_match("/[^,\s?]*/", $request['meta'], $metaMatches))
         {
-            throw ValidationException::withMessages(['Meta words must be separated by commas']);
+            throw ValidationException::withMessages(['Meta tags must be separated by commas']);
         }
 
         $metaArray = explode(',', $request['meta']);
@@ -69,6 +69,7 @@ class Article extends Model
         }
         $metas = rtrim($metas, ",");
         $metas .= ']';
+
         return array_merge(
             $validated,
             [

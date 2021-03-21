@@ -42,8 +42,8 @@ class ArticleController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = Article::validateArticle($request);
-        Article::create($validated);
-        return redirect()->route('articles.index')->with('Article created successfully!');
+        $article = Article::create($validated);
+        return redirect()->route('articles.edit', $article)->with('success', 'Article created successfully!');
     }
 
     /**
@@ -88,7 +88,7 @@ class ArticleController extends Controller
      *
      * @param Article $article
      * @return RedirectResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy(Article $article): RedirectResponse
     {

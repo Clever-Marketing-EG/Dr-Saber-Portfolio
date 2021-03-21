@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Dashboard\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
 use App\Http\Controllers\SurgeriesDashboardController;
@@ -23,6 +24,7 @@ Route::group([
 ], function () {
 
     Route::resource('articles', DashboardArticles::class);
+    Route::post('/articles/image/upload', [ImageController::class, 'upload'])->name('articles.images.upload');
 
 
     Route::get('surgeries', [SurgeriesDashboardController::class, 'index'])->name('surgeries.index');
