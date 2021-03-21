@@ -10,6 +10,9 @@
             </ul>
         </div>
     @endif
+    @foreach($article->images as $image)
+
+    @endforeach
     @include('shared.flash')
     <form method="POST" action="{{ route('articles.update', $article) }}">
         @csrf

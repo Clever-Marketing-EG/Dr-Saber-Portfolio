@@ -23,6 +23,7 @@ class ImageController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'article_id' => 'required|exists:articles,id'
         ]);
+
         $image = $request->file('image');
         $name = $image->getClientOriginalName();
         $path = $request->image->store('articles_images');

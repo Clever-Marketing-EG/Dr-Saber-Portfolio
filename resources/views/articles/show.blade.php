@@ -26,7 +26,7 @@
                     <ul class="slides">
                         @foreach ($article->images as $image)
                             <li>
-                                <img src={{ $image->url }} alt="large-thumb" width="1170" height="500" />
+                                <img src="{{ $image->url }}" alt="large-thumb" width="1170" height="500" />
                             </li>
                         @endforeach
                     </ul>
