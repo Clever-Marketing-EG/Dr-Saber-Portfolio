@@ -3,7 +3,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
-use App\Http\Controllers\SurgeriesDashboardController;
+use App\Http\Controllers\Dashboard\OperationController as DashboardOperations;
+use App\Http\Controllers\Dashboard\MediaController as DashboardMedia;
 
 
 /*
@@ -23,12 +24,7 @@ Route::group([
 ], function () {
 
     Route::resource('articles', DashboardArticles::class);
-
-
-    Route::get('surgeries', [SurgeriesDashboardController::class, 'index'])->name('surgeries.index');
-    Route::get('surgeries/show/{operation}', [SurgeriesDashboardController::class, 'show'])->name('surgeries.show');
-    Route::delete('surgeries/{operation}',[SurgeriesDashboardController::class, 'destroy'])->name('surgeries.delete');
-    Route::get('surgeries/{operation}/edit', [SurgeriesDashboardController::class, 'edit'])->name('surgeries.edit');
-    Route::patch('surgeries/edit/{operation}',[SurgeriesDashboardController::class, 'update'])->name('surgeries.update');
+    Route::resource('operations', DashboardOperations::class);
+    Route::resource('media', DashboardMedia::class);
 
 });

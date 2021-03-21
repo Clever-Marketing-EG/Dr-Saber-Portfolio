@@ -1,7 +1,7 @@
 <x-app-layout>
     <h2>Articles List</h2>
     <a href="{{route('articles.create')}}" class="btn btn-success">Add</a>
-    <br>
+    <br> 
     <br>
     @include('shared.flash')
     <div class="table-responsive">

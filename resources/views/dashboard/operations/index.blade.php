@@ -1,6 +1,10 @@
 <x-app-layout>
 
-    <h2>Section title</h2>
+    <h2>Operations List</h2>
+    <a href="{{ route('operations.create') }}" class="btn btn-success">Add</a>
+    <br>
+    <br>
+    @include('shared.flash')
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -16,10 +20,11 @@
                     <tr>
                         <td>{{ $operation->title }}</td>
                         <td>{{ $operation->title_ar }}</td>
-                        <td><a class="btn btn-primary" href="{{ route('surgeries.show', $operation) }}">Show</a></td>
-                        <td><a href="{{ route('surgeries.edit', $operation) }}" class="btn btn-secondary">Edit</a></td>
+                        <td><a class="btn btn-primary" href="{{ route('operations.show', $operation) }}">Show</a></td>
+                        <td><a href="{{ route('operations.edit', $operation) }}" class="btn btn-secondary">Edit</a>
+                        </td>
                         <td>
-                            <form method="POST" action="{{ route('surgeries.delete', $operation) }}">
+                            <form method="POST" action="{{ route('operations.destroy', $operation) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -30,5 +35,7 @@
             @endforeach
 
         </table>
+        {{ $operations->links() }}
+
     </div>
 </x-app-layout>
