@@ -10,9 +10,7 @@
             </ul>
         </div>
     @endif
-    @foreach($article->images as $image)
 
-    @endforeach
     @include('shared.flash')
     <form method="POST" action="{{ route('articles.update', $article) }}">
         @csrf
@@ -52,13 +50,30 @@
         </div>
         <br />
     </form>
-    <form method="POST" action="{{route('articles.images.upload')}}" enctype="multipart/form-data">
-        @csrf
-        <input type="hidden" name="article_id" value="{{$article->id}}" >
-        <label for="image" class="btn btn-secondary">
-            Upload Image
-        </label>
-        <input id="image" type="file" name="image" style="display: none;">
-        <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
+    <div class="container position-relative">
+        <div class="position-absolute top-0 end-0">
+            <form method="POST" action="{{route('articles.images.upload', $article)}}" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="article_id" value="{{$article->id}}" >
+                <label for="image" class="btn btn-secondary">
+                    Choose Image
+                </label>
+                <input id="image" type="file" name="image" style="display: none;">
+                <button type="submit" class="btn btn-success">Upload</button>
+            </form>
+        </div>
+        <br><br>
+        <div class="row">
+            @foreach($article->images as $image)
+                <div class="col-md-3 mb-3 position-relative">
+                    <img src="{{$image->url}}" class="img-thumbnail" alt="..." style="height: 300px">
+                    <form method="POST" action="{{route('articles.images.destroy', $image)}}" class="position-absolute bottom-0 end-0">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </x-app-layout>

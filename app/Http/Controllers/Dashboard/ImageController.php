@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Image;
+use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
@@ -12,12 +13,13 @@ class ImageController extends Controller
 {
 
     /**
-     * Upload an image
+     * Upload image for Article
      *
      * @param Request $request
+     * @param Article $article
      * @return RedirectResponse
      */
-    public function upload(Request $request): RedirectResponse
+    public function uploadArticleImage(Request $request, Article $article): RedirectResponse
     {
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
@@ -30,9 +32,22 @@ class ImageController extends Controller
         $image = new Image();
         $image['name'] = $name;
         $image['url'] = asset($path);
-        $article = Article::find($request['article_id']);
         $article->images()->save($image);
         return redirect()->back()->with('success', 'Image Uploaded successfully');
     }
 
+
+    /**
+     * Delete an image of an Article
+     *
+     * @param Request $request
+     * @param Image $image
+     * @return RedirectResponse
+     * @throws Exception
+     */
+    public function deleteArticlesImage(Image $image): RedirectResponse
+    {
+        $image->delete();
+        return redirect()->back()->with('warning', 'Image deleted successfully');
+    }
 }

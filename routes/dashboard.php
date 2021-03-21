@@ -29,7 +29,8 @@ Route::group([
     Route::resource('media', DashboardMedia::class);
 
 
-    Route::post('/articles/image/upload', [ImageController::class, 'upload'])->name('articles.images.upload');
+    Route::post('/articles/{article}/image', [ImageController::class, 'uploadArticleImage'])->name('articles.images.upload');
+    Route::delete('/articles/images/{image}', [ImageController::class, 'deleteArticlesImage'])->name('articles.images.destroy');
 
 
 });
