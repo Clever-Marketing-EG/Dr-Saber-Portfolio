@@ -1,3 +1,5 @@
 *
 !public/
 !.gitignore
+articles_images/*
+operations_images/*
