@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Dashboard\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
 use App\Http\Controllers\Dashboard\OperationController as DashboardOperations;
@@ -26,5 +27,9 @@ Route::group([
     Route::resource('articles', DashboardArticles::class);
     Route::resource('operations', DashboardOperations::class);
     Route::resource('media', DashboardMedia::class);
+
+
+    Route::post('/articles/image/upload', [ImageController::class, 'upload'])->name('articles.images.upload');
+
 
 });

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Image extends Model
 {
@@ -13,4 +14,14 @@ class Image extends Model
       'name',
       'image_url'
     ];
+
+    /**
+     * Relationship with Articles
+     *
+     * @return BelongsTo
+     */
+    public function article(): BelongsTo
+    {
+        return $this->belongsTo(Article::class);
+    }
 }
