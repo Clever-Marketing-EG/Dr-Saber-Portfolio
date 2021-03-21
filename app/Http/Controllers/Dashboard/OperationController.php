@@ -7,13 +7,14 @@ use App\Models\Operation;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 
 class OperationController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      * @return View
      */
     public function index(): View
@@ -25,7 +26,6 @@ class OperationController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      * @return View
      */
     public function create(): View
@@ -36,23 +36,29 @@ class OperationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
      * @return RedirectResponse
+     * @throws ValidationException
      */
     public function store(Request $request): RedirectResponse
     {
         $validated = Operation::validateOperation($request);
-        Operation::create($validated);
-        return redirect()->route('operations.index')->with('Operation created successfully!');
+        $operation = new Operation();
+        $operation->title = $validated['title'];
+        $operation->title_ar = $validated['title_ar'];
+        $operation->content = $validated['content'];
+        $operation->content_ar = $validated['content_ar'];
+        $operation->video_url = $validated['video_url'];
+        $operation->image_url = $validated['image_url'];
+        $operation->save();
+        return redirect()->route('operations.index')->with('success', 'Operation created successfully!');
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  Operation $operation
-     * @return \Illuminate\Http\Response
+     * @param Operation $operation
      * @return View
      */
     public function show(Operation $operation): View
@@ -63,26 +69,33 @@ class OperationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Operation $operation
-     * @return \Illuminate\Http\Response
+     * @param Operation $operation
      * @return View
      */
     public function edit(Operation $operation): View
     {
         return view('dashboard.operations.edit', ['operation' => $operation]);
     }
+
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Article $article
+     * @param Operation $operation
      * @return RedirectResponse
      * @throws ValidationException
      */
     public function update(Request $request, Operation $operation): RedirectResponse
     {
         $validated = Operation::validateOperation($request);
-        $operation->update($validated);
+//        dd($validated);
+        $operation->title = $validated['title'];
+        $operation->title_ar = $validated['title_ar'];
+        $operation->content = $validated['content'];
+        $operation->content_ar = $validated['content_ar'];
+        $operation->video_url = $validated['video_url'];
+        $operation->image_url = $validated['image_url'];
+        $operation->save();
         return redirect()->route('operations.index')->with('success', 'operation updated successfully!');
     }
 
@@ -90,7 +103,7 @@ class OperationController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  Operation $operation
-     * @return \Illuminate\Http\Response
+     * @return Response
      * @return RedirectResponse
      */
     public function destroy(Operation $operation): RedirectResponse

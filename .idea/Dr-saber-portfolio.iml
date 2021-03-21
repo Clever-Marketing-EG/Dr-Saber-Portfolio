@@ -119,7 +119,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/realrashid/sweet-alert" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/public/storage" />
-      <excludeFolder url="file://$MODULE_DIR$/storage/app/articles_images" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/1f" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/fd" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />

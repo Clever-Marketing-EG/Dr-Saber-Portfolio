@@ -2,7 +2,7 @@
 
     <div  class="container mt-5">
         <br /><br /><br />
-        <div  class="row">
+        <div  class="row mb-5">
             <div  class="col-md-6">
                 <h5>Article Title:</h5>
                 <h6>{{ $article->title }}</h6>
@@ -21,9 +21,12 @@
 
             </div>
         </div>
-        <div  class="container center">
-            <img src={{ $article->images[0]->url}}  class="article-img" alt="" />
-
+        <div class="row">
+            @foreach($article->images as $image)
+                <div class="col-md-3 mb-3">
+                    <img src="{{$image->url}}" class="img-thumbnail" alt="..." style="height: 300px">
+                </div>
+            @endforeach
         </div>
     </div>
 
