@@ -1,7 +1,6 @@
 <x-app-layout>
 
     <div  class="container mt-5">
-        <img src="{{$operation->image_url}}" class="rounded mx-auto d-block" alt="..." style="max-height: 400px; width: auto">
         <br /><br /><br />
         <div  class="row">
             <div  class="col-md-6">
@@ -23,6 +22,15 @@
             </div>
         </div>
 
+        <div class="row justify-content-around mt-5">
+            @foreach($operation->images as $image)
+                <div class="col-md-3 mb-3">
+                    <img src="{{$image->url}}" class="img-thumbnail" alt="..." style="height: 300px">
+                </div>
+            @endforeach
+        </div>
+        <div class="d-flex justify-content-center align-items-center mt-5">
+            <iframe width="560" height="315" src="{{$operation->video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
-
 </x-app-layout>
