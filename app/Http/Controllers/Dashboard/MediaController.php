@@ -51,63 +51,63 @@ class MediaController extends Controller
         $mediaItem->content_ar = $validated['content_ar'];
         $mediaItem->video_url = $validated['video_url'];
         $mediaItem->save();
-        return redirect()->route('media.index')->with('success', 'Media item created successfully!');
+        return redirect()->route('media.index')->with('success', 'Medium created successfully!');
     }
 
 
     /**
      * Display the specified resource.
      *
-     * @param Media $media
+     * @param Media $medium
      * @return View
      */
-    public function show(Media $media): View
+    public function show(Media $medium): View
     {
-        return view('dashboard.media.show', ['media' => $media]);
+        return view('dashboard.media.show', ['medium' => $medium]);
     }
 
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Media $media
+     * @param Media $medium
      * @return View
      */
-    public function edit(Media $media): View
+    public function edit(Media $medium): View
     {
-        return view('dashboard.media.edit', ['media' => $media]);
+        return view('dashboard.media.edit', ['media' => $medium]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Media $mediaItem
+     * @param Media $medium
      * @return RedirectResponse
      * @throws ValidationException
      */
-    public function update(Request $request, Media $mediaItem): RedirectResponse
+    public function update(Request $request, Media $medium): RedirectResponse
     {
         $validated = Media::validateMedia($request);
-        $mediaItem->title = $validated['title'];
-        $mediaItem->title_ar = $validated['title_ar'];
-        $mediaItem->content = $validated['content'];
-        $mediaItem->content_ar = $validated['content_ar'];
-        $mediaItem->video_url = $validated['video_url'];
-        $mediaItem->save();
+        $medium->title = $validated['title'];
+        $medium->title_ar = $validated['title_ar'];
+        $medium->content = $validated['content'];
+        $medium->content_ar = $validated['content_ar'];
+        $medium->video_url = $validated['video_url'];
+        $medium->save();
         return redirect()->route('media.index')->with('success', 'Media item created successfully!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Media $media
+     * @param Media $medium
      * @return RedirectResponse
      * @throws Exception
      */
-    public function destroy(Media $media): RedirectResponse
+    public function destroy(Media $medium): RedirectResponse
     {
-        $media->delete();
+        $medium->delete();
         return redirect()->back()->with('warning', 'Media deleted successfully');
     }
 }

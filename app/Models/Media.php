@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use http\Env\Request;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;
@@ -19,7 +19,14 @@ class Media extends Model
         'video_url'
     ];
 
-    public static function validateMedia(Request $request)
+    /**
+     * Validate Media item data
+     *
+     * @param Request $request
+     * @return array
+     * @throws ValidationException
+     */
+    public static function validateMedia(Request $request): array
     {
         $validated = $request->validate([
             'title' => 'required|min:3|string',

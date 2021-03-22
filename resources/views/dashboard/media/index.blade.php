@@ -16,16 +16,16 @@
                 <th>Delete</th>
             </tr>
             </thead>
-            @foreach ($media as $mediaItem)
+            @foreach($media as $medium)
                 <tbody>
                 <tr>
-                    <td>{{ $mediaItem->title }}</td>
-                    <td>{{ $mediaItem->title_ar }}</td>
-                    <td><a class="btn btn-primary" href="{{ route('media.show', $mediaItem) }}">Show</a></td>
-                    <td><a href="{{ route('media.edit', $mediaItem) }}" class="btn btn-secondary">Edit</a>
+                    <td>{{ $medium->title }}</td>
+                    <td>{{ $medium->title_ar }}</td>
+                    <td><a class="btn btn-primary" href="{{ route('media.show', $medium) }}">Show</a></td>
+                    <td><a href="{{ route('media.edit', $medium) }}" class="btn btn-secondary">Edit</a>
                     </td>
                     <td>
-                        <form method="POST" action="{{ route('media.destroy', $mediaItem) }}">
+                        <form method="POST" action="{{ route('media.destroy', $medium) }}">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
