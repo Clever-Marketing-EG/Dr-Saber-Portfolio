@@ -75,7 +75,7 @@ class MediaController extends Controller
      */
     public function edit(Media $medium): View
     {
-        return view('dashboard.media.edit', ['media' => $medium]);
+        return view('dashboard.media.edit', ['medium' => $medium]);
     }
 
     /**
