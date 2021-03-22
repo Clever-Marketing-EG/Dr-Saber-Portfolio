@@ -41,17 +41,11 @@
                     <input id="meta-tags" type="text" name="meta" class="form-control" value="{{old('meta')}}"/>
                     <small class="form-text text-muted">Enter Meta tags separated by commas ","</small>
                 </div>
-{{--                <div>--}}
-{{--                    <label for="image" class="btn btn-secondary">--}}
-{{--                        Upload Image--}}
-{{--                    </label>--}}
-{{--                    <input id="image" type="file" name="image" style="display: none;">--}}
-{{--                </div>--}}
             </div>
 
         </div>
         <br />
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Create</button>
     </form>
 
 </x-app-layout>

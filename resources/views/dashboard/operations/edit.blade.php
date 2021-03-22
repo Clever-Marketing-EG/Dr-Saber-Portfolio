@@ -14,15 +14,6 @@
         @csrf
         @method('PATCH')
         <div class="container">
-            <div class="position-relative">
-                <img src="{{$operation->image_url}}" class="rounded mx-auto d-block" alt="..." style="max-height: 400px; width: auto">
-                <div class="form-group position-absolute end-0 top-0">
-                    <label for="image" class="btn btn-success">
-                        Upload Image
-                    </label>
-                    <input id="image" type="file" name="image" style="display: none;">
-                </div>
-            </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Title:</label>
@@ -49,5 +40,31 @@
             <button type="submit" class="btn btn-primary">Edit</button>
         </div>
     </form>
+    <div class="container position-relative">
+        <div class="position-absolute top-0 end-0">
+            <form method="POST" action="{{route('operations.images.upload', $operation)}}" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="operation_id" value="{{$operation->id}}" >
+                <label for="image" class="btn btn-secondary">
+                    Choose Image
+                </label>
+                <input id="image" type="file" name="image" style="display: none;">
+                <button type="submit" class="btn btn-success">Upload</button>
+            </form>
+        </div>
+        <br><br>
+        <div class="row">
+            @foreach($operation->images as $image)
+                <div class="col-md-3 mb-3 position-relative">
+                    <img src="{{$image->url}}" class="img-thumbnail" alt="..." style="height: 300px">
+                    <form method="POST" action="{{route('operations.images.destroy', $image)}}" class="position-absolute bottom-0 end-0">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            @endforeach
+        </div>
+    </div>
 
 </x-app-layout>

@@ -49,10 +49,8 @@ class OperationController extends Controller
         $operation->content = $validated['content'];
         $operation->content_ar = $validated['content_ar'];
         $operation->video_url = $validated['video_url'];
-        $operation->image_url = $validated['image_url'];
         $operation->save();
-        return redirect()->route('operations.index')->with('success', 'Operation created successfully!');
-
+        return redirect()->route('operations.edit', $operation)->with('success', 'Operation created successfully!');
     }
 
     /**
@@ -93,7 +91,6 @@ class OperationController extends Controller
         $operation->content = $validated['content'];
         $operation->content_ar = $validated['content_ar'];
         $operation->video_url = $validated['video_url'];
-        $operation->image_url = $validated['image_url'];
         $operation->save();
         return redirect()->route('operations.index')->with('success', 'operation updated successfully!');
     }

@@ -36,12 +36,6 @@
                     <input type="text" name="video_url" class="form-control" value="{{old('video_url')}}" />
                     <small class="form-text text-muted">Enter a valid YouTube video URL</small>
                 </div>
-                <div class="form-group col-md-6 mb-3 mt-4">
-                    <label for="image" class="btn btn-secondary">
-                        Upload Image
-                    </label>
-                    <input id="image" type="file" name="image" style="display: none;">
-                </div>
 
             </div>
 

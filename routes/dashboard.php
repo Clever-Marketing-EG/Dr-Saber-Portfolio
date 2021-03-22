@@ -31,7 +31,9 @@ Route::group([
 
 
     Route::post('/articles/{article}/image', [ImageController::class, 'uploadArticleImage'])->name('articles.images.upload');
-    Route::delete('/articles/images/{image}', [ImageController::class, 'deleteArticlesImage'])->name('articles.images.destroy');
+    Route::delete('/articles/images/{image}', [ImageController::class, 'deleteArticleImage'])->name('articles.images.destroy');
 
+    Route::post('/operations/{operation}/image', [ImageController::class, 'uploadOperationImage'])->name('operations.images.upload');
+    Route::delete('/operations/images/{image}', [ImageController::class, 'deleteOperationImage'])->name('operations.images.destroy');
 
 });

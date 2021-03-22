@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -19,6 +20,18 @@ class Operation extends Model
         'video_url'
     ];
 
+
+    /**
+     * return this operation images
+     *
+     * @return HasMany
+     */
+    public function images(): HasMany
+    {
+        return $this->hasMany(OperationImage::class);
+    }
+
+
     /**
      * Saves a new Operation after validation steps
      *
@@ -33,7 +46,6 @@ class Operation extends Model
             'title_ar' => 'required|min:3|string',
             'content' => 'required|min:3|string',
             'content_ar' => 'required|min:3|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240'
         ]);
 
         if(!preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
@@ -41,13 +53,10 @@ class Operation extends Model
             throw ValidationException::withMessages(['YouTube video URL is not valid']);
         }
 
-        $path = $request->image->store('operations_images');
 
-        unset($validated['image']);
         return array_merge(
             $validated,
             [
-                'image_url' => asset($path),
                 'video_url' => 'https://www.youtube.com/embed/'.$vidMatches[5],
             ]
         );

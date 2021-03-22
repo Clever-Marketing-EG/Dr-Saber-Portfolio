@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOperationsTable extends Migration
+class CreateOperationImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateOperationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('operations', function (Blueprint $table) {
+        Schema::create('operation_images', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('title_ar');
-            $table->text('content');
-            $table->text('content_ar');
-            $table->string('video_url')->nullable();
+            $table->string('name');
+            $table->string('url');
+            $table->foreignId('operation_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateOperationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('operations');
+        Schema::dropIfExists('operation_images');
     }
 }
