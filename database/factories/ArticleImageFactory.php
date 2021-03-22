@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\ArticleImage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ArticleImageFactory extends Factory
+class ArticleImageFactory extends ImageFactory
 {
     /**
      * The name of the factory's corresponding model.
@@ -14,16 +14,4 @@ class ArticleImageFactory extends Factory
      */
     protected $model = ArticleImage::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
-    public function definition()
-    {
-        return [
-            'name' => $this->faker->sentence,
-            'url' => $this->faker->imageUrl()
-        ];
-    }
 }

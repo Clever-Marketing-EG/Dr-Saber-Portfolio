@@ -43,11 +43,11 @@ class ImageController extends Controller
     /**
      * Delete an image of an Article
      *
-     * @param Image $image
+     * @param ArticleImage $image
      * @return RedirectResponse
      * @throws Exception
      */
-    public function deleteArticleImage(Image $image): RedirectResponse
+    public function deleteArticleImage(ArticleImage $image): RedirectResponse
     {
         $image->delete();
         return redirect()->back()->with('warning', 'Image deleted successfully');
