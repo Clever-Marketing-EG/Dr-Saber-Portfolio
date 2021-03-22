@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\ArticleImage;
 use App\Models\Image;
 use App\Models\Operation;
 use App\Models\OperationImage;
@@ -31,7 +32,7 @@ class ImageController extends Controller
         $image = $request->file('image');
         $name = $image->getClientOriginalName();
         $path = $request->image->store('articles_images');
-        $image = new Image();
+        $image = new ArticleImage();
         $image['name'] = $name;
         $image['url'] = asset($path);
         $article->images()->save($image);

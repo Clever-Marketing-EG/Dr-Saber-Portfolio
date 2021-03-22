@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Article;
-use App\Models\Image;
+use App\Models\ArticleImage;
 use Illuminate\Database\Seeder;
 
 class ArticleSeeder extends Seeder
@@ -16,7 +16,7 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         Article::factory(100)
-            ->has(Image::factory()->count(5))
+            ->has(ArticleImage::factory()->count(5))
             ->create();
     }
 }

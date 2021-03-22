@@ -22,13 +22,13 @@ class Operation extends Model
 
 
     /**
-     * return this operation images
+     * relates to Images
      *
      * @return HasMany
      */
     public function images(): HasMany
     {
-        return $this->hasMany(OperationImage::class);
+        return $this->hasMany(OperationImage::class, 'operation_id');
     }
 
 

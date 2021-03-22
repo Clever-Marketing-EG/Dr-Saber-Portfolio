@@ -21,9 +21,11 @@
                     @foreach($articles as $article)
                         <div class="type-post">
                             <div class="entry-cover">
-                                <a title="Blog" href={{route('main.article.show', $article)}}>
-                                    <img alt="blog" src={{$article->images[0]->url}} />
-                                </a>
+                                @if(isset($article->images[0]))
+                                    <a title="Blog" href={{route('main.article.show', $article)}}>
+                                        <img alt="blog" src={{$article->images[0]->url}} />
+                                    </a>
+                                @endif
                                 <div class="post-date-bg">
                                     <div class="post-date">
                                         {{ strftime("%d", strtotime($article->created_at)) }}

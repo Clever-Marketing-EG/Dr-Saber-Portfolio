@@ -30,12 +30,13 @@
 
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="type-post">
-                                                <div class="entry-cover">
-                                                    <a title="Blog" href="#">
-                                                        <img alt="blog" src={{ $operation->image_url }} />
-                                                    </a>
-
-                                                </div>
+                                                @if(isset($operation->images[0]))
+                                                    <div class="entry-cover">
+                                                        <a title="Blog" href="#">
+                                                            <img alt="blog" src={{ $operation->images[0]->url }} />
+                                                        </a>
+                                                    </div>
+                                                @endif
                                                 <div class="latest-news-content">
                                                     <div class="entry-header">
                                                         <h3 class="entry-title"><a
