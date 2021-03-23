@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Article;
+use App\Models\Certificate;
 use App\Models\Content;
 use App\Models\Image;
 use App\Models\Operation;
@@ -39,7 +40,12 @@ class MainController extends Controller
     public function biography(): View
     {
         $images = Image::loadImages();
-        return view('main.biography', ['images' => $images]);
+        $certificates = Certificate::all();
+        $data = array(
+            'images' => $images,
+            'certificates' => $certificates
+        );
+        return view('main.biography', $data);
     }
 
 
