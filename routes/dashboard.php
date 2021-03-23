@@ -30,10 +30,11 @@ Route::group([
         'operations' => DashboardOperations::class,
         'researches' => DashboardResearch::class,
         'media' => DashboardMedia::class,
-        'contents' => ContentController::class,
-        'images' => ImageController::class
     ]);
 
+
+    Route::resource('contents', ContentController::class)->only(['update', 'index']);
+    Route::resource('images', ImageController::class)->only(['update', 'index']);
 
 
     Route::post('/articles/{article}/image', [ImageController::class, 'uploadArticleImage'])->name('articles.images.upload');

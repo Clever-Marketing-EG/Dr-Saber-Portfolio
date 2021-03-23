@@ -1,4 +1,4 @@
-@if(\Illuminate\Support\Facades\Session::get('locale') == 'ar')
+@if(Session::get('locale') == 'ar')
     <html lang="ar" dir="rtl">
 @else
     <html lang="en">

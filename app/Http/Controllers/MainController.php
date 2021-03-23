@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Content;
+use App\Models\Image;
 use App\Models\Operation;
 use App\Models\Research;
 use Illuminate\Contracts\View\View;
@@ -16,7 +17,17 @@ class MainController extends Controller
 {
     public function main()
     {
-        return view('main.home');
+        $researches = Research::latest()->take(5)->get();
+        $operations = Operation::latest()->take(4)->get();
+        $images = Image::loadImages();
+
+        $data = [
+            'researches' => $researches,
+            'operations' => $operations,
+            'images' => $images
+        ];
+
+        return view('main.home', $data);
     }
 
 

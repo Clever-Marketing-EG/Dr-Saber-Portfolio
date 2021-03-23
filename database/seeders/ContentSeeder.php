@@ -16,44 +16,39 @@ class ContentSeeder extends Seeder
     {
         $data = array(
             [
-                'position' => 'top_left_surgery_title',
-                'content' => 'Top Left Surgery Title',
-                'content_ar' => 'عنوان',
-            ],
-            [
-                'position' => 'top_left_surgery_content',
-                'content' => 'Top Left Surgery Content',
+                'position' => 'home_operations_description',
+                'content' => 'content',
                 'content_ar' => 'محتوى',
             ],
             [
-                'position' => 'top_right_surgery_title',
-                'content' => 'Top Right Surgery Title',
-                'content_ar' => 'عنوان',
-            ],
-            [
-                'position' => 'top_right_surgery_content',
-                'content' => 'Top Right Surgery Content',
+                'position' => 'home_news_description',
+                'content' => 'content',
                 'content_ar' => 'محتوى',
             ],
             [
-                'position' => 'bottom_left_surgery_title',
-                'content' => 'Bottom Left Surgery Title',
-                'content_ar' => 'عنوان',
-            ],
-            [
-                'position' => 'bottom_left_surgery_content',
-                'content' => 'Bottom Left Surgery Content',
+                'position' => 'footer_description',
+                'content' => 'content',
                 'content_ar' => 'محتوى',
             ],
             [
-                'position' => 'bottom_right_surgery_title',
-                'content' => 'Bottom Right Surgery Title',
-                'content_ar' => 'عنوان',
+                'position' => 'phone_number',
+                'content' => '0123456789',
+                'content_ar' => '٠١٢٣٤٥٦٧٨٩',
             ],
             [
-                'position' => 'bottom_right_surgery_content',
-                'content' => 'Bottom Right Surgery Content',
-                'content_ar' => 'محتوى',
+                'position' => 'email',
+                'content' => 'admin@dr-saber-waheeb.com',
+                'content_ar' => 'admin@dr-saber-waheeb.com',
+            ],
+            [
+                'position' => 'address',
+                'content' => 'El-Gaish Rd, Al Mesallah Sharq, Al Attarin, Alexandria Governorate',
+                'content_ar' => 'طريق الجيش، المسلة شرق، العطارين، محافظة الإسكندرية',
+            ],
+            [
+                'position' => 'facebook_link',
+                'content' => 'https://www.facebook.com/prof.dr.saberwaheeb/',
+                'content_ar' => 'https://www.facebook.com/prof.dr.saberwaheeb/',
             ],
         );
 

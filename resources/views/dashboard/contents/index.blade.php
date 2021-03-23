@@ -14,10 +14,8 @@
             <tbody>
             @foreach ($contents as $content)
                 <tr>
-                    <td>
-                        {{$content->position}}
-                    </td>
                     <form method="POST" action="{{route('contents.update', $content)}}">
+                        <td>{{$content->position}}</td>
                         @csrf
                         @method('PATCH')
                         <td>

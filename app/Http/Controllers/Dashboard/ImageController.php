@@ -15,6 +15,18 @@ use Illuminate\Http\Request;
 class ImageController extends Controller
 {
 
+    public function index()
+    {
+        $images = Image::all();
+        return view('dashboard.images.index', ['images' => $images]);
+    }
+
+
+    public function update(Request $request, Image $image)
+    {
+
+    }
+
     /**
      * Upload image for Article
      *

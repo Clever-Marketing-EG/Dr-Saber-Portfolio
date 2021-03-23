@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Image extends Model
 {
@@ -16,5 +15,14 @@ class Image extends Model
     ];
 
     protected $table = 'images';
+
+
+    public static function loadImages()
+    {
+        return Image::select('name', 'url')
+            ->get()->mapWithKeys(function ($item) {
+                return [$item['name'] => $item['url']];
+            })->toArray();
+    }
 
 }

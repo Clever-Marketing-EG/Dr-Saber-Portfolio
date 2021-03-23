@@ -11,7 +11,7 @@
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
                         data-masterspeed="2000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500"
                         data-fsslotamount="7">
-                        <img src="{{ asset('assets/images/saber.jpg') }}" data-bgposition="center center"
+                        <img src="{{ $images['header_image_1'] }}" data-bgposition="center center"
                              data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
                              data-no-retina alt="...">
                         <div class="tp-caption background-block NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
@@ -51,7 +51,7 @@
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
                         data-masterspeed="2000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500"
                         data-fsslotamount="7">
-                        <img src="{{asset("assets/images/slide2.jpg")}}" alt="slider" data-bgposition="center center" data-bgfit="cover"
+                        <img src="{{ $images['header_image_1'] }}" alt="slider" data-bgposition="center center" data-bgfit="cover"
                              data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <div class="tp-caption background-block NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
                              id="slide-layer-3" data-x="['left','left','left','center']"
@@ -91,7 +91,7 @@
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
                         data-masterspeed="2000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500"
                         data-fsslotamount="7">
-                        <img src="{{asset("assets/images/slide3.jpg")}}" alt="slider" data-bgposition="center center" data-bgfit="cover"
+                        <img src="{{ $images['header_image_1'] }}" alt="slider" data-bgposition="center center" data-bgfit="cover"
                              data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <div class="tp-caption background-block NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
                              id="slide-layer-5" data-x="['left','left','left','center']"
@@ -132,50 +132,71 @@
             </div><!-- END OF SLIDER WRAPPER -->
         </div><!-- Slider Section /- -->
         <!-- Offer Section -->
+        @if(count($operations) >=4)
+            <div class="offer-section container-fluid no-left-padding no-right-padding">
+                <!-- Container -->
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="section-header">
+                        <h3>@lang('helpers.surgeries')</h3>
+                    </div><!-- Section Header /- -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="offer-box">
+                                <i class="fa fa-smile-o"></i>
+                                @if(Session::get('locale') == 'ar')
+                                    <h5>{{$operations[0]->title_ar}}</h5>
+                                    <p>{{$operations[0]->content_ar}}</p>
+                                @else
+                                    <h5>{{$operations[0]->title}}</h5>
+                                    <p>{{$operations[0]->content}}</p>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="offer-box">
+                                <i class="fa fa-smile-o"></i>
+                                @if(Session::get('locale') == 'ar')
+                                    <h5>{{$operations[1]->title_ar}}</h5>
+                                    <p>{{$operations[1]->content_ar}}</p>
+                                @else
+                                    <h5>{{$operations[1]->title}}</h5>
+                                    <p>{{$operations[1]->content}}</p>
+                                @endif
+                            </div>
+                        </div>
 
-        <div class="offer-section container-fluid no-left-padding no-right-padding">
-            <!-- Container -->
-            <div class="container">
-                <!-- Section Header -->
-                <div class="section-header">
-                    <h3>@lang('helpers.surgeries')</h3>
-                </div><!-- Section Header /- -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="offer-box">
-                            <i class="fa fa-smile-o"></i>
-                            <h5>@lang('content.top_left_surgery_title')</h5>
-                            <p>@lang('content.top_left_surgery_content')</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="offer-box">
+                                <i class="fa fa-smile-o"></i>
+                                @if(Session::get('locale') == 'ar')
+                                    <h5>{{$operations[2]->title_ar}}</h5>
+                                    <p>{{$operations[2]->content_ar}}</p>
+                                @else
+                                    <h5>{{$operations[2]->title}}</h5>
+                                    <p>{{$operations[2]->content}}</p>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="offer-box">
+                                <i class="fa fa-smile-o"></i>
+                                @if(Session::get('locale') == 'ar')
+                                    <h5>{{$operations[3]->title_ar}}</h5>
+                                    <p>{{$operations[3]->content_ar}}</p>
+                                @else
+                                    <h5>{{$operations[3]->title}}</h5>
+                                    <p>{{$operations[3]->content}}</p>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="offer-box">
-                            <i class="fa fa-smile-o"></i>
-                            <h5>@lang('content.top_right_surgery_title')</h5>
-                            <p>@lang('content.top_right_surgery_content')</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="offer-box">
-                            <i class="fa fa-smile-o"></i>
-                            <h5>@lang('content.bottom_left_surgery_title')</h5>
-                            <p>@lang('content.bottom_left_surgery_content')</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="offer-box">
-                            <i class="fa fa-smile-o"></i>
-                            <h5>@lang('content.bottom_right_surgery_title')</h5>
-                            <p>@lang('content.bottom_right_surgery_content')</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- Container -->
-        </div><!-- Offer Section /- -->
-        <!-- Team Section -->
+                </div><!-- Container -->
+            </div><!-- Offer Section /- -->
+    @endif
+    <!-- Team Section -->
         <div id="team-section" class="team-section container-fluid no-left-padding no-right-padding">
             <!-- Container -->
             <div class="container">
@@ -184,38 +205,22 @@
                     <h3>@lang('nav.Scientific_Publications')</h3>
                 </div>
                 <div class="team-carousel">
-                    <div class="col-md-12">
-                        <div class="team-content">
-                            <div class="team-box">
-                                <img src="{{asset("assets/images/team-1.png")}}" alt="team" />
+                    @foreach($researches as $research)
+                        <div class="col-md-12">
+                            <div class="team-content">
+                                <div class="team-box">
+                                    <img src="{{$research->image_url}}" alt="team" />
+                                </div>
+                                <span class="team-catagory">
+                                    @if(Session::get('locale') == 'ar')
+                                        {{$research->title_ar}}
+                                    @else
+                                        {{$research->title}}
+                                    @endif
+                                </span>
                             </div>
-                            <span class="team-catagory">Pathologist</span>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="team-content">
-                            <div class="team-box">
-                                <img src="{{asset("assets/images/team-2.png")}}" alt="team" />
-                            </div>
-                            <span class="team-catagory">Cardiologist</span>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="team-content">
-                            <div class="team-box">
-                                <img src="{{asset("assets/images/team-3.png")}}" alt="team" />
-                            </div>
-                            <span class="team-catagory">Neurologist</span>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="team-content">
-                            <div class="team-box">
-                                <img src="{{asset("assets/images/team-4.png")}}" alt="team" />
-                            </div>
-                            <span class="team-catagory">Pediatrician</span>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div><!-- Container /- -->
         </div><!-- Team Section /- -->
@@ -240,8 +245,7 @@
 
                                 </div>
                                 <div class="entry-content">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard .</p>
+                                    <p>@lang('content.home_operations_description')</p>
                                 </div>
                                 <a href="{{route('main.operations.index')}}" title="See More" class="read-more">@lang('helpers.read_more')</a>
                             </div>
@@ -262,8 +266,7 @@
 
                                 </div>
                                 <div class="entry-content">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard .</p>
+                                    <p>@lang('content.home_news_description')</p>
                                 </div>
                                 <a href="{{route('main.articles.index')}}" title="See More" class="read-more">@lang('helpers.read_more')</a>
                             </div>
