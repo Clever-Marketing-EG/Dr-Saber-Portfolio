@@ -28,9 +28,8 @@
                              data-paddingtop="[55,55,55,55]" data-paddingright="[45,45,45,65]"
                              data-paddingbottom="[55,55,55,55]" data-paddingleft="[45,45,45,25]"
                              style="z-index:3; position:relative; width: 561px; color:#4c4c4c; height: 221px; font-family: 'Lato', sans-serif; font-weight: 300;">
-                            <span class="title-txt" style="font-size: 48px; font-weight:bold;">Prof</span>
-                            Dr.Saber Waheeb <br> <span style="font-weight:bold; font-size: 48px;">Pediatric
-                                Surgeon</span>
+                            <span class="title-txt" style="font-size: 48px; font-weight:bold;">@lang('nav.Name')</span>
+                            <br> <div style="font-weight:bold; font-size: 48px; margin-top: 2rem;">@lang('helpers.job_title')</div>
                         </div>
 
                         <div class="tp-caption NotGeneric-Button rev-btn learn-btn rs-parallaxlevel-0" id="slide-layer-2"
@@ -46,7 +45,7 @@
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
                             <span class="button-txt"><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                Learn More</span>
+                                @lang('helpers.read_more')</span>
                         </div>
                     </li>
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
@@ -68,9 +67,9 @@
                              data-paddingtop="[55,55,55,55]" data-paddingright="[45,45,45,65]"
                              data-paddingbottom="[55,55,55,55]" data-paddingleft="[45,45,45,25]"
                              style="z-index:3; position:relative;width: 561px; color:#4c4c4c; height: 221px; font-family: 'Lato', sans-serif; font-weight: 300;">
-                            <span class="title-txt" style="font-size: 48px; font-weight:bold;">Prof</span>
-                            Dr.Saber Waheeb <br> <span style="font-weight:bold; font-size: 48px;">Pediatric
-                                Surgeon</span>
+
+                            <span class="title-txt" style="font-size: 48px; font-weight:bold;">@lang('nav.Name')</span>
+                            <br> <div style="font-weight:bold; font-size: 48px; margin-top: 2rem;">@lang('helpers.job_title')</div>
                         </div>
 
                         <div class="tp-caption NotGeneric-Button rev-btn learn-btn rs-parallaxlevel-0" id="slide-layer-4"
@@ -86,7 +85,7 @@
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
                             <span class="button-txt"><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                Learn More</span>
+                                @lang('helpers.read_more')</span>
                         </div>
                     </li>
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
@@ -108,9 +107,9 @@
                              data-paddingtop="[55,55,55,55]" data-paddingright="[45,45,45,65]"
                              data-paddingbottom="[55,55,55,55]" data-paddingleft="[45,45,45,25]"
                              style="z-index:3; position:relative;width: 561px; color:#4c4c4c; height: 221px; font-family: 'Lato', sans-serif; font-weight: 300;">
-                            <span class="title-txt" style="font-size: 48px; font-weight:bold;">Prof</span>
-                            Dr.Saber Waheeb <br> <span style="font-weight:bold; font-size: 48px;">Pediatric
-                                Surgeon</span>
+
+                            <span class="title-txt" style="font-size: 48px; font-weight:bold;">@lang('nav.Name')</span>
+                            <br> <div style="font-weight:bold; font-size: 48px; margin-top: 2rem;">@lang('helpers.job_title')</div>
                         </div>
 
                         <div class="tp-caption NotGeneric-Button rev-btn learn-btn rs-parallaxlevel-0" id="slide-layer-6"
@@ -126,7 +125,7 @@
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
                             <span class="button-txt"><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                Learn More</span>
+                                @lang('helpers.read_more')</span>
                         </div>
                     </li>
                 </ul>

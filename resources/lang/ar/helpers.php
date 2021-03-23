@@ -13,5 +13,6 @@ return [
     'search_here' => 'إبحث هنا',
     'additional_media' => 'وسائط إضافية',
     'surgeries' => 'العمليات الجراحية',
-    'information' => 'معلومات'
+    'information' => 'معلومات',
+    'job_title' => 'جراح أطفال'
 ];

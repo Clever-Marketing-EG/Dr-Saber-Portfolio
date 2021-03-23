@@ -13,6 +13,7 @@ return [
     'search_here' => 'Search Here',
     'additional_media' => 'Additional Media',
     'surgeries' => 'Surgeries',
-    'information' => 'Information'
+    'information' => 'Information',
+    'job_title' => 'Pediatric Surgeon'
 
 ];

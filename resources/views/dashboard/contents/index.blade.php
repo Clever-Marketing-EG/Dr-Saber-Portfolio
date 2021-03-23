@@ -6,16 +6,18 @@
             <thead>
             <tr>
                 <th>Position</th>
+                <th>Content</th>
+                <th>Arabic Content</th>
                 <th>Edit</th>
             </tr>
             </thead>
+            <tbody>
             @foreach ($contents as $content)
-                <tbody>
                 <tr>
                     <td>
                         {{$content->position}}
                     </td>
-                    <form action="{{route('contents.update', $content)}}">
+                    <form method="POST" action="{{route('contents.update', $content)}}">
                         @csrf
                         @method('PATCH')
                         <td>
@@ -24,11 +26,13 @@
                         <td>
                             <textarea name="content_ar" rows="5" cols="50">{{$content->content_ar}}</textarea>
                         </td>
-                        <td></td>
+                        <td>
+                            <button type="submit" class="btn btn-secondary mt-5">Edit</button>
+                        </td>
                     </form>
                 </tr>
-                </tbody>
             @endforeach
+            </tbody>
         </table>
     </div>
 </x-app-layout>
