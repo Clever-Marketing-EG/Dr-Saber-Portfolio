@@ -25,6 +25,28 @@ class ContentSeeder extends Seeder
                 'content' => 'content',
                 'content_ar' => 'محتوى',
             ],
+            //=======================================================================
+            [
+                'position' => 'biography_title_1',
+                'content' => 'content',
+                'content_ar' => 'محتوى',
+            ],
+            [
+                'position' => 'biography_content_1',
+                'content' => 'content',
+                'content_ar' => 'محتوى',
+            ],
+            [
+                'position' => 'biography_title_2',
+                'content' => 'content',
+                'content_ar' => 'محتوى',
+            ],
+            [
+                'position' => 'biography_content_2',
+                'content' => 'content',
+                'content_ar' => 'محتوى',
+            ],
+            //=======================================================================
             [
                 'position' => 'footer_description',
                 'content' => 'content',

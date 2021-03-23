@@ -18,14 +18,26 @@
             <div class="row">
                 <div class="col-md-8 col-sm-7 col-xs-12">
                     <div class="about-content">
-                        <h5>We look forward to exceeding your expectations.</h5>
-                        <p>Welcome to our Hospital. Whether you are a patient or a visitor at our hospital, you can expect that over 80 dedicated employees, physicians and volunteers will be working tirelessly to ensure that you receive excellent care in a safe and comfortable environment.</p>
-                        <p>As a leading healthcare provider in US, Our Hospital provides quality, compassionate and cost-effective services that continually meet and exceed our patient needs. I hope you will consider the many quality healthcare services available to you at our hospital and off-site facilities and providers. We offer high quality health care, the most advanced technologies and skilled physicians and nurses who are passionate about what they do.</p>
-                    </div>
+                        <h5>@lang('content.biography_title_1')</h5>
+                        <p>@lang('content.biography_content_1')</p>
+                        </div>
                 </div>
                 <div class="col-md-4 col-sm-5 col-xs-12 about-img">
-                    <img src="{{$images['biography_side_image']}}" alt="about" />
+                    <img src="{{$images['biography_side_image_1']}}" alt="about" />
                 </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-4 col-sm-5 col-xs-12 about-img">
+                    <img src="{{$images['biography_side_image_2']}}" alt="about" />
+                </div>
+                <div class="col-md-8 col-sm-7 col-xs-12">
+                    <div class="about-content">
+                        <h5>@lang('content.biography_title_2')</h5>
+                        <p>@lang('content.biography_content_2')</p>
+                    </div>
+                </div>
+
             </div>
         </div><!-- Container /- -->
     </div><!-- About Section -->

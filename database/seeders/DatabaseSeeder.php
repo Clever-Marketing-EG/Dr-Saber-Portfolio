@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             OperationSeeder::class,
             ResearchSeeder::class,
             ImageSeeder::class,
+            CertificateSeeder::class
 //            MediaSeeder::class
         ]);
     }

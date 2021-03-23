@@ -35,38 +35,22 @@ class ImageSeeder extends Seeder
                 'name' => 'home_news_image',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
             ],
+            //================================================================
             [
                 'name' => 'biography_background_image',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
             ],
             [
-                'name' => 'biography_side_image',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
-            ],
-
-
-            [
-                'name' => 'biography_certificate_1',
+                'name' => 'biography_side_image_1',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
             ],
             [
-                'name' => 'biography_certificate_2',
+                'name' => 'biography_side_image_2',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
             ],
+            //================================================================
             [
-                'name' => 'biography_certificate_3',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
-            ],
-            [
-                'name' => 'biography_certificate_4',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
-            ],
-            [
-                'name' => 'biography_certificate_5',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
-            ],
-            [
-                'name' => 'biography_certificate_6',
+                'name' => 'news_background',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
             ],
         );
