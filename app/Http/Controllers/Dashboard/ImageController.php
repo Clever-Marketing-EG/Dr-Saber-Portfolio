@@ -17,7 +17,7 @@ class ImageController extends Controller
 
     public function index()
     {
-        $images = Image::all();
+        $images = Image::orderBy('created_at', 'desc')->get();
         return view('dashboard.images.index', ['images' => $images]);
     }
 

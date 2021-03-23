@@ -18,7 +18,7 @@ class ArticleController extends Controller
      */
     public function index(): View
     {
-        $articles = Article::paginate(30);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(30);
         return view('dashboard.articles.index', ['articles' => $articles]);
     }
 

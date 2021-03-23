@@ -17,7 +17,7 @@ class ArticleController extends Controller
      */
     public function index(): View
     {
-        $articles = Article::paginate(5);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(5);
         return view('articles.index', ['articles' => $articles]);
     }
 
@@ -27,7 +27,7 @@ class ArticleController extends Controller
      * @param Article $article
      * @return View
      */
-    public function show(Article $article)
+    public function show(Article $article): View
     {
         $article->load('images');
         return view('articles.show', ['article' => $article]);

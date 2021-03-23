@@ -15,7 +15,7 @@ class ResearchController extends Controller
      */
     public function index(): View
     {
-        $researches = Research::paginate(15);
+        $researches = Research::orderBy('created_at', 'desc')->paginate(15);
         return View('publications.index', ['researches' => $researches]);
     }
 

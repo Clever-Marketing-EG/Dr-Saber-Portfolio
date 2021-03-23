@@ -19,7 +19,7 @@ class OperationController extends Controller
      */
     public function index(): View
     {
-        $operations = Operation::paginate(30);
+        $operations = Operation::orderBy('created_at', 'desc')->paginate(30);
         return view('dashboard.operations.index', ['operations' => $operations]);
     }
 

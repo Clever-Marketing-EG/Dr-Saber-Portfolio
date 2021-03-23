@@ -87,6 +87,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{route('certificates.index')}}">
+                            <span data-feather="file"></span>
+                            Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{route('media.index')}}">
                             <span data-feather="file"></span>
                             Media

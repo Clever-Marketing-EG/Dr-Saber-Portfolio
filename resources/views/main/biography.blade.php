@@ -57,9 +57,9 @@
                             <div class="team-box">
                                 <img src="{{$certificate->image_url}}" alt="team" />
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$certificate->title}}</h5>
-                                @else
                                     <h5>{{$certificate->title_ar}}</h5>
+                                @else
+                                    <h5>{{$certificate->title}}</h5>
                                 @endif
                             </div>
                         </div>

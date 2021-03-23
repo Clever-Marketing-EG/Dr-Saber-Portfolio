@@ -8,6 +8,7 @@ use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
 use App\Http\Controllers\Dashboard\OperationController as DashboardOperations;
 use App\Http\Controllers\Dashboard\MediaController as DashboardMedia;
 use App\Http\Controllers\Dashboard\ResearchController as DashboardResearch;
+use App\Http\Controllers\Dashboard\CertificateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +36,12 @@ Route::group([
 
     Route::resource('contents', ContentController::class)->only(['update', 'index']);
     Route::resource('images', ImageController::class)->only(['update', 'index']);
+    Route::resource('certificates', CertificateController::class)->except(['edit']);
 
 
     Route::post('/articles/{article}/image', [ImageController::class, 'uploadArticleImage'])->name('articles.images.upload');
     Route::delete('/articles/images/{image}', [ImageController::class, 'deleteArticleImage'])->name('articles.images.destroy');
+
 
     Route::post('/operations/{operation}/image', [ImageController::class, 'uploadOperationImage'])->name('operations.images.upload');
     Route::delete('/operations/images/{image}', [ImageController::class, 'deleteOperationImage'])->name('operations.images.destroy');

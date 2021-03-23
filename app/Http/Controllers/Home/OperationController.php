@@ -18,7 +18,7 @@ class OperationController extends Controller
      */
     public function index(): View
     {
-        $operations = Operation::paginate(15);
+        $operations = Operation::orderBy('created_at', 'desc')->paginate(15);
         return view('operations.index', ['operations' => $operations]);
     }
 

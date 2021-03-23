@@ -17,7 +17,7 @@ class ContentController extends Controller
      */
     public function index(): View
     {
-        $contents = Content::all();
+        $contents = Content::orderBy('created_at', 'desc')->get();
         return view('dashboard.contents.index', ['contents' => $contents]);
     }
 
