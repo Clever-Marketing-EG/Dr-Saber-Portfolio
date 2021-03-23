@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Page Banner -->
-    <div class="page-banner container-fluid no-left-padding no-right-padding">
+    <div class="page-banner container-fluid no-left-padding no-right-padding" style="background-image: url({{$images['biography_background_image']}});">
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-5 col-xs-12 about-img">
-                    <img src="assets/images/about.jpg" alt="about" />
+                    <img src="{{$images['biography_side_image']}}" alt="about" />
                 </div>
             </div>
         </div><!-- Container /- -->
@@ -42,37 +42,49 @@
                 <div class="col-md-12">
                     <div class="team-content">
                         <div class="team-box">
-                            <img src="assets/images/team-1.png" alt="team" />
+                            <img src="{{$images['biography_certificate_1']}}" alt="team" />
                             <h5>Alan Dark</h5>
                         </div>
-                        <span class="team-catagory">Pathologist</span>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="team-content">
                         <div class="team-box">
-                            <img src="assets/images/team-2.png" alt="team" />
+                            <img src="{{$images['biography_certificate_2']}}" alt="team" />
                             <h5>Knox Ulmar</h5>
                         </div>
-                        <span class="team-catagory">Cardiologist</span>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="team-content">
                         <div class="team-box">
-                            <img src="assets/images/team-3.png" alt="team" />
+                            <img src="{{$images['biography_certificate_3']}}" alt="team" />
                             <h5>Jeremy Duncan</h5>
                         </div>
-                        <span class="team-catagory">Neurologist</span>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="team-content">
                         <div class="team-box">
-                            <img src="assets/images/team-4.png" alt="team" />
+                            <img src="{{$images['biography_certificate_4']}}" alt="team" />
                             <h5>Tedd Justice</h5>
                         </div>
-                        <span class="team-catagory">Pediatrician</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="team-content">
+                        <div class="team-box">
+                            <img src="{{$images['biography_certificate_5']}}" alt="team" />
+                            <h5>Tedd Justice</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="team-content">
+                        <div class="team-box">
+                            <img src="{{$images['biography_certificate_6']}}" alt="team" />
+                            <h5>Tedd Justice</h5>
+                        </div>
                     </div>
                 </div>
             </div>

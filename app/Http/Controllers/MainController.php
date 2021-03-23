@@ -38,7 +38,8 @@ class MainController extends Controller
      */
     public function biography(): View
     {
-        return view('main.biography');
+        $images = Image::loadImages();
+        return view('main.biography', ['images' => $images]);
     }
 
 

@@ -26,7 +26,49 @@ class ImageSeeder extends Seeder
             [
                 'name' => 'header_image_3',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
-            ]
+            ],
+            [
+                'name' => 'home_operations_image',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'home_news_image',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_background_image',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_side_image',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+
+
+            [
+                'name' => 'biography_certificate_1',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_certificate_2',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_certificate_3',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_certificate_4',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_certificate_5',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
+            [
+                'name' => 'biography_certificate_6',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
         );
         DB::table('images')->insert($data);
     }

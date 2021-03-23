@@ -234,7 +234,7 @@
                         <div class="type-post">
                             <div class="entry-cover">
                                 <a title="Blog" href="{{route('main.operations.index')}}">
-                                    <img alt="blog" src="{{asset("assets/images/blog-1.jpg")}}" />
+                                    <img alt="blog" src="{{ $images['home_operations_image'] }}" />
                                 </a>
 
                             </div>
@@ -255,7 +255,7 @@
                         <div class="type-post">
                             <div class="entry-cover">
                                 <a title="Blog" href={{route('main.articles.index')}}>
-                                    <img alt="blog" src="{{asset("assets/images/blog-1.jpg")}}" />
+                                    <img alt="blog" src="{{$images['home_news_image']}}" />
                                 </a>
 
                             </div>
