@@ -56,6 +56,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href={{route('contents.index')}}>
+                            <span data-feather="file"></span>
+                            Content
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={{route('images.index')}}>
+                            <span data-feather="file"></span>
+                            Images
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href={{route('articles.index')}}>
                             <span data-feather="file"></span>
                             Articles

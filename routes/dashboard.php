@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Dashboard\ContentController;
 use App\Http\Controllers\Dashboard\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\ArticleController as DashboardArticles;
@@ -24,10 +25,15 @@ Route::group([
     'middleware' => ['auth']
 ], function () {
 
-    Route::resource('articles', DashboardArticles::class);
-    Route::resource('operations', DashboardOperations::class);
-    Route::resource('researches', DashboardResearch::class);
-    Route::resource('media', DashboardMedia::class);
+    Route::resources([
+        'articles' => DashboardArticles::class,
+        'operations' => DashboardOperations::class,
+        'researches' => DashboardResearch::class,
+        'media' => DashboardMedia::class,
+        'contents' => ContentController::class,
+        'images' => ImageController::class
+    ]);
+
 
 
     Route::post('/articles/{article}/image', [ImageController::class, 'uploadArticleImage'])->name('articles.images.upload');

@@ -145,17 +145,15 @@
                     <div class="col-md-6">
                         <div class="offer-box">
                             <i class="fa fa-smile-o"></i>
-                            <h5>Special skilled surgeries</h5>
-                            <p>In crack commando was sent to prison by a military court for a crime they didn't
-                                commit. These men prompt-</p>
+                            <h5>@lang('content.top_left_surgery_title')</h5>
+                            <p>@lang('content.top_left_surgery_content')</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="offer-box">
                             <i class="fa fa-smile-o"></i>
-                            <h5>Major surgeries</h5>
-                            <p>Come aboard expecting you. Love life's sweetest reward Let it flow it floats back to
-                                you. It's a beautiful Day.</p>
+                            <h5>@lang('content.top_right_surgery_title')</h5>
+                            <p>@lang('content.top_right_surgery_content')</p>
                         </div>
                     </div>
 
@@ -164,17 +162,15 @@
                     <div class="col-md-6">
                         <div class="offer-box">
                             <i class="fa fa-smile-o"></i>
-                            <h5>Medium surgeries</h5>
-                            <p>In crack commando was sent to prison by a military court for a crime they didn't
-                                commit. These men prompt-</p>
+                            <h5>@lang('content.bottom_left_surgery_title')</h5>
+                            <p>@lang('content.bottom_left_surgery_content')</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="offer-box">
                             <i class="fa fa-smile-o"></i>
-                            <h5>Minor surgeries</h5>
-                            <p>Come aboard expecting you. Love life's sweetest reward Let it flow it floats back to
-                                you. It's a beautiful Day.</p>
+                            <h5>@lang('content.bottom_right_surgery_title')</h5>
+                            <p>@lang('content.bottom_right_surgery_content')</p>
                         </div>
                     </div>
                 </div>

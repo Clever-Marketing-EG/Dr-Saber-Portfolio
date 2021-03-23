@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Article;
+use App\Models\Content;
 use App\Models\Operation;
 use App\Models\Research;
 use Illuminate\Contracts\View\View;
@@ -15,7 +16,6 @@ class MainController extends Controller
 {
     public function main()
     {
-        // Cookie::queue(Cookie::forever('lang', 'ar'));
         return view('main.home');
     }
 
