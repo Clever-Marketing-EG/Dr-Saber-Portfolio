@@ -51,7 +51,7 @@
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
                         data-masterspeed="2000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500"
                         data-fsslotamount="7">
-                        <img src="{{ $images['header_image_1'] }}" alt="slider" data-bgposition="center center" data-bgfit="cover"
+                        <img src="{{ $images['header_image_2'] }}" alt="slider" data-bgposition="center center" data-bgfit="cover"
                              data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <div class="tp-caption background-block NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
                              id="slide-layer-3" data-x="['left','left','left','center']"
@@ -91,7 +91,7 @@
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
                         data-masterspeed="2000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500"
                         data-fsslotamount="7">
-                        <img src="{{ $images['header_image_1'] }}" alt="slider" data-bgposition="center center" data-bgfit="cover"
+                        <img src="{{ $images['header_image_3'] }}" alt="slider" data-bgposition="center center" data-bgfit="cover"
                              data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <div class="tp-caption background-block NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
                              id="slide-layer-5" data-x="['left','left','left','center']"

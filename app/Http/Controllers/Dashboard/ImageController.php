@@ -22,9 +22,23 @@ class ImageController extends Controller
     }
 
 
-    public function update(Request $request, Image $image)
+    /**
+     * update an image
+     *
+     * @param Request $request
+     * @param Image $image
+     * @return RedirectResponse
+     */
+    public function update(Request $request, Image $image): RedirectResponse
     {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+        ]);
 
+        $path = $request->image->store('images');
+        $image['url'] = asset($path);
+        $image->save();
+        return redirect()->back()->with('success', 'Image updated successfully');
     }
 
     /**
