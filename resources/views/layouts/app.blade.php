@@ -81,6 +81,19 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="nav flex-column mt-5">
+                    <li class="nav-item">
+                        <form method="POST" action="{{ route('password.email') }}">
+                            @csrf
+                            <input type="hidden" value="{{Auth::user()->email}}" name="email">
+
+                            <button type="submit" class="nav-link" style="border: none; background: none;" href="{{route('media.index')}}">
+                                <span data-feather="file"></span>
+                                Reset Password
+                            </button>
+                        </form>
+                    </li>
+                </ul>
 
             </div>
         </nav>
