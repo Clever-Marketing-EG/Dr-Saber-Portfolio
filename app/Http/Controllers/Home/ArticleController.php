@@ -39,13 +39,12 @@ class ArticleController extends Controller
         return view('articles.show', ['article' => $article]);
     }
 
-//    TODO
-//    public function search(Request $request)
-//    {
-//        $request->validate([
-//            'term' => 'required|string|min:3'
-//        ]);
-//
-//        dd($request['term']);
-//    }
+    public function search(Request $request)
+    {
+        $request->validate([
+            'term' => 'required|string|min:3'
+        ]);
+
+        dd($request['term']);
+    }
 }

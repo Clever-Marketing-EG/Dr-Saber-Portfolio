@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Image;
 use App\Models\Media;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -17,7 +18,13 @@ class MediaController extends Controller
     public function index(): View
     {
         $media = Media::orderBy('created_at', 'desc')->paginate(12);
-        return view('media.index', ['media' => $media]);
+        $images = Image::loadImages();
+
+        $data = array(
+            'media' => $media,
+            'images' => $images
+        );
+        return view('media.index', $data);
     }
 
 }

@@ -41,7 +41,7 @@ Route::get('/ar', [LocalizationController::class, 'ar'])->name('lang.ar');
 */
 Route::get('/articles', [HomeArticles::class, 'index'])->name('main.articles.index');
 Route::get('/articles/{article}', [HomeArticles::class, 'show'])->name('main.article.show');
-
+Route::get('/search/articles', [HomeArticles::class, 'search'])->name('main.articles.search');
 
 
 /*

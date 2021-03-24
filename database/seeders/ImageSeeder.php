@@ -53,6 +53,11 @@ class ImageSeeder extends Seeder
                 'name' => 'news_background',
                 'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
             ],
+            //================================================================
+            [
+                'name' => 'media_background',
+                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+            ],
         );
         DB::table('images')->insert($data);
     }

@@ -60,12 +60,13 @@
                     <!-- Widget Search -->
                     <aside id="search" class="widget widget_search">
                         <h3 class="widget-title">@lang('helpers.search')</h3>
-                        <form method="get" class="searchform" action="#">
+                        <form method="GET" class="searchform" action="{{route('main.articles.search')}}">
+                            @csrf
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="@lang('helpers.search_here')" />
+                                <input type="text" class="form-control" placeholder="@lang('helpers.search_here')" name="term" />
                                 <span class="input-group-btn">
-											<button class="btn btn-search" title="Search" type="button"><i class="fa fa-search"></i></button>
-										</span>
+                                    <button class="btn btn-search" title="Search" type="button"><i class="fa fa-search"></i></button>
+                                </span>
                             </div>
                         </form>
                     </aside><!-- Widget Search /- -->
