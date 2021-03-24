@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Image;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -18,7 +19,12 @@ class ArticleController extends Controller
     public function index(): View
     {
         $articles = Article::orderBy('created_at', 'desc')->paginate(5);
-        return view('articles.index', ['articles' => $articles]);
+        $images = Image::loadImages();
+        $data = array(
+            'articles' => $articles,
+            'images' => $images
+        );
+        return view('articles.index', $data);
     }
 
     /**
