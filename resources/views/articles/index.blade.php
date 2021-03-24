@@ -75,23 +75,15 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="popular">
-                                    <div class="latest-content">
-                                        <a href="#"><i><img src="assets/images/latest-post-1.jpg" alt="Post"></i></a>
-                                        <h5><a href="#" title="Improving and Removing Envato Market Image Watermarking">Improving and Removing Envato Market Image Watermarking</a></h5>
-                                        <span><a href="#" title="Date"><i class="fa fa-calendar-o"></i>04 January 2014</a></span>
-                                    </div>
-
-                                    <div class="latest-content">
-                                        <a href="#"><i><img src="assets/images/latest-post-2.jpg" alt="Post"></i></a>
-                                        <h5><a href="#" title="Improving and Removing Envato Market Image Watermarking">Improving and Removing Envato Market Image Watermarking</a></h5>
-                                        <span><a href="#" title="Date"><i class="fa fa-calendar-o"></i>04 January 2014</a></span>
-                                    </div>
-
-                                    <div class="latest-content">
-                                        <a href="#"><i><img src="assets/images/latest-post-3.jpg" alt="Post"></i></a>
-                                        <h5><a href="#" title="Improving and Removing Envato Market Image Watermarking">Improving and Removing Envato Market Image Watermarking</a></h5>
-                                        <span><a href="#" title="Date"><i class="fa fa-calendar-o"></i>04 January 2014</a></span>
-                                    </div>
+                                    @for ($i = 0; $i < 3; $i++)
+                                        <div class="latest-content">
+                                            @if(isset($articles[$i]->images[0]))
+                                                <a href="{{route('main.article.show', $articles[$i])}}"><i><img src="{{$articles[$i]->images[0]->url}}" alt="Post" style="width: 100px; height: 100px" ></i></a>
+                                            @endif
+                                            <h5><a href="{{route('main.article.show', $articles[$i])}}" title="{{$articles[$i]->title}}">{{$articles[$i]->title}}</a></h5>
+                                            <span><b title="Date"><i class="fa fa-calendar-o"></i>{{date('d M Y', strtotime($articles[$i]->created_at))}}</b></span>
+                                        </div>
+                                    @endfor
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane" id="recent">

@@ -43,6 +43,7 @@ Route::get('/articles', [HomeArticles::class, 'index'])->name('main.articles.ind
 Route::get('/articles/{article}', [HomeArticles::class, 'show'])->name('main.article.show');
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Operations Routes

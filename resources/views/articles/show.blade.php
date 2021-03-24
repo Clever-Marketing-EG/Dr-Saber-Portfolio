@@ -3,21 +3,23 @@
 @section('content')
     <div id="articles-show">
         <!-- Page Banner -->
-        <div class="page-banner container-fluid no-left-padding no-right-padding"
-            style="background-image: url({{ $article->images[0]->url }})">
-            <!-- Container -->
-            <div class="container">
-                <div class="page-banner-content">
-                    @if(Session::get('locale') == 'ar')
-                        <h3>{{$article->title_ar}}</h3>
-                    @else
-                        <h3>{{$article->title}}w</h3>
-                    @endif
-                </div>
-            </div><!-- Container /- -->
-        </div><!-- Page Banner -->
+        @if(isset($article->images[0]))
+            <div class="page-banner container-fluid no-left-padding no-right-padding"
+                 style="background-image: url({{ $article->images[0]->url }})">
+                <!-- Container -->
+                <div class="container">
+                    <div class="page-banner-content">
+                        @if(Session::get('locale') == 'ar')
+                            <h3>{{$article->title_ar}}</h3>
+                        @else
+                            <h3>{{$article->title}}w</h3>
+                        @endif
+                    </div>
+                </div><!-- Container /- -->
+            </div><!-- Page Banner -->
+    @endif
 
-        <!-- Gallery Single Section -->
+    <!-- Gallery Single Section -->
         <div class="gallery-single-section container-fluid no-padding">
             <div class="section-padding"></div>
             <!-- Container -->
