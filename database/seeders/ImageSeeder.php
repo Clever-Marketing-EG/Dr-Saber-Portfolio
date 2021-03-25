@@ -17,46 +17,46 @@ class ImageSeeder extends Seeder
         $data = array(
             [
                 'name' => 'header_image_1',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             [
                 'name' => 'header_image_2',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             [
                 'name' => 'header_image_3',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             [
                 'name' => 'home_operations_image',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             [
                 'name' => 'home_news_image',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             //================================================================
             [
                 'name' => 'biography_background_image',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             [
                 'name' => 'biography_side_image_1',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             [
                 'name' => 'biography_side_image_2',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             //================================================================
             [
                 'name' => 'news_background',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
             //================================================================
             [
                 'name' => 'media_background',
-                'url' => 'http://127.0.0.1:8000/assets/images/saber.jpg'
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
         );
         DB::table('images')->insert($data);
