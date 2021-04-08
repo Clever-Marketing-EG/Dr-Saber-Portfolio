@@ -145,11 +145,11 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[0]->title_ar}}</h5>
-                                    <p>{{$operations[0]->content_ar}}</p>
+                                    <h5> {{ Str::limit($operations[0]->title_ar, 40)}}</h5>
+                                    <p>{{ Str::limit($operations[0]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[0]->title}}</h5>
-                                    <p>{{$operations[0]->content}}</p>
+                                <h5> {{ Str::limit($operations[0]->title, 40)}}</h5>
+                                <p>{{ Str::limit($operations[0]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
@@ -157,11 +157,11 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[1]->title_ar}}</h5>
-                                    <p>{{$operations[1]->content_ar}}</p>
+                                <h5> {{ Str::limit($operations[1]->title_ar, 40)}}</h5>
+                                <p>{{ Str::limit($operations[1]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[1]->title}}</h5>
-                                    <p>{{$operations[1]->content}}</p>
+                                <h5> {{ Str::limit($operations[1]->title, 40)}}</h5>
+                                <p>{{ Str::limit($operations[1]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
@@ -172,11 +172,12 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[2]->title_ar}}</h5>
-                                    <p>{{$operations[2]->content_ar}}</p>
+                                <h5> {{ Str::limit($operations[2]->title_ar, 40)}}</h5>
+                                <p>{{ Str::limit($operations[2]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[2]->title}}</h5>
-                                    <p>{{$operations[2]->content}}</p>
+
+                                <h5> {{ Str::limit($operations[2]->title, 40)}}</h5>
+                                <p>{{ Str::limit($operations[2]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
@@ -184,11 +185,11 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[3]->title_ar}}</h5>
-                                    <p>{{$operations[3]->content_ar}}</p>
+                                    <h5> {{ Str::limit($operations[3]->title_ar, 40)}}</h5>
+                                    <p>{{ Str::limit($operations[3]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[3]->title}}</h5>
-                                    <p>{{$operations[3]->content}}</p>
+                                <h5> {{ Str::limit($operations[3]->title, 60)}}</h5>
+                                <p>{{ Str::limit($operations[3]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
