@@ -13,7 +13,7 @@ return [
     'Phone' => 'Phone',
     'Message' => 'Message',
     'Send' => 'Send',
-    'Send-us-a-message' => 'Send us a message',
+    'Send_us_a_message' => 'Send us a message',
     'Get_in_touch_with_us' => 'Get in touch with us'
 
 ];
