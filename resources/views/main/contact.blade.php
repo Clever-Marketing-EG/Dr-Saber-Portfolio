@@ -6,14 +6,9 @@
     <!-- Container -->
     <div class="container">
         <div class="page-banner-content">
-            <h3>Contact</h3>
+            <h3>@lang('nav.Contact_Us')</h3>
         </div>
-        <div class="banner-content">
-            <ol class="breadcrumb">
-                <li><a href={{route('main.home')}}>Home</a></li>
-                <li class="active">Contact</li>
-            </ol>
-        </div>
+
     </div><!-- Container /- -->
 </div><!-- Page Banner -->
 
@@ -22,23 +17,23 @@
     <!-- Container -->
     <div class="container">
         <div class="contact-header">
-            <h5>Get in touch with us</h5>
+            <h5>@lang('contactus.Get_in_touch_with_us')</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
         </div>
         <div class="contact-form">
-            <h5>Send us a message</h5>
+            <h5>@lang('contactus.Send_us_a_message')</h5>
             <form class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                    <input type="text" class="form-control" placeholder="Your Name" name="contact-name" id="input_name" required="" />
+                    <input type="text" class="form-control" placeholder=@lang('contactus.Name') name="contact-name" id="input_name" required="" />
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                    <input type="text" class="form-control" placeholder="Your Phone" name="contact-phone" id="input_phone" required="" />
+                    <input type="text" class="form-control" placeholder=@lang('contactus.Phone') name="contact-phone" id="input_phone" required="" />
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                    <textarea class="form-control" placeholder="Message" rows="6" name="textarea-message" id="textarea_message"></textarea>
+                    <textarea class="form-control" placeholder=@lang('contactus.Message') rows="6" name="textarea-message" id="textarea_message"></textarea>
                 </div>
                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                    <button title="Submit" type="submit" id="btn_submit" name="post">Send</button>
+                    <button title="Submit" type="submit" id="btn_submit" name="post">@lang('contactus.Send')</button>
                 </div>
                 <div id="alert-msg" class="alert-msg"></div>
             </form>
