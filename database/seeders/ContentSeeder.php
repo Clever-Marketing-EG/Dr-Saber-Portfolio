@@ -72,6 +72,11 @@ class ContentSeeder extends Seeder
                 'content' => 'https://www.facebook.com/prof.dr.saberwaheeb/',
                 'content_ar' => 'https://www.facebook.com/prof.dr.saberwaheeb/',
             ],
+            [
+                'position' => 'contact_description',
+                'content' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
+                'content_ar' => 'محتوي',
+            ]
         );
 
         DB::table('contents')->insert($data);

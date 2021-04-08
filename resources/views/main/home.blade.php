@@ -43,9 +43,9 @@
                              data-paddingtop="[15,15,15,15]" data-paddingright="[10,10,10,10]"
                              data-paddingbottom="[15,15,15,70]" data-paddingleft="[10,10,10,10]"
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
-                            <span class="button-txt"><i class="fa fa-stethoscope"
+                            <a class="button-txt" href={{route('main.biography')}}><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                @lang('helpers.read_more')</span>
+                                @lang('helpers.read_more')</a>
                         </div>
                     </li>
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
@@ -83,9 +83,9 @@
                              data-paddingtop="[15,15,15,15]" data-paddingright="[10,10,10,10]"
                              data-paddingbottom="[15,15,15,70]" data-paddingleft="[10,10,10,10]"
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
-                            <span class="button-txt"><i class="fa fa-stethoscope"
+                            <a class="button-txt" href={{route('main.biography')}}><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                @lang('helpers.read_more')</span>
+                                @lang('helpers.read_more') </a>
                         </div>
                     </li>
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
@@ -123,9 +123,9 @@
                              data-paddingtop="[15,15,15,15]" data-paddingright="[10,10,10,10]"
                              data-paddingbottom="[15,15,15,70]" data-paddingleft="[10,10,10,10]"
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
-                            <span class="button-txt"><i class="fa fa-stethoscope"
+                            <a class="button-txt" href={{route('main.biography')}}><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                @lang('helpers.read_more')</span>
+                                @lang('helpers.read_more')</a>
                         </div>
                     </li>
                 </ul>

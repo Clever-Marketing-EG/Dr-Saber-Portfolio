@@ -18,7 +18,7 @@
     <div class="container">
         <div class="contact-header">
             <h5>@lang('contactus.Get_in_touch_with_us')</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
+            <p>@lang('content.contact_description')</p>
         </div>
         <div class="contact-form">
             <h5>@lang('contactus.Send_us_a_message')</h5>
