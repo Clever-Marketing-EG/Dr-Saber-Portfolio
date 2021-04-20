@@ -57,7 +57,7 @@
                 </div><!-- Content Area /- -->
                 <!-- Widget Area -->
                 <div class="widget-area col-md-4 col-sm-4 col-xs-12">
-                    <!-- Widget Search -->
+                    {{-- <!-- Widget Search -->
                     <aside id="search" class="widget widget_search">
                         <h3 class="widget-title">@lang('helpers.search')</h3>
                         <form method="GET" class="searchform" action="{{route('main.articles.search')}}">
@@ -69,7 +69,7 @@
                                 </span>
                             </div>
                         </form>
-                    </aside><!-- Widget Search /- -->
+                    </aside><!-- Widget Search /- --> --}}
                     <!-- Widget Latest Posts -->
                     <aside id="widget_latestposts" class="widget widget_latestposts">
                         <div class="latest-detail-tab">
