@@ -48,7 +48,7 @@
         <div class="container">
             <!-- Section Header -->
             <div class="section-header">
-                <h3>Certificates</h3>
+                <h3>@lang('helpers.certificates')</h3>
             </div>
             <div class="team-carousel">
                 @foreach($certificates as $certificate)
@@ -57,9 +57,10 @@
                             <div class="team-box">
                                 <img src="{{$certificate->image_url}}" alt="team" />
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$certificate->title_ar}}</h5>
+                                    <h5>{{ Str::limit($certificate->title_ar, 30)}}</h5>
+
                                 @else
-                                    <h5>{{$certificate->title}}</h5>
+                                    <h5>{{ Str::limit($certificate->title, 30)}}</h5>
                                 @endif
                             </div>
                         </div>

@@ -43,9 +43,9 @@
                              data-paddingtop="[15,15,15,15]" data-paddingright="[10,10,10,10]"
                              data-paddingbottom="[15,15,15,70]" data-paddingleft="[10,10,10,10]"
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
-                            <span class="button-txt"><i class="fa fa-stethoscope"
+                            <a class="button-txt" href={{route('main.biography')}}><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                @lang('helpers.read_more')</span>
+                                @lang('helpers.read_more')</a>
                         </div>
                     </li>
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
@@ -83,9 +83,9 @@
                              data-paddingtop="[15,15,15,15]" data-paddingright="[10,10,10,10]"
                              data-paddingbottom="[15,15,15,70]" data-paddingleft="[10,10,10,10]"
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
-                            <span class="button-txt"><i class="fa fa-stethoscope"
+                            <a class="button-txt" href={{route('main.biography')}}><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                @lang('helpers.read_more')</span>
+                                @lang('helpers.read_more') </a>
                         </div>
                     </li>
                     <li data-transition="zoomout" data-slotamount="default" data-easein="easeInOut" data-easeout="easeInOut"
@@ -123,9 +123,9 @@
                              data-paddingtop="[15,15,15,15]" data-paddingright="[10,10,10,10]"
                              data-paddingbottom="[15,15,15,70]" data-paddingleft="[10,10,10,10]"
                              style="z-index: 10; border-radius: 0; letter-spacing:1px; color: #fff; font-family: 'Poppins', sans-serif; text-transform:capitalize; white-space:nowrap; outline:none; box-shadow:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
-                            <span class="button-txt"><i class="fa fa-stethoscope"
+                            <a class="button-txt" href={{route('main.biography')}}><i class="fa fa-stethoscope"
                                                         style="text-align: center; line-height: 50px; width: 55px; height: 55px; font-size: 24px; border-radius: 50%; background-color: #fff; vertical-align: middle; box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.06); margin-right: 10px;"></i>
-                                @lang('helpers.read_more')</span>
+                                @lang('helpers.read_more')</a>
                         </div>
                     </li>
                 </ul>
@@ -145,11 +145,11 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[0]->title_ar}}</h5>
-                                    <p>{{$operations[0]->content_ar}}</p>
+                                    <h5> {{ Str::limit($operations[0]->title_ar, 40)}}</h5>
+                                    <p>{{ Str::limit($operations[0]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[0]->title}}</h5>
-                                    <p>{{$operations[0]->content}}</p>
+                                <h5> {{ Str::limit($operations[0]->title, 40)}}</h5>
+                                <p>{{ Str::limit($operations[0]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
@@ -157,11 +157,11 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[1]->title_ar}}</h5>
-                                    <p>{{$operations[1]->content_ar}}</p>
+                                <h5> {{ Str::limit($operations[1]->title_ar, 40)}}</h5>
+                                <p>{{ Str::limit($operations[1]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[1]->title}}</h5>
-                                    <p>{{$operations[1]->content}}</p>
+                                <h5> {{ Str::limit($operations[1]->title, 40)}}</h5>
+                                <p>{{ Str::limit($operations[1]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
@@ -172,11 +172,12 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[2]->title_ar}}</h5>
-                                    <p>{{$operations[2]->content_ar}}</p>
+                                <h5> {{ Str::limit($operations[2]->title_ar, 40)}}</h5>
+                                <p>{{ Str::limit($operations[2]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[2]->title}}</h5>
-                                    <p>{{$operations[2]->content}}</p>
+
+                                <h5> {{ Str::limit($operations[2]->title, 40)}}</h5>
+                                <p>{{ Str::limit($operations[2]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>
@@ -184,11 +185,11 @@
                             <div class="offer-box">
                                 <i class="fa fa-smile-o"></i>
                                 @if(Session::get('locale') == 'ar')
-                                    <h5>{{$operations[3]->title_ar}}</h5>
-                                    <p>{{$operations[3]->content_ar}}</p>
+                                    <h5> {{ Str::limit($operations[3]->title_ar, 40)}}</h5>
+                                    <p>{{ Str::limit($operations[3]->content_ar, 60)}}</p>
                                 @else
-                                    <h5>{{$operations[3]->title}}</h5>
-                                    <p>{{$operations[3]->content}}</p>
+                                <h5> {{ Str::limit($operations[3]->title, 60)}}</h5>
+                                <p>{{ Str::limit($operations[3]->content, 60)}}</p>
                                 @endif
                             </div>
                         </div>

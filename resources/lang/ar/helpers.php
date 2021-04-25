@@ -14,5 +14,6 @@ return [
     'additional_media' => 'وسائط إضافية',
     'surgeries' => 'العمليات الجراحية',
     'information' => 'معلومات',
-    'job_title' => 'جراح أطفال'
+    'job_title' => 'جراح أطفال',
+    'certificates' => 'الشهادات'
 ];

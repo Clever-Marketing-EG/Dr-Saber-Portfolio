@@ -17,7 +17,7 @@
         <div class="container">
             <!-- Row -->
             <div class="row">
-                <!-- Widget Area -->
+                {{-- <!-- Widget Area -->
                 <div class="widget-area col-md-4 col-sm-4 col-xs-12">
                     <!-- Widget Search -->
                     <aside id="search" class="widget widget_search">
@@ -32,7 +32,7 @@
                         </form>
                     </aside><!-- Widget Search /- -->
 
-                </div><!-- Widget Area /- -->
+                </div><!-- Widget Area /- --> --}}
 
                 <!-- Content Area -->
                 <div class="content-area col-md-8 col-sm-8 col-xs-12">

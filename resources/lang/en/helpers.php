@@ -14,6 +14,8 @@ return [
     'additional_media' => 'Additional Media',
     'surgeries' => 'Surgeries',
     'information' => 'Information',
-    'job_title' => 'Pediatric Surgeon'
+    'job_title' => 'Pediatric Surgeon',
+    'certificates' => 'Certificates'
+
 
 ];
