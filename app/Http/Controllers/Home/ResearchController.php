@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Research;
+use App\Models\Image;
 use Illuminate\Contracts\View\View;
 
 class ResearchController extends Controller
@@ -16,7 +17,8 @@ class ResearchController extends Controller
     public function index(): View
     {
         $researches = Research::orderBy('created_at', 'desc')->paginate(15);
-        return View('publications.index', ['researches' => $researches]);
+        $images = Image::loadImages();
+        return View('publications.index', ['researches' => $researches, 'images' => $images]);
     }
 
     /**

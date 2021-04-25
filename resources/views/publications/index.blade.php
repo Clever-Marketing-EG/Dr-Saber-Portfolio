@@ -1,6 +1,6 @@
 @extends('shared.layouts.main')
 @section('content')
-    <div class="page-banner container-fluid no-left-padding no-right-padding">
+    <div class="page-banner container-fluid no-left-padding no-right-padding" style="background-image: url({{$images['scientific_publications_background']}})">
         <!-- Container -->
         <div class="container">
             <div class="page-banner-content">

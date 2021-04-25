@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Image;
 use App\Models\Operation;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class OperationController extends Controller
     public function index(): View
     {
         $operations = Operation::orderBy('created_at', 'desc')->paginate(15);
-        return view('operations.index', ['operations' => $operations]);
+        $images = Image::loadImages();
+        return view('operations.index', ['operations' => $operations, 'images' => $images]);
     }
 
     /**

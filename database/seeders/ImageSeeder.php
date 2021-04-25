@@ -58,6 +58,21 @@ class ImageSeeder extends Seeder
                 'name' => 'media_background',
                 'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
             ],
+            //================================================================
+            [
+                'name' => 'scientific_publications_background',
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+            ],
+            //================================================================
+            [
+                'name' => 'operations_background',
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+            ],
+            //================================================================
+            [
+                'name' => 'contact_us_background',
+                'url' => 'https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+            ],
         );
         DB::table('images')->insert($data);
     }

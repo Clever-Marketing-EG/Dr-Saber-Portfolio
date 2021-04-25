@@ -56,7 +56,11 @@ class MainController extends Controller
      */
     public function contact(): View
     {
-        return view('main.contact');
+        $images = Image::loadImages();
+         $data = array(
+            'images' => $images,
+        );
+        return view('main.contact', $data);
     }
 
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="page-banner container-fluid no-left-padding no-right-padding">
+<div class="page-banner container-fluid no-left-padding no-right-padding" style="background-image: url({{$images['contact_us_background']}})">
     <!-- Container -->
     <div class="container">
         <div class="page-banner-content">
