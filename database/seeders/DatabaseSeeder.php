@@ -17,11 +17,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ContentSeeder::class,
             ImageSeeder::class,
-            // CertificateSeeder::class
-            // ArticleSeeder::class,
-            // OperationSeeder::class,
-            // ResearchSeeder::class,
-//            MediaSeeder::class
+            CertificateSeeder::class,
+            ArticleSeeder::class,
+            OperationSeeder::class,
+            ResearchSeeder::class,
+           MediaSeeder::class
         ]);
     }
 }

@@ -5,7 +5,7 @@
             <img src="{{$image}}" class="rouded m-2" alt="..." style="max-width: 300px">
         @endforeach
         <br /><br /><br />
-        <div  class="row">
+        <div  class="row mb-5">
             <div  class="col-md-6">
                 <h5>Research Title:</h5>
                 <h6>{{ $research->title }}</h6>

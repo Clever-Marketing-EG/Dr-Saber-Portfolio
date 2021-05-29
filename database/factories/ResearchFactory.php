@@ -26,7 +26,7 @@ class ResearchFactory extends Factory
             'title_ar' => $this->faker->unique()->sentence,
             'content' => $this->faker->text,
             'content_ar' => $this->faker->text,
-            'image_url' => $this->faker->imageUrl(),
+            'images' => [$this->faker->imageUrl(), $this->faker->imageUrl(),$this->faker->imageUrl()],
             'video_url' => 'https://www.youtube.com/watch?v=WsptdUFthWI'
         ];
     }

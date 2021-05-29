@@ -16,20 +16,24 @@
         <div class="container">
 
             <div class="position-relative">
-            @foreach ($research['images'] as $image)
-                <img src="{{$image}}" class="rounded m-2" alt="..." style="max-width: 300px;">
-                <div class="form-group position-absolute end-0 top-0">
-                    <label for="image" class="btn btn-success">
-                        Upload Image
+                <div style="height: 50px">
+                <label for="image" class="btn btn-success position-absolute end-0 top-0">
+                        Upload Images
                     </label>
-                    <input id="image" type="file" name="image" style="display: none;">
+                    <input id="image" type="file" name="images[]" style="display: none;" multiple>
                 </div>
-            @endforeach
-            @foreach($research['images'] as $old_image)
-                <input type="hidden" name="old_images[]" value="{{$old_image}}">
-            @endforeach
-
             </div>
+            <div class="d-flex flex-wrap">
+                @for ($i = 0; $i<count($research['images']); $i++)
+                <div class="position-relative" id="image-{{$i}}">
+                    <img src="{{$research['images'][$i]}}" class="rounded m-2" alt="..." style="max-width: 300px;">
+                    <input type="hidden" name="old_images[]" value="{{$research['images'][$i]}}">
+                    <button id="{{$i}}" class="btn btn-danger position-absolute end-0 top-0 delete-button">Delete</button>
+                </div>
+                @endfor
+            </div>
+
+
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Title:</label>
@@ -56,5 +60,14 @@
             <button type="submit" class="btn btn-primary">Edit</button>
         </div>
     </form>
+
+    <script>
+        document.querySelectorAll('.delete-button').forEach(btn=> {
+            btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById(`image-${event.target.id}`).remove();
+        })
+        })
+    </script>
 
 </x-app-layout>

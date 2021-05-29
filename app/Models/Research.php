@@ -21,22 +21,34 @@ class Research extends Model
 
     public static function validateResearch(Request $request): array
     {
-        $validated = $request->validate([
+        $validated = $request->method() == ('PUT'|| 'PATCH') ? $request->validate([
+            'title' => 'required|min:3|string',
+            'title_ar' => 'required|min:3|string',
+            'content' => 'required|min:3|string',
+            'content_ar' => 'required|min:3|string',
+            'images' => 'nullable|array|min:1',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'old_images' => 'nullable|array',
+            'old_images.*' => 'required|string',
+            'video_url' => 'nullable|url'
+        ]) : $request->validate([
             'title' => 'required|min:3|string',
             'title_ar' => 'required|min:3|string',
             'content' => 'required|min:3|string',
             'content_ar' => 'required|min:3|string',
             'images' => 'required|array|min:1',
             'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
-            // 'old_images' => 'nullable|array',
-            // 'old_images.*' => 'required|string',
             'video_url' => 'nullable|url'
         ]);
 
-        $validated['images'] = array_map(function($image){
+        $new_images = isset($validated['images'])?array_map(function($image){
             return asset($image->store('images'));
-        }, $validated['images']);
+        }, $validated['images']) : [];
 
+
+        $validated['images'] = isset($validated['old_images']) ?
+            array_merge($new_images, $validated['old_images']) : $new_images ;
+        unset($validated['old_images']);
         if($validated['video_url'] && !preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
         {
             throw ValidationException::withMessages(['YouTube video URL is not valid']);
