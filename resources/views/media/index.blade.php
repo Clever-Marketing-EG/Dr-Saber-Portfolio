@@ -38,6 +38,7 @@
                 <div class="content-area col-md-8 col-sm-8 col-xs-12">
                     @foreach($media as $mediaItem)
                         <div class="type-post">
+                            @if(isset($mediaItem['video_url']))
                             <div class="entry-cover">
                                 <a title="Blog" href="#">
                                     <iframe width="100%" height="315" src="{{$mediaItem->video_url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
@@ -49,6 +50,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                             <div class="latest-news-content">
                                 <div class="entry-header">
                                     <h3 class="entry-title">

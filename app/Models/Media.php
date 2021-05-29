@@ -11,13 +11,7 @@ class Media extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'title_ar',
-        'content',
-        'content_ar',
-        'video_url'
-    ];
+    protected $guarded = [];
 
     /**
      * Validate Media item data
@@ -33,18 +27,20 @@ class Media extends Model
             'title_ar' => 'required|min:3|string',
             'content' => 'required|min:3|string',
             'content_ar' => 'required|min:3|string',
+            'video_url' => 'nullable|url'
         ]);
 
-        if(!preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
+        if($request['video_url'] && !preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
         {
             throw ValidationException::withMessages(['YouTube video URL is not valid']);
         }
 
-        return array_merge(
+        return isset($vidMatches) ? array_merge(
             $validated,
             [
                 'video_url' => 'https://www.youtube.com/embed/'.$vidMatches[5],
             ]
-        );
+        ) : $validated;
     }
+
 }

@@ -16,3 +16,7 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
+
+mix.disableNotifications(0);
+
+mix.browserSync('0.0.0.0:8084');
