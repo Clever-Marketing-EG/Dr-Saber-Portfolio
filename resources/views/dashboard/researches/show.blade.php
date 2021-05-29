@@ -20,6 +20,10 @@
                 <h6  class="title">{{ $research->content_ar }}</h6>
 
             </div>
+
+            @if(isset($research['video_url']))
+            <iframe width="100%" height="315" src="{{$research['video_url']}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            @endif
         </div>
 
     </div>

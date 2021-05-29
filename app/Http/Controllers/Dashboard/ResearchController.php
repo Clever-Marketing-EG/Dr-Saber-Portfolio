@@ -49,7 +49,7 @@ class ResearchController extends Controller
         $research->content = $validated['content'];
         $research->content_ar = $validated['content_ar'];
         $research->video_url = $validated['video_url'];
-        $research->image_url = $validated['image_url'];
+        // $research->image_url = $validated['image_url'];
         $research->save();
         return redirect()->route('researches.index')->with('success', 'Scientific publication created successfully!');
     }
@@ -94,7 +94,7 @@ class ResearchController extends Controller
         $research->content = $validated['content'];
         $research->content_ar = $validated['content_ar'];
         $research->video_url = $validated['video_url'];
-        $research->image_url = $validated['image_url'];
+        // $research->image_url = $validated['image_url'];
         $research->save();
         return redirect()->route('researches.index')->with('success', 'Scientific publication updated successfully!');
     }

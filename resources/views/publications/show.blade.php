@@ -44,6 +44,9 @@
                 <div class="col-md-4 col-sm-5 col-xs-12 about-img">
                     <img src={{ $research->image_url }} alt="about" />
                 </div>
+                @if(isset($research['video_url']))
+                <iframe width="100%" height="315" src="{{$research['video_url']}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                @endif
             </div>
         </div><!-- Container /- -->
         <br /><br />

@@ -19,7 +19,7 @@ class CreateResearchTable extends Migration
             $table->string('title_ar');
             $table->text('content');
             $table->text('content_ar');
-            $table->string('image_url');
+            // $table->string('image_url');
             $table->string('video_url')->nullable();
             $table->timestamps();
         });

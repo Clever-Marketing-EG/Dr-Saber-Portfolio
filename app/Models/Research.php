@@ -12,6 +12,7 @@ class Research extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
 
     public static function validateResearch(Request $request): array
     {
@@ -20,22 +21,28 @@ class Research extends Model
             'title_ar' => 'required|min:3|string',
             'content' => 'required|min:3|string',
             'content_ar' => 'required|min:3|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'images' => 'nullable|array',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'video_url' => 'nullable|url'
         ]);
 
-        if(!preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
+        if($validated['video_url'] && !preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
         {
             throw ValidationException::withMessages(['YouTube video URL is not valid']);
         }
 
-        $path = $request->image->store('researches_images');
 
         unset($validated['image']);
-        return array_merge(
+        return  $validated['video_url'] ? array_merge(
             $validated,
             [
-                'image_url' => asset($path),
+                // 'image_url' => asset($path),
                 'video_url' => 'https://www.youtube.com/embed/'.$vidMatches[5],
+            ]
+        ) : array_merge(
+            $validated,
+            [
+                // 'image_url' => asset($path)
             ]
         );
     }
