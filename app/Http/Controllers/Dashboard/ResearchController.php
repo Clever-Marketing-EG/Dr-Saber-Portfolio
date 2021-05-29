@@ -43,14 +43,7 @@ class ResearchController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = Research::validateResearch($request);
-        $research = new Research();
-        $research->title = $validated['title'];
-        $research->title_ar = $validated['title_ar'];
-        $research->content = $validated['content'];
-        $research->content_ar = $validated['content_ar'];
-        $research->video_url = $validated['video_url'];
-        // $research->image_url = $validated['image_url'];
-        $research->save();
+        $research = Research::create($validated);
         return redirect()->route('researches.index')->with('success', 'Scientific publication created successfully!');
     }
 
@@ -87,8 +80,8 @@ class ResearchController extends Controller
      */
     public function update(Request $request, Research $research): RedirectResponse
     {
-
         $validated = Research::validateResearch($request);
+        dd($validated);
         $research->title = $validated['title'];
         $research->title_ar = $validated['title_ar'];
         $research->content = $validated['content'];

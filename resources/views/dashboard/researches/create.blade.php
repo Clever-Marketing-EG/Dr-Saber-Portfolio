@@ -37,10 +37,11 @@
                     <small class="form-text text-muted">Enter a valid YouTube video URL</small>
                 </div>
                 <div class="form-group col-md-6 mb-3 mt-4">
-                    <label for="image" class="btn btn-secondary">
-                        Upload Image
+                    <label for="images-input" class="label">
+                        Upload Images: (at least one)
                     </label>
-                    <input id="image" type="file" name="image" style="display: none;">
+                    <br>
+                    <input id="images-input" type="file" name="images[]" style="" multiple>
                 </div>
 
             </div>

@@ -14,6 +14,11 @@ class Research extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'images' => 'array'
+    ];
+
+
     public static function validateResearch(Request $request): array
     {
         $validated = $request->validate([
@@ -21,30 +26,24 @@ class Research extends Model
             'title_ar' => 'required|min:3|string',
             'content' => 'required|min:3|string',
             'content_ar' => 'required|min:3|string',
-            'images' => 'nullable|array',
+            'images' => 'required|array|min:1',
             'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            // 'old_images' => 'nullable|array',
+            // 'old_images.*' => 'required|string',
             'video_url' => 'nullable|url'
         ]);
+
+        $validated['images'] = array_map(function($image){
+            return asset($image->store('images'));
+        }, $validated['images']);
 
         if($validated['video_url'] && !preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
         {
             throw ValidationException::withMessages(['YouTube video URL is not valid']);
         }
 
+        $validated['video_url'] = isset($vidMatches) ? 'https://www.youtube.com/embed/'.$vidMatches[5] : null;
 
-        unset($validated['image']);
-        return  $validated['video_url'] ? array_merge(
-            $validated,
-            [
-                // 'image_url' => asset($path),
-                'video_url' => 'https://www.youtube.com/embed/'.$vidMatches[5],
-            ]
-        ) : array_merge(
-            $validated,
-            [
-                // 'image_url' => asset($path)
-            ]
-        );
+        return  $validated;
     }
-
 }

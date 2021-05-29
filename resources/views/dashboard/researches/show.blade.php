@@ -1,7 +1,9 @@
 <x-app-layout>
 
     <div  class="container mt-5">
-        <img src="{{$research->image_url}}" class="rounded mx-auto d-block" alt="..." style="max-height: 400px; width: auto">
+        @foreach ($research['images'] as $image)
+            <img src="{{$image}}" class="rouded m-2" alt="..." style="max-width: 300px">
+        @endforeach
         <br /><br /><br />
         <div  class="row">
             <div  class="col-md-6">
@@ -22,7 +24,7 @@
             </div>
 
             @if(isset($research['video_url']))
-            <iframe width="100%" height="315" src="{{$research['video_url']}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            <iframe width="auto" height="500px" src="{{$research['video_url']}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
             @endif
         </div>
 

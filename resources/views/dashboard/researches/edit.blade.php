@@ -14,14 +14,21 @@
         @csrf
         @method('PATCH')
         <div class="container">
+
             <div class="position-relative">
-                <img src="{{$research->image_url}}" class="rounded mx-auto d-block" alt="..." style="max-height: 400px; width: auto">
+            @foreach ($research['images'] as $image)
+                <img src="{{$image}}" class="rounded m-2" alt="..." style="max-width: 300px;">
                 <div class="form-group position-absolute end-0 top-0">
                     <label for="image" class="btn btn-success">
                         Upload Image
                     </label>
                     <input id="image" type="file" name="image" style="display: none;">
                 </div>
+            @endforeach
+            @foreach($research['images'] as $old_image)
+                <input type="hidden" name="old_images[]" value="{{$old_image}}">
+            @endforeach
+
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
