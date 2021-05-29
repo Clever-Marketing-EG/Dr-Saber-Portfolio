@@ -49,6 +49,9 @@ class Research extends Model
         $validated['images'] = isset($validated['old_images']) ?
             array_merge($new_images, $validated['old_images']) : $new_images ;
         unset($validated['old_images']);
+
+        if(count($validated['images'])<1) throw ValidationException::withMessages(['Must have at least one image']);
+
         if($validated['video_url'] && !preg_match("/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/", $request['video_url'], $vidMatches))
         {
             throw ValidationException::withMessages(['YouTube video URL is not valid']);
