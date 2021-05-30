@@ -210,7 +210,7 @@
                         <div class="col-md-12">
                             <div class="team-content">
                                 <div class="team-box">
-                                    <img src="{{$research->image_url}}" alt="team" />
+                                    <img src="{{$research['images'][0]}}" alt="team" />
                                 </div>
                                 <span class="team-catagory">
                                     @if(Session::get('locale') == 'ar')
