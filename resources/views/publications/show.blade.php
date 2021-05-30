@@ -23,29 +23,29 @@
         <!-- Container -->
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-7 col-xs-12">
-                    <div class="about-content">
-                        <h5>
-                            @if (Session::get('locale') == 'ar')
-                                {{ $research->title_ar }}
-                            @else
-                                {{ $research->title }}
-                            @endif
-                        </h5>
-                        <p>
-                            @if (Session::get('locale') == 'ar')
-                                {{ $research->content_ar }}
-                            @else
-                                {{ $research->content }}
-                            @endif
-                        </p>
-                    </div>
+                <div class="about-content">
+                    <h5>
+                        @if (Session::get('locale') == 'ar')
+                            {{ $research->title_ar }}
+                        @else
+                            {{ $research->title }}
+                        @endif
+                    </h5>
+                    <p>
+                        @if (Session::get('locale') == 'ar')
+                            {{ $research->content_ar }}
+                        @else
+                            {{ $research->content }}
+                        @endif
+                    </p>
                 </div>
-                <div class="col-md-4 col-sm-5 col-xs-12 about-img">
-                    <img src={{ $research->image_url }} alt="about" />
+                <div class="row flex-wrap mb-5">
+                    @foreach ($research['images'] as $image)
+                        <img class="rounded m-2= col" src={{$image}} alt="about" style="max-width: 300px" />
+                    @endforeach
                 </div>
                 @if(isset($research['video_url']))
-                <iframe width="100%" height="315" src="{{$research['video_url']}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                <iframe width="100%" height="500" src="{{$research['video_url']}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-top: 5rem" ></iframe>
                 @endif
             </div>
         </div><!-- Container /- -->

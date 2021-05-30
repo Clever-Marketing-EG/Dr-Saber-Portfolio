@@ -20,7 +20,7 @@
 
                     <li class="col-md-4 col-sm-4 col-xs-6 design">
                         <div class="content-image-block">
-                            <img src={{$research->image_url}} alt="gallery" alt="...">
+                            <img src={{$research->images[0]}} alt="gallery" alt="...">
                             <div class="content-block-hover">
                                 <span>
                                     @if(Session::get('locale') == 'ar')

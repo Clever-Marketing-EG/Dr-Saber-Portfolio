@@ -10,7 +10,7 @@
             </ul>
         </div>
     @endif
-    <form method="POST" action="{{ route('researches.update', $research) }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('researches.update', $research) }}" enctype="multipart/form-data" class="mb-5">
         @csrf
         @method('PATCH')
         <div class="container">
