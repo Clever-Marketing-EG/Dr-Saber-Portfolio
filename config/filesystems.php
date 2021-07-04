@@ -70,7 +70,7 @@ return [
         public_path('images') => storage_path('app/images'),
         public_path('articles_images') => storage_path('app/articles_images'),
         public_path('operations_images') => storage_path('app/operations_images'),
-        public_path('researches_images') => storage_path('app/researches_images'),
+        // public_path('researches_images') => storage_path('app/researches_images'),
         public_path('certificates_images') => storage_path('app/certificates_images')
     ],
 ];
